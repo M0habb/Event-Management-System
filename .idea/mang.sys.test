@@ -1,0 +1,11 @@
+import java.util.Date;
+
+enum Gender {MALE, FEMALE};
+public abstract class User {
+    private String userName;
+    private String password;
+    private Gender gender;
+    private long phoneNumber;
+    private Date birthDate;
+    public abstract boolean login(String userName, String password);
+}
