@@ -40,6 +40,19 @@ public class Database {
         Event event2 = new Event("ASU Sports Concert", bd2, true, address1, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, address3, 400, organizer1, category1);
 
-
+        admins.add(admin1);
+        admins.add(admin2);
+        admins.add(admin3);
+        organizers.add(organizer1);
+        organizers.add(organizer2);
+        organizers.add(organizer3);
+        attendees.add(attendee1);
+        attendees.add(attendee2);
+        attendees.add(attendee3);
+        categories.add(category1);
+        categories.add(category2);
+        events.add(event1);
+        events.add(event2);
+        events.add(event3);
     }
 }
