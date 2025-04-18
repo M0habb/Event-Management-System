@@ -27,10 +27,16 @@ public class Wallet {
         return balance;
     }
 
-    public double addBalance(){
-        return 0;
+    public void addBalance(double amount){
+        if (amount < 0){
+            throw new IllegalArgumentException("Cannot add negative amount.");
+        }
+        balance += amount;
     }
-    public double deductBalance(){
-        return 0;
+    public void deductBalance(double amount){
+        if (amount < 0){
+            throw new IllegalArgumentException("Cannot deduct negative amount.");
+        }
+        balance -= amount;
     }
 }
