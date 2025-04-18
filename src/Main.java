@@ -54,5 +54,6 @@ public class Main {
         organizer3.setEventsCreated(org1EventsCreated);
         admin1.showOrganizers();
         System.out.println(category1.getUpcomingEvents());
+        System.out.println(category2.getEventCount());
     }
 }

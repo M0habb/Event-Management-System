@@ -62,6 +62,12 @@ public class Category {
         return eventsString;
     }
     public int getEventCount(){
-        return 0;
+        int count = 0;
+        for (Event e : Database.events){
+            if(e.getCategory().equals(this)){
+                count++;
+            }
+        }
+        return count;
     }
 }
