@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 public class Category {
@@ -40,7 +43,23 @@ public class Category {
 
 
     public String getUpcomingEvents(){
-        return "s";
+
+        String eventsString = "Upcoming " + this.name +" events: ";
+        int count = 0;
+
+        for (Event e : Database.events){
+            if (e.getCategory().equals(this) && e.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                count++;
+                eventsString += e.getEventName();
+                eventsString += " on " + e.getEventDate() + ", ";
+            }
+        }
+
+        if (count == 0){
+            eventsString += "none.";
+        }else eventsString = eventsString.substring(0, eventsString.length() - 2);
+
+        return eventsString;
     }
     public int getEventCount(){
         return 0;

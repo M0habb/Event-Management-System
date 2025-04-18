@@ -72,6 +72,12 @@ public class Event {
     public List<Attendee> getAttendees(){
         return attendees;
     }
+    public Category getCategory(){
+        return category;
+    }
+    public void setCategory(Category category){
+        this.category = category;
+    }
 
     public void showActivities(){
     }
