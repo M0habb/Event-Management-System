@@ -26,23 +26,26 @@ public class Admin extends User implements Crud<Category>{
     public void showEvents(){
 
     }
-  
-
-    @Override
-    public void signup() {
-
-    }
 
     public void showAttendees(){
 
     }
-    public void showOrganizers(){
+    public void showOrganizers() {
+        System.out.println("Registered Organizers:");
+        for (Organizer organizer : Database.organizers) {
+            System.out.println(organizer.getUserName() +
+                    " . Events Created: " + organizer.getEventsCreated().size());
 
+        }
     }
     public void addRoom(){
 
     }
 
+    @Override
+    public void signup() {
+
+    }
 
     @Override
     public void create() {

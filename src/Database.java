@@ -54,5 +54,8 @@ public class Database {
         events.add(event1);
         events.add(event2);
         events.add(event3);
+
+        organizer1.setEventsCreated();
+        admin1.showOrganizers();
     }
 }

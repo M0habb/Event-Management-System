@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Organizer extends User implements Crud<Event>{
 
-    private List<Event> eventsCreated;
+    private ArrayList<Event> eventsCreated;
     Organizer(){
         super();
     }
@@ -12,6 +13,12 @@ public class Organizer extends User implements Crud<Event>{
         super.setRole(Role.ORGANIZER);
     }
 
+    public void setEventsCreated(ArrayList<Event> eventsCreated){
+        this.eventsCreated = eventsCreated;
+    }
+    public ArrayList<Event> getEventsCreated(){
+        return eventsCreated;
+    }
     @Override
     public void signup() {
 
