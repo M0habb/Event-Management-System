@@ -55,7 +55,12 @@ public class Database {
         events.add(event2);
         events.add(event3);
 
-        organizer1.setEventsCreated();
+        ArrayList<Event> org1EventsCreated = new ArrayList<Event>();
+        org1EventsCreated.add(event1);
+        org1EventsCreated.add(event2);
+        organizer1.setEventsCreated(org1EventsCreated);
+        organizer2.setEventsCreated(org1EventsCreated);
+        organizer3.setEventsCreated(org1EventsCreated);
         admin1.showOrganizers();
     }
 }
