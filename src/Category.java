@@ -6,6 +6,11 @@ public class Category {
     private String description;
     private List<Event> events;
 
+    Category(String name, CategoryType type, String description){
+        this.name = name;
+        this.type = type;
+        this.description = description;
+    }
 
     //Setters & Getters
 

@@ -5,8 +5,9 @@ public class Admin extends User implements Crud<Category>{
     Admin(){
         super();
     }
-    Admin(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
+    Admin(String userName, String password, Gender gender, Date birthDate, long phoneNumber, int workingHours){
         super(userName, password, gender, birthDate, phoneNumber);
+        this.workingHours = workingHours;
     }
 
     //Setters & Getters

@@ -12,8 +12,9 @@ public class Attendee extends User{
     Attendee(){
         super();
     }
-    Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber) throws IOException {
+    Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
+        this.address = address;
         super.setRole(Role.ATTENDEE);
     }
 

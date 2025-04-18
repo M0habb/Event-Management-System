@@ -13,7 +13,14 @@ public class Event {
     private Category category;
     private List<Attendee> attendees;
 
-    Event() {
+    Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
+        this.eventName = eventName;
+        this.eventDate = eventDate;
+        this.outdoors = outdoors;
+        this.location = location;
+        this.maxAttendees = maxAttendees;
+        this.organizer = organizer;
+        this.category = category;
     }
 
     //Setters & Getters

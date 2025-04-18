@@ -1,4 +1,4 @@
-public abstract class   Address {
+public class   Address {
     String city;
     String street;
     long postalCode;
