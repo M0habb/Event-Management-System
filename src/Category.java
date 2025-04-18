@@ -2,8 +2,10 @@ import java.util.List;
 
 public class Category {
     private CategoryType type;
+    private String name;
     private String description;
     private List<Event> events;
+
 
     //Setters & Getters
 

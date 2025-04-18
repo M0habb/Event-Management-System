@@ -4,6 +4,7 @@ public class Room {
     private Size size; //no. of ppl
     private boolean available;
 
+
     public Size getSize() {
         return size;
     }
