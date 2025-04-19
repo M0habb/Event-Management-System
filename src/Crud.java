@@ -1,6 +1,6 @@
 public interface Crud<T> {
-    public void create();
+    public void create(T t);
     public void read();
-    public void update();
-    public void delete();
+    public void update(T t);
+    public void delete(int t);
 }

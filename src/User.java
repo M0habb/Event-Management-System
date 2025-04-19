@@ -56,6 +56,12 @@ public abstract class User {
     public Role getRole(){
         return this.role;
     }
+    public Wallet getWallet(){
+        return this.wallet;
+    }
+    public void setWallet(Wallet wallet){
+        this.wallet = wallet;
+    }
 
     public boolean login(){
         return true;

@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Category {
     private CategoryType type;
-    private String name;
+    private int ID;
     private String description;
     private List<Event> events;
 
-    Category(String name, CategoryType type, String description){
-        this.name = name;
+    Category(int ID, CategoryType type, String description){
+        this.ID = ID;
         this.type = type;
         this.description = description;
     }
@@ -40,11 +40,17 @@ public class Category {
     public void setEvents(List<Event> events) {
         this.events = events;
     }
+    public int getID(){
+        return this.ID;
+    }
+    public void setID(int ID){
+        this.ID = ID;
+    }
 
 
     public String getUpcomingEvents(){
 
-        String eventsString = "Upcoming " + this.name +" events: ";
+        String eventsString = "Upcoming " + this.ID +" events: ";
         int count = 0;
 
         for (Event e : Database.events){

@@ -27,8 +27,8 @@ public class Main {
         Organizer organizer2 = new Organizer("Ahmad", "1325", Gender.MALE, bd2, 5236);
         Organizer organizer3 = new Organizer("Sarah", "asda", Gender.FEMALE, bd3, 85635436);
 
-        Category category1 = new Category("fuck you", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
-        Category category2 = new Category("fuck you too", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category1 = new Category(1, CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
+        Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
         Event event1 = new Event("ASU Music Concert", bd, false, address2, 100, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, address1, 250, organizer2, category2);

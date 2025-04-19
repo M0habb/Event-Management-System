@@ -31,7 +31,7 @@ public class Organizer extends User implements Crud<Event>{
     public void showAttendees (){}
 
     @Override
-    public void create() {
+    public void create(Event event) {
 
     }
 
@@ -41,12 +41,12 @@ public class Organizer extends User implements Crud<Event>{
     }
 
     @Override
-    public void update() {
+    public void update(Event event) {
 
     }
 
     @Override
-    public void delete() {
+    public void delete(int i) { // Parameter Come Back Later
 
     }
 }
