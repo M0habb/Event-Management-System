@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         initializeDummyData();
     }
-    public static void initializeDummyData(){
+    public static void initializeDummyData() {
         Date bd = new Date(2006, 07, 23);
         Date bd2 = new Date(2005, 12, 21);
         Date bd3 = new Date(2030, 02, 11);
