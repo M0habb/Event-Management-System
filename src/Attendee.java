@@ -1,8 +1,6 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Attendee extends User{
 
@@ -20,8 +18,122 @@ public class Attendee extends User{
 
     @Override
     public void signup() {
+        Scanner sc = new Scanner(System.in);
+        String username, password;
 
+        System.out.println("Enter your username: ");
+        username = sc.nextLine();
+        boolean exists = false;
+        do{
+            exists = false;
+            for (Attendee attendee : Database.totalAttendees){
+                if (attendee.getUserName().equals(username)){
+                    exists = true;
+                    System.out.println("Username already exists!");
+                    System.out.println("Enter your username: ");
+                    username = sc.nextLine();
+                }
+            }
+        } while (exists);
+
+        System.out.println("Enter your password. Password must be at least 8 characters long, contains at least one uppercase character, one lowercase character, one digit, and one special character: ");
+        password = sc.nextLine();
+        while (!StrongPasswordValidation(password)){
+            System.out.println("Password must be at least 8 characters long, contains at least one uppercase character, one lowercase character, one digit, and one special character: ");
+            password = sc.nextLine();
+        }
+
+        System.out.println("Gender Selection: ");
+        System.out.println("1. Male");
+        System.out.println("2. Female");
+        int input = sc.nextInt();
+        switch (input){
+            case 1:
+                this.setGender(Gender.MALE);
+                break;
+            case 2:
+                this.setGender(Gender.FEMALE);
+                break;
+        }
+
+        System.out.println("Enter Birth Year(1900-2015): ");
+        int year = sc.nextInt();
+        boolean validYear = false;
+        while (!validYear){
+            validYear = true;
+            if (year < 1990 || year > 2015){
+                validYear = false;
+                System.out.println("Invalid year! Input year between 1990 and 2015: ");
+                year = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter Birth Month: ");
+        int month = sc.nextInt();
+        boolean validMonth = false;
+        while (!validMonth){
+            validMonth = true;
+            if (month < 1 || year > 12){
+                validMonth = false;
+                System.out.println("Invalid month! Input month between 1 and 12: ");
+                month = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter Birth Day: ");
+        int day = sc.nextInt();
+        boolean validDay = false;
+        while (!validDay){
+            validDay = true;
+            if (day < 1 || day > 31){
+                validDay = false;
+                System.out.println("Invalid day! Input day between 1 and 31: ");
+                day = sc.nextInt();
+            }
+        }
+
+        Date birthDate = new Date(year, month, day);
+
+        
     }
+
+    public boolean StrongPasswordValidation(String password)
+    {
+        if (password.length() < 8)
+            return false;
+
+        boolean hasUppercase = false;
+        boolean hasLowercase = false;
+        boolean hasDigit = false;
+        boolean hasSpecialCharacter = false;
+
+        for (int i = 0; i < password.length(); ++i)
+        {
+            if (Character.isUpperCase(password.charAt(i)))
+                hasUppercase = true;
+
+            else if (Character.isLowerCase(password.charAt(i)))
+                hasLowercase = true;
+
+            else if (Character.isDigit(password.charAt(i)))
+                hasDigit = true;
+
+            else
+                hasSpecialCharacter = true;
+        }
+
+        if (!hasUppercase)
+            return false;
+        if (!hasLowercase)
+            return false;
+        if (!hasDigit)
+            return false;
+        if (!hasSpecialCharacter)
+            return false;
+
+        return true;
+    }
+
 
     public void chooseEvent(){}
     public void buyTickets(){}

@@ -1,4 +1,5 @@
-import java.util.Date;;
+import java.util.Date;
+import java.util.Scanner;;
 public abstract class User {
     private String userName;
     private String password;
@@ -63,8 +64,46 @@ public abstract class User {
         this.wallet = wallet;
     }
 
-    public boolean login(){
-        return true;
+    public static int login(){
+        String username, password;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your username: ");
+        username = sc.nextLine();
+
+        System.out.println("Enter your password: ");
+        password = sc.nextLine();
+
+        for (Admin admin : Database.admins) {
+            if (username.equals(admin.getUserName())){
+                if (admin.getPassword().equals(password)){
+                    System.out.println("Succesful Login. Welcome, " + admin.getUserName());
+                    return 1;
+                }else return 0;
+            }
+        }
+
+        for (Organizer organizer : Database.organizers) {
+            if (username.equals(organizer.getUserName())){
+                if (organizer.getPassword().equals(password)){
+                    System.out.println("Succesful Login. Welcome, " + organizer.getUserName());
+                    return 2;
+                }else return 0;
+            }
+        }
+
+        for (Attendee attendee : Database.totalAttendees) {
+            if (username.equals(attendee.getUserName())){
+                if (attendee.getPassword().equals(password)){
+                    System.out.println("Succesful Login. Welcome, " + attendee.getUserName());
+                    return 3;
+                }else return 0;
+            }
+        }
+
+        return 0;
+
     }
     public abstract void signup();
 

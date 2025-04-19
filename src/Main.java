@@ -1,10 +1,51 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         initializeDummyData();
+
+        // Startup Menu
+        System.out.println("1. Login");
+        System.out.println("2. Signup (Attendee)");
+        System.out.println("3. Exit");
+
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+
+        switch (input){
+            case 1:
+                int succesfulLogin = User.login();
+
+                while (succesfulLogin == 0){
+                    System.out.println("Invalid Username/Password!");
+                    succesfulLogin = User.login();
+                }
+
+                switch (succesfulLogin){
+                    case 1:
+                        // Admin Menu
+                        break;
+                    case 2:
+                        // Organizer Menu
+                        break;
+                    case 3:
+                        // Attendee Menu
+                        break;
+                }
+                break;
+
+            case 2:
+                Attendee newAttendee = new Attendee();
+                newAttendee.signup();
+                break;
+            case 3:
+                break;
+
+        }
+
     }
     public static void initializeDummyData() {
         Date bd = new Date(2006, 07, 23);
