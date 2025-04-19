@@ -13,7 +13,7 @@ public class Event {
     private Category category;
     private List<Attendee> attendees;
 
-    Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
+    public Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.outdoors = outdoors;
@@ -80,7 +80,23 @@ public class Event {
     }
 
     public void showActivities(){
+        System.out.println("Activities for the event:");
+        if (activities.isEmpty()) {
+            System.out.println("No activities scheduled.");
+        } else {
+            for (String activity : activities) {
+                System.out.println("- " + activity);
+            }
+        }
     }
     public void showAttendees(){
+        System.out.println("Attendees for the event:");
+        if (attendees.isEmpty()) {
+            System.out.println("No attendees yet.");
+        } else {
+            for (String attendee : attendees) {
+                System.out.println("- " + attendee);
+            }
+        }
     }
 }
