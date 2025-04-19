@@ -4,12 +4,6 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-<<<<<<< HEAD
-        Database.initializeDummyData();
-        System.out.println("hi guys");
-        System.out.println("Test"); //sadjajks
-        //hi
-=======
         initializeDummyData();
     }
     public static void initializeDummyData() {
@@ -61,6 +55,5 @@ public class Main {
         organizer1.setEventsCreated(org1EventsCreated);
         organizer2.setEventsCreated(org1EventsCreated);
         organizer3.setEventsCreated(org1EventsCreated);
->>>>>>> f703882cfaf03066e61c8cbd18f565ccf44ce6df
     }
 }
