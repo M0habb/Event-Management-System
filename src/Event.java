@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Event {
 
@@ -11,9 +11,7 @@ public class Event {
     private double fees;
     private Organizer organizer;
     private Category category;
-    private List<Attendee> attendees;
-
-    public ArrayList<Attendee> attendees = new ArrayList<>();
+    private ArrayList<Attendee> attendees;
     public ArrayList<String> activities = new ArrayList<>();
 
     public Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
@@ -69,10 +67,10 @@ public class Event {
     public Organizer getOrganizer(){
         return organizer;
     }
-    public void setAttendees(List<Attendee> attendees){
+    public void setAttendees(ArrayList<Attendee> attendees){
         this.attendees = attendees;
     }
-    public List<Attendee> getAttendees(){
+    public ArrayList<Attendee> getAttendees(){
         return attendees;
     }
     public Category getCategory(){
