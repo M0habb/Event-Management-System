@@ -7,44 +7,54 @@ public class Main {
     public static void main(String[] args) {
         initializeDummyData();
 
-        // Startup Menu
-        System.out.println("1. Login");
-        System.out.println("2. Signup (Attendee)");
-        System.out.println("3. Exit");
+        while(true){
+            // Startup Menu
+            System.out.println("1. Login");
+            System.out.println("2. Signup (Attendee)");
+            System.out.println("3. Exit");
 
-        Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            int input = scanner.nextInt();
 
-        switch (input){
-            case 1:
-                int succesfulLogin = User.login();
+            boolean exit = false;
 
-                while (succesfulLogin == 0){
-                    System.out.println("Invalid Username/Password!");
-                    succesfulLogin = User.login();
-                }
+            switch (input){
+                case 1:
+                    int succesfulLogin = User.login();
 
-                switch (succesfulLogin){
-                    case 1:
-                        // Admin Menu
-                        break;
-                    case 2:
-                        // Organizer Menu
-                        break;
-                    case 3:
-                        // Attendee Menu
-                        break;
-                }
+                    while (succesfulLogin == 0){
+                        System.out.println("Invalid Username/Password!");
+                        succesfulLogin = User.login();
+                    }
+
+                    switch (succesfulLogin){
+                        case 1:
+                            // Admin Menu
+                            break;
+                        case 2:
+                            // Organizer Menu
+                            break;
+                        case 3:
+                            // Attendee Menu
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    Attendee newAttendee = new Attendee();
+                    newAttendee.signup();
+                    System.out.println("Successful signup!");
+                    break;
+                case 3:
+                    exit = true;
+                    break;
+
+            }
+            if(exit){
                 break;
-
-            case 2:
-                Attendee newAttendee = new Attendee();
-                newAttendee.signup();
-                break;
-            case 3:
-                break;
-
+            }
         }
+
 
     }
     public static void initializeDummyData() {

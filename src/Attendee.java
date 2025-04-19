@@ -13,7 +13,6 @@ public class Attendee extends User{
     Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
         this.address = address;
-        super.setRole(Role.ATTENDEE);
     }
 
     @Override
@@ -73,7 +72,7 @@ public class Attendee extends User{
         boolean validMonth = false;
         while (!validMonth){
             validMonth = true;
-            if (month < 1 || year > 12){
+            if (month < 1 || month > 12){
                 validMonth = false;
                 System.out.println("Invalid month! Input month between 1 and 12: ");
                 month = sc.nextInt();
@@ -96,8 +95,30 @@ public class Attendee extends User{
 
         System.out.println("Enter phone number: ");
         long phonenumber = sc.nextLong();
+        System.out.println("Enter your country: ");
+        sc.nextLine();
+        String country = sc.nextLine();
+        System.out.println("Enter your city: ");
+        String city = sc.nextLine();
+        System.out.println("Enter your street: ");
+        String street = sc.nextLine();
+        System.out.println("Enter your postal code: ");
+        long postalCode = sc.nextLong();
+        Address address = new Address(country, city, street, postalCode);
+
+        this.setUserName(username);
+        this.setPassword(password);
+        this.setPhoneNumber(phonenumber);
+        this.address = address;
+        this.setBirthDate(birthDate);
+
+        Database.totalAttendees.add(this);
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 96177a907475bb3da24f60f72fde25cf32252037
 
     }
 

@@ -39,7 +39,7 @@ public class Admin extends User implements Crud<Category>{
 
     }
 
-    public void showAllAttendees() {
+    public void  showAllAttendees() {
         System.out.println("Registered Attendees:");
         for (Attendee attendee : Database.totalAttendees) {
             System.out.println(attendee.getUserName() +
