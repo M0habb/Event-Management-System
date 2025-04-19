@@ -37,9 +37,9 @@ public class Main {
         Database.organizers.add(organizer1);
         Database.organizers.add(organizer2);
         Database.organizers.add(organizer3);
-        Database.attendees.add(attendee1);
-        Database.attendees.add(attendee2);
-        Database.attendees.add(attendee3);
+        Database.totalAttendees.add(attendee1);
+        Database.totalAttendees.add(attendee2);
+        Database.totalAttendees.add(attendee3);
         Database.categories.add(category1);
         Database.categories.add(category2);
         Database.events.add(event1);
