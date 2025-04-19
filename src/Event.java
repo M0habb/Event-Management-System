@@ -13,6 +13,9 @@ public class Event {
     private Category category;
     private List<Attendee> attendees;
 
+    public ArrayList<Attendee> attendees = new ArrayList<>();
+    public ArrayList<String> activities = new ArrayList<>();
+
     public Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
         this.eventName = eventName;
         this.eventDate = eventDate;
