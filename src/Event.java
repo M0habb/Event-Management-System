@@ -94,7 +94,7 @@ public class Event {
         if (attendees.isEmpty()) {
             System.out.println("No attendees yet.");
         } else {
-            for (String attendee : attendees) {
+            for (Attendee attendee : attendees) {
                 System.out.println("- " + attendee);
             }
         }
