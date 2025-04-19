@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Event {
 
@@ -11,9 +11,10 @@ public class Event {
     private double fees;
     private Organizer organizer;
     private Category category;
-    private List<Attendee> attendees;
+    private ArrayList<Attendee> attendees;
+    public ArrayList<String> activities = new ArrayList<>();
 
-    Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
+    public Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.outdoors = outdoors;
@@ -66,15 +67,37 @@ public class Event {
     public Organizer getOrganizer(){
         return organizer;
     }
-    public void setAttendees(List<Attendee> attendees){
+    public void setAttendees(ArrayList<Attendee> attendees){
         this.attendees = attendees;
     }
-    public List<Attendee> getAttendees(){
+    public ArrayList<Attendee> getAttendees(){
         return attendees;
+    }
+    public Category getCategory(){
+        return category;
+    }
+    public void setCategory(Category category){
+        this.category = category;
     }
 
     public void showActivities(){
+        System.out.println("Activities for the event:");
+        if (activities.isEmpty()) {
+            System.out.println("No activities scheduled.");
+        } else {
+            for (String activity : activities) {
+                System.out.println("- " + activity);
+            }
+        }
     }
     public void showAttendees(){
+        System.out.println("Attendees for the event:");
+        if (attendees.isEmpty()) {
+            System.out.println("No attendees yet.");
+        } else {
+            for (Attendee attendee : attendees) {
+                System.out.println("- " + attendee);
+            }
+        }
     }
 }

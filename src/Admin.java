@@ -24,14 +24,20 @@ public abstract class Admin extends User implements Crud<Category> {
         this.workingHours = workingHours;
     }
 
+<<<<<<< HEAD
     // Display methods
     public void showRooms() {
         System.out.println("Available Rooms:");
+=======
+
+    public void showRooms(){
+>>>>>>> f703882cfaf03066e61c8cbd18f565ccf44ce6df
         for (Room room : Database.rooms) {
             System.out.println("Room #" + room.getRoomNum() +
                     " | Size: " + room.getSize() +
                     " | Available: " + room.getAvailable());
         }
+<<<<<<< HEAD
     }
 
     public void showEvents() {
@@ -42,6 +48,28 @@ public abstract class Admin extends User implements Crud<Category> {
                     " | Location: " + event.getLocation() +
                     " | Category: " + event.getCategory().getType());
         }
+=======
+
+    }
+    public void showAllEvents(){
+        System.out.println("Upcoming Events:");
+        for (Event event : Database.events) {
+            System.out.println(event.getEventName() +
+                    " | Date: " + event.getEventDate() +
+                    " | Location: " + event.getLocation() +
+                    " | Category: " + event.getCategory().getType());
+        }
+
+    }
+
+    public void showAllAttendees() {
+        System.out.println("Registered Attendees:");
+        for (Attendee attendee : Database.totalAttendees) {
+            System.out.println(attendee.getUserName() +
+                    " | Balance: " + attendee.getWallet().getBalance());
+
+        } 
+>>>>>>> f703882cfaf03066e61c8cbd18f565ccf44ce6df
     }
 
     public void showAttendees() {
@@ -59,6 +87,19 @@ public abstract class Admin extends User implements Crud<Category> {
                     " | Events Created: " + organizer.getEventsCreated().size());
         }
     }
+<<<<<<< HEAD
+=======
+    public void addRoom(int roomNum, Size size){
+        Room newRoom = new Room(roomNum, size, true);
+        Database.rooms.add(newRoom);
+    }
+
+    @Override
+    public void signup() { // come back to later
+        // Admin-specific signup logic
+        Database.admins.add(this);
+        System.out.println("Admin account created for: " + this.getUserName());
+>>>>>>> f703882cfaf03066e61c8cbd18f565ccf44ce6df
 
     // Room management
     public Room addRoom(int roomNum, Size size) {
@@ -132,9 +173,57 @@ public abstract class Admin extends User implements Crud<Category> {
     }
 
     @Override
+<<<<<<< HEAD
     public void signup() {
         // Admin-specific signup logic
         Database.admins.add(this);
         System.out.println("Admin account created for: " + this.getUserName());
+=======
+    public void create(Category category) {
+        Database.categories.add(category);
+        System.out.println("Category created: " + category.getType());
+    }
+
+    @Override
+    public void read() {
+        System.out.println("Available Categories:");
+        for (Category category : Database.categories) {
+            System.out.println(category.getType() +
+                    " (" + category.getEvents().size() + " events)");
+        }
+    }
+
+    @Override
+    public void update(Category updatedCategory) {
+        for (int i = 0; i < Database.categories.size(); i++) {
+            if (Database.categories.get(i).getID() == updatedCategory.getID()) {
+                Database.categories.set(i, updatedCategory);
+                System.out.println("Category updated: " + updatedCategory.getID());
+                return;
+            }
+        }
+        System.out.println("Category not found for update");
+
+    }
+
+    @Override
+    public void delete(int categoryID) {
+        Category toRemove = null;
+        for (Category category : Database.categories) {
+            if (category.getID() == categoryID) {
+                toRemove = category;
+                break;
+            }
+        }
+        if (toRemove != null && toRemove.getEvents().isEmpty()) {
+            Database.categories.remove(toRemove);
+            System.out.println("Category deleted: " + toRemove.getType());
+        } else if (toRemove != null) {
+            System.out.println("Cannot delete category with associated events");
+        } else {
+            System.out.println("Category not found");
+        }
+
+>>>>>>> f703882cfaf03066e61c8cbd18f565ccf44ce6df
     }
 }
