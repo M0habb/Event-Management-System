@@ -9,7 +9,7 @@ public abstract class User {
     private Role role;
     private Wallet wallet;
     User(){
-
+        this.wallet = new Wallet();
     }
     User(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         this.userName = userName;
