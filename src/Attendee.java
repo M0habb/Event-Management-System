@@ -94,7 +94,11 @@ public class Attendee extends User{
 
         Date birthDate = new Date(year, month, day);
 
+        System.out.println("Enter phone number: ");
+        long phonenumber = sc.nextLong();
+
         
+
     }
 
     public boolean StrongPasswordValidation(String password)
