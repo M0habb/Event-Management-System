@@ -6,5 +6,6 @@ public class Main {
         Database.initializeDummyData();
         System.out.println("hi guys");
         System.out.println("Test"); //sadjajks
+        //hi
     }
 }
