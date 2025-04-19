@@ -63,8 +63,6 @@ public class Admin extends User implements Crud<Category>{
     @Override
     public void signup() { // come back to later
         // Admin-specific signup logic
-        Database.admins.add(this);
-        System.out.println("Admin account created for: " + this.getUserName());
 
     }
 
