@@ -45,7 +45,7 @@ public class Admin extends User implements Crud<Category>{
             System.out.println(attendee.getUserName() +
                     " | Balance: " + attendee.getWallet().getBalance());
 
-        }
+        } 
     }
     public void showOrganizers() {
         System.out.println("Registered Organizers:");
