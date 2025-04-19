@@ -97,7 +97,7 @@ public class Attendee extends User{
         System.out.println("Enter phone number: ");
         long phonenumber = sc.nextLong();
 
-        
+
 
     }
 
