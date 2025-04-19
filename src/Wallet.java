@@ -28,14 +28,16 @@ public class Wallet {
     }
 
     public void addBalance(double amount){
-        if (amount < 0 && amount <= balance){
-            throw new IllegalArgumentException("Cannot add negative amount or in sufficient funds.");
+        if (amount < 0){
+            throw new IllegalArgumentException("Cannot add negative amount.");
         }
         balance += amount;
     }
     public void deductBalance(double amount){
         if (amount < 0){
             throw new IllegalArgumentException("Cannot deduct negative amount.");
+        }else if (amount > balance){
+            throw new IllegalArgumentException("Insufficient funds.");
         }
         balance -= amount;
     }
