@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         initializeDummyData();
@@ -33,6 +34,29 @@ public class Main {
                             break;
                         case 2:
                             // Organizer Menu
+                            Organizer organizer = (Organizer) User.currentUser;
+                            Scanner sc = new Scanner(System.in);
+
+                            System.out.println("1. Upcoming Events");
+                            System.out.println("2. Previous Events");
+                            System.out.println("3. Create Event");
+                            System.out.println("4. Logout");
+
+                            int orgInput = sc.nextInt();
+
+                            switch (orgInput){
+                                case 1:
+                                    organizer.showOrgUpcomingEvents();
+                                    break;
+                                case 2:
+                                    organizer.showOrgPreviousEvents();
+                                    break;
+                                case 3:
+                                    organizer.createEvent();
+                                    break;
+                                case 4:
+                                    break;
+                            }
                             break;
                         case 3:
                             // Attendee Menu

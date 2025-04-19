@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Organizer extends User implements Crud<Event>{
 
@@ -27,7 +26,8 @@ public class Organizer extends User implements Crud<Event>{
     public void createEvent(){}
     public void rentRoom(){}
     public void showAvRooms(){}
-    public void showOrgEvents(){}
+    public void showOrgUpcomingEvents(){}
+    public void showOrgPreviousEvents(){}
     public void showAttendees (){}
 
     @Override

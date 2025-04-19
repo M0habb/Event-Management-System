@@ -1,5 +1,6 @@
 import java.util.Date;
-import java.util.Scanner;;
+import java.util.Scanner;
+
 public abstract class User {
     private String userName;
     private String password;
@@ -8,6 +9,8 @@ public abstract class User {
     private long phoneNumber;
     private Role role;
     private Wallet wallet;
+    public static User currentUser;
+
     User(){
         this.wallet = new Wallet();
     }
@@ -79,6 +82,7 @@ public abstract class User {
             if (username.equals(admin.getUserName())){
                 if (admin.getPassword().equals(password)){
                     System.out.println("Succesful Login. Welcome, " + admin.getUserName());
+                    currentUser = admin;
                     return 1;
                 }else return 0;
             }
@@ -88,6 +92,7 @@ public abstract class User {
             if (username.equals(organizer.getUserName())){
                 if (organizer.getPassword().equals(password)){
                     System.out.println("Succesful Login. Welcome, " + organizer.getUserName());
+                    currentUser = organizer;
                     return 2;
                 }else return 0;
             }
@@ -97,6 +102,7 @@ public abstract class User {
             if (username.equals(attendee.getUserName())){
                 if (attendee.getPassword().equals(password)){
                     System.out.println("Succesful Login. Welcome, " + attendee.getUserName());
+                    currentUser = attendee;
                     return 3;
                 }else return 0;
             }
