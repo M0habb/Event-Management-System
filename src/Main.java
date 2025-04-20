@@ -31,6 +31,98 @@ public class Main {
                     switch (succesfulLogin){
                         case 1:
                             // Admin Menu
+                            Admin admin = (Admin) User.currentUser;
+
+                            System.out.println("1. Show Rooms");
+                            System.out.println("2. Show Events");
+                            System.out.println("3. Show Attendees");
+                            System.out.println("4. Show Organizers");
+                            System.out.println("5. Manage Categories");//crud
+                            System.out.println("6. Logout");
+
+                            int adInput = scanner.nextInt();
+
+                            switch (adInput){
+                                case 1:
+                                    admin.showRooms();
+                                    break;
+                                case 2:
+                                    admin.showAllEvents();
+                                    break;
+                                case 3:
+                                    admin.showAllAttendees();
+                                    break;
+                                case 4:
+                                    admin.showOrganizers();
+                                    break;
+                                case 5:
+                                    System.out.println("1. Create category");
+                                    System.out.println("2. Read category");
+                                    System.out.println("3. Update category");
+                                    System.out.println("4. Delete category");
+                                    System.out.println("5. Exit");
+
+                                    int catInput = scanner.nextInt();
+
+                                    switch (catInput){
+
+                                        case 1:
+                                            System.out.print("Enter category ID: ");
+                                            int createId = scanner.nextInt();
+
+                                            System.out.print("Enter category type (e.g., SPORTS, MUSIC, TECH): ");
+                                            String typeInput = scanner.nextLine().toUpperCase();
+
+                                            CategoryType type;
+                                            try {
+                                                type = CategoryType.valueOf(typeInput);
+                                            } catch (IllegalArgumentException e) {
+                                                System.out.println("Invalid category type.");
+                                                break;
+                                            }
+
+                                            System.out.print("Enter category description: ");
+                                            String desc = scanner.nextLine();
+
+                                            Category newCategory = new Category(createId, type, desc);
+                                            admin.create(newCategory);
+                                            break;
+                                        case 2:
+                                            admin.read();
+                                            break;
+                                        case 3:
+                                            System.out.print("Enter ID of category to update: ");
+                                            int updateId = scanner.nextInt();
+                                            scanner.nextLine();
+
+                                            System.out.print("Enter new category type: ");
+                                            String newTypeInput = scanner.nextLine().toUpperCase();
+
+                                            CategoryType newType;
+                                            try {
+                                                newType = CategoryType.valueOf(newTypeInput);
+                                            } catch (IllegalArgumentException e) {
+                                                System.out.println("Invalid category type.");
+                                                break;
+                                            }
+
+                                            System.out.print("Enter new description: ");
+                                            String newDesc = scanner.nextLine();
+
+                                            Category updatedCategory = new Category(updateId, newType, newDesc);
+                                            admin.update(updatedCategory);
+                                            break;
+                                        case 4:
+                                            System.out.print("Enter category ID to delete: ");
+                                            int deleteId = scanner.nextInt();
+                                            admin.delete(deleteId);
+                                            break;
+                                        case 5:
+                                            break;
+
+                                    }
+                            }
+
                             break;
                         case 2:
                             // Organizer Menu
