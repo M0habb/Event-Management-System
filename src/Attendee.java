@@ -207,8 +207,6 @@ public class Attendee extends User{
         }else if(i == 2){
             System.out.println("Insufficient Funds!");
         }
-<<<<<<< HEAD
-=======
     }
     public void showEventsAttended(){
         int count = 0;
@@ -226,6 +224,5 @@ public class Attendee extends User{
         System.out.println("Address: "+ getAddress());
         System.out.println("BirthDate: "+ getBirthDate());
         System.out.println("PhoneNumber: "+ getPhoneNumber());
->>>>>>> d67bfb1b7396c4e60f7bd63233abe3bcdf786cd5
     }
 }

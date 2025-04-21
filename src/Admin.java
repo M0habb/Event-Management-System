@@ -71,7 +71,6 @@ public class Admin extends User implements Crud<Category>{
     @Override
     public void create(Category category) {
         Database.categories.add(category);
-        System.out.println("Category created: " + category.getType());
     }
 
     @Override
