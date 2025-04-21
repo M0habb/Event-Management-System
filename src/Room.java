@@ -37,11 +37,11 @@ public class Room {
 
     public void isAvailable(){
         System.out.println("Rooms available");
-       boolean exits=false;
+       boolean exists=false;
         if (room.getAvailable()){
             boolean exists=true;
         }
-        if(exists=="false"){
+        if(exists =="false"){
             System.out.println("no available rooms");
         }
         else {
