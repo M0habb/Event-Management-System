@@ -70,9 +70,6 @@ public class Event {
     public void setAttendees(ArrayList<Attendee> attendees){
         this.attendees = attendees;
     }
-    public ArrayList<Attendee> getAttendees(){
-        return attendees;
-    }
     public Category getCategory(){
         return category;
     }
@@ -90,14 +87,15 @@ public class Event {
             }
         }
     }
-    public void showAttendees(){
-        System.out.println("Attendees for the event:");
+    public boolean showAttendees(){
         if (attendees.isEmpty()) {
-            System.out.println("No attendees yet.");
+            return false;
         } else {
+            System.out.println("Attendees for the event:");
             for (Attendee attendee : attendees) {
                 System.out.println("- " + attendee);
             }
         }
+        return true;
     }
 }

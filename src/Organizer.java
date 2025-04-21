@@ -52,8 +52,31 @@ public class Organizer extends User implements Crud<Event>{
             System.out.println("No Upcoming Events.");
         }
     }
-    public void showOrgPreviousEvents(){}
-    public void showAttendees (){}
+    public void showOrgPreviousEvents(){
+        int count = 1;
+        for (Event event : eventsCreated){
+            if (event.getEventDate().before(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                System.out.println(count + ". " + event.getEventName() + ": " + event.getEventDate());
+                count++;
+            }
+        }
+        if (count == 1){
+            System.out.println("No Previous Events.");
+        }
+    }
+    public void showAttendees (){
+        int count = 1;
+        boolean attendees = false;
+        for (Event event : eventsCreated){
+            System.out.println(count + ". " + event.getEventName() + ": ");
+            if(event.showAttendees()) attendees = true;
+            count++;
+        }
+        if (count == 1)
+            System.out.println("No Events created");
+        else if (!attendees)
+            System.out.println("No Attendees.");
+    }
 
     @Override
     public void create(Event event) {

@@ -27,12 +27,12 @@ public class Main {
                         System.out.println("Invalid Username/Password!");
                         succesfulLogin = User.login();
                     }
-
+                    boolean logout = false;
                     switch (succesfulLogin){
                         case 1:
                             // Admin Menu
                             Admin admin = (Admin) User.currentUser;
-                            boolean logout = false;
+
 
                             while (true){
                                 System.out.println("1. Show Rooms");
@@ -157,6 +157,11 @@ public class Main {
                             switch (orgInput){
                                 case 1:
                                     organizer.showOrgUpcomingEvents();
+                                    System.out.println("Enter event number to check details or 0 to go back.");
+                                    int response = scanner.nextInt();
+                                    if (response == 0){
+                                        break;
+                                    }
                                     break;
                                 case 2:
                                     organizer.showOrgPreviousEvents();
@@ -165,8 +170,10 @@ public class Main {
                                     //organizer.create();
                                     break;
                                 case 4:
+                                    logout = true;
                                     break;
                             }
+                            if (logout) break;
                             break;
                         case 3:
                             // Attendee Menu
