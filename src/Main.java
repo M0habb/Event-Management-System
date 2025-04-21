@@ -177,6 +177,41 @@ public class Main {
                             break;
                         case 3:
                             // Attendee Menu
+
+                            System.out.println("1. View Available Events");
+                            System.out.println("2. View My Events");
+                            System.out.println("3. View My Profile");
+                            System.out.println("4. Exit");
+
+                            int atInput = scanner.nextInt();
+
+                            switch (atInput){
+                                case 1:
+                                System.out.println("1. Buy tickets");
+                                System.out.println("2. Back");
+
+                                int evInput = scanner.nextInt();
+
+                                switch(evInput){
+                                    case 1:
+                                        System.out.println("Enter event number to check details or 0 to go back.");
+                                        int response = scanner.nextInt();
+                                        if (response == 0){
+                                            break;
+                                        }
+                                        Event e = new Event();
+                                        int count = 0;
+                                        for (Event event : organizer.getEventsCreated()){
+                                            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                                                count++;
+                                            }
+                                            if (count == response){
+                                                e = event;
+                                                break;
+                                            }
+
+                                        }
+                            }
                             break;
                     }
                     break;
