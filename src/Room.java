@@ -36,6 +36,7 @@ public class Room {
         Room = room;
     }
 
+<<<<<<< HEAD
     public void isAvailable(){
         System.out.println("Rooms available");
         if (Room.isEmpty()){
@@ -51,3 +52,7 @@ public class Room {
 
 
 }
+=======
+
+}
+>>>>>>> 6bbd9b7e1ed0d3a9379e39c4af52f872e0a505eb
