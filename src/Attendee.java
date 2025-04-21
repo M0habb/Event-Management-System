@@ -1,5 +1,7 @@
+import java.security.spec.RSAOtherPrimeInfo;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -8,13 +10,38 @@ public class Attendee extends User{
 
     private List<Category> interests;
     private Address address;
-    private List<Ticket> ticketsOwned;
+    private ArrayList<Event> eventsAttended;
     Attendee(){
         super();
     }
     Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
+        this.eventsAttended = new ArrayList<>();
         this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<Category> getInterests() {
+        return interests;
+    }
+
+    public void setInterests(List<Category> interests) {
+        this.interests = interests;
+    }
+
+    public ArrayList<Event> getEventsAttended() {
+        return eventsAttended;
+    }
+
+    public void setEventsAttended(ArrayList<Event> eventsAttended) {
+        this.eventsAttended = eventsAttended;
     }
 
     @Override
@@ -176,8 +203,29 @@ public class Attendee extends User{
         if(i == 0){
             System.out.println("Ticket purchased!");
             event.getAttendees().add(this);
+            eventsAttended.add(event);
         }else if(i == 2){
             System.out.println("Insufficient Funds!");
         }
+<<<<<<< HEAD
+=======
+    }
+    public void showEventsAttended(){
+        int count = 0;
+        for (Event event : eventsAttended){
+            count++;
+            System.out.println(count + ". " + event.getEventName() + ", " + event.getEventDate());
+        }
+        if (count == 0){
+            System.out.println("No events attended.");
+        }
+    }
+    public void showPersonalDetails(){
+        System.out.println("Username: "+ getUserName());
+        System.out.println("Gender: "+ getGender());
+        System.out.println("Address: "+ getAddress());
+        System.out.println("BirthDate: "+ getBirthDate());
+        System.out.println("PhoneNumber: "+ getPhoneNumber());
+>>>>>>> d67bfb1b7396c4e60f7bd63233abe3bcdf786cd5
     }
 }
