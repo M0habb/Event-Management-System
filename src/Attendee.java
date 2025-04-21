@@ -157,22 +157,20 @@ public class Attendee extends User{
 
 
     public void chooseEvent(){}
-<<<<<<< HEAD
-    public void buyTickets(Event event){}
-    public int showUpcomingEvents(){
+    public int showUpcomingEvents() {
         int count = 1;
-        for (Event event : Database.events){
-            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+        for (Event event : Database.events) {
+            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
                 System.out.println(count + ". " + event.getEventName() + ": " + event.getEventDate());
                 count++;
             }
         }
-        if (count == 1){
+        if (count == 1) {
             System.out.println("No Upcoming Events.");
             return 0;
         }
         return count - 1;
-=======
+    }
     public void buyTickets(Event event){
         int i = this.getWallet().deductBalance(event.getFees());
         if(i == 0){
@@ -181,6 +179,5 @@ public class Attendee extends User{
         }else if(i == 2){
             System.out.println("Insufficient Funds!");
         }
->>>>>>> 689a8c7e15bf9daf20b6d895c86477be2693b160
     }
 }
