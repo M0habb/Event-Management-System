@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,7 +11,6 @@ public class Organizer extends User implements Crud<Event>{
     }
     Organizer(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         super(userName, password, gender, birthDate, phoneNumber);
-        super.setRole(Role.ORGANIZER);
     }
 
     public void setEventsCreated(ArrayList<Event> eventsCreated){
@@ -23,10 +24,34 @@ public class Organizer extends User implements Crud<Event>{
 
     }
 
-    public void createEvent(){}
-    public void rentRoom(){}
-    public void showAvRooms(){}
-    public void showOrgUpcomingEvents(){}
+    public void rentRoom(Event event, Room room){
+
+    }
+    public void showAvRooms(){
+        System.out.println("Rooms available: ");
+        boolean exists=false;
+        for(Room room:Database.rooms) {
+            if(room.getAvailable()){
+                exists=true;
+                System.out.println("-" + room.getRoomNum());
+            }
+        }
+        if(!exists){
+            System.out.println("none");
+        }
+    }
+    public void showOrgUpcomingEvents(){
+        int count = 1;
+        for (Event event : Database.events){
+            if (event.getOrganizer().equals(this) && event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                System.out.println(count + ". " + event.getEventName() + ": " + event.getEventDate());
+                count++;
+            }
+        }
+        if (count == 1){
+            System.out.println("No Upcoming Events.");
+        }
+    }
     public void showOrgPreviousEvents(){}
     public void showAttendees (){}
 

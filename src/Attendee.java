@@ -114,12 +114,6 @@ public class Attendee extends User{
 
         Database.totalAttendees.add(this);
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 96177a907475bb3da24f60f72fde25cf32252037
-
     }
 
     public boolean StrongPasswordValidation(String password)
