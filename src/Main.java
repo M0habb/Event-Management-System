@@ -1,4 +1,6 @@
 import java.io.*;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -156,12 +158,27 @@ public class Main {
 
                             switch (orgInput){
                                 case 1:
-                                    organizer.showOrgUpcomingEvents();
+                                    int nEvents = organizer.showOrgUpcomingEvents();
                                     System.out.println("Enter event number to check details or 0 to go back.");
                                     int response = scanner.nextInt();
                                     if (response == 0){
                                         break;
                                     }
+                                    Event e = new Event();
+                                    int count = 0;
+                                    for (Event event : organizer.getEventsCreated()){
+                                        if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                                            count++;
+                                        }
+                                        if (count == response){
+                                            e = event;
+                                            break;
+                                        }
+                                    }
+                                    System.out.println("Name: " + e.getEventName());
+                                    System.out.println("Date: " + e.getEventDate());
+                                    System.out.println("Room Number: " + e.getRoomNum());
+                                    System.out.println("Number of Attendees: " + e.getNumberofAttendees());
                                     break;
                                 case 2:
                                     organizer.showOrgPreviousEvents();
@@ -204,8 +221,12 @@ public class Main {
         Date bd3 = new Date(2030, 02, 11);
 
         Address address1 = new Address("Egypt", "Cairo", "123", 12341);
-        Address address2 = new Address("Egypt", "Alexander", "456", 3624);
+        Address address2 = new Address("Egypt", "Alexnder", "456", 3624);
         Address address3 = new Address("Japan", "Tokyo", "890", 2385);
+
+        Room room1 = new Room(1, Size.SINGLE, true);
+        Room room2 = new Room(2, Size.DOUBLE, true);
+        Room room3 = new Room(3, Size.TRIPLE, true);
 
         Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
@@ -222,9 +243,9 @@ public class Main {
         Category category1 = new Category(1, CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
-        Event event1 = new Event("ASU Music Concert", bd, false, address2, 100, organizer3, category1);
-        Event event2 = new Event("ASU Sports Concert", bd2, true, address1, 250, organizer2, category2);
-        Event event3 = new Event("IDK Music Concert", bd3, true, address3, 400, organizer1, category1);
+        Event event1 = new Event("ASU Music Concert", bd, false, room1, 100, organizer3, category1);
+        Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
+        Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);

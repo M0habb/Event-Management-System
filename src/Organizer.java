@@ -40,7 +40,7 @@ public class Organizer extends User implements Crud<Event>{
             System.out.println("none");
         }
     }
-    public void showOrgUpcomingEvents(){
+    public int showOrgUpcomingEvents(){
         int count = 1;
         for (Event event : Database.events){
             if (event.getOrganizer().equals(this) && event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
@@ -50,7 +50,9 @@ public class Organizer extends User implements Crud<Event>{
         }
         if (count == 1){
             System.out.println("No Upcoming Events.");
+            return 0;
         }
+        return count - 1;
     }
     public void showOrgPreviousEvents(){
         int count = 1;

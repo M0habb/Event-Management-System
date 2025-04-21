@@ -6,7 +6,7 @@ public class Event {
     private String eventName;
     private Date eventDate;
     private boolean outdoors;
-    private Address location;
+    private Room room;
     private int maxAttendees;
     private double fees;
     private Organizer organizer;
@@ -14,14 +14,18 @@ public class Event {
     private ArrayList<Attendee> attendees;
     public ArrayList<String> activities = new ArrayList<>();
 
-    public Event(String eventName, Date eventDate, boolean outdoors, Address location, int maxAttendees, Organizer organizer, Category category) {
+    public Event(){
+
+    }
+    public Event(String eventName, Date eventDate, boolean outdoors, Room room, int maxAttendees, Organizer organizer, Category category) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.outdoors = outdoors;
-        this.location = location;
+        this.room = room;
         this.maxAttendees = maxAttendees;
         this.organizer = organizer;
         this.category = category;
+        this.room.setAvailable(false);
     }
 
     //Setters & Getters
@@ -37,11 +41,11 @@ public class Event {
     public void setOutdoors(boolean outdoors) {
         this.outdoors = outdoors;
     }
-    public Address getLocation() {
-        return location;
+    public int getRoomNum() {
+        return room.getRoomNum();
     }
-    public void setLocation(Address location) {
-        this.location = location;
+    public void setRoom(Room room) {
+        this.room = room;
     }
     public int getMaxAttendees() {
         return maxAttendees;
@@ -75,6 +79,9 @@ public class Event {
     }
     public void setCategory(Category category){
         this.category = category;
+    }
+    public int getNumberofAttendees(){
+        return attendees.size();
     }
 
     public void showActivities(){
