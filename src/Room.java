@@ -37,15 +37,16 @@ public class Room {
 
     public void isAvailable(){
         System.out.println("Rooms available");
-        if (Database.rooms.isEmpty()){
-            System.out.println("no available rooms");
-        }
-        else {
-            System.out.println("available rooms are:");
-            for(Room room:Database.rooms) {
-                if(room.getAvailable()){
-                System.out.println("-" + room);}
+        boolean exists=false;
+        System.out.println("available rooms are:");
+        for(Room room:Database.rooms) {
+            if(room.getAvailable()){
+                exists=true;
+                System.out.println("-" + roomNum);
             }
+        }
+        if(!exists){
+            System.out.println("none");
         }
     }
 
