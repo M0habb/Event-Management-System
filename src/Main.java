@@ -242,58 +242,76 @@ public class Main {
                             // Attendee Menu
                             Attendee attendee = (Attendee) User.currentUser;
 
-                            System.out.println("1. View Available Events");
-                            System.out.println("2. View My Events");
-                            System.out.println("3. View My Profile");
-                            System.out.println("4. AddFunds");
-                            System.out.println("5. Exit");
+                            while (true) {
+                                System.out.println("1. View Available Events");
+                                System.out.println("2. View My Events");
+                                System.out.println("3. View My Profile");
+                                System.out.println("4. Add Funds");
+                                System.out.println("5. Logout");
 
-                            int atInput = scanner.nextInt();
+                                int atInput = scanner.nextInt();
 
-                            switch (atInput){
-                                case 1:
-                                    attendee.showUpcomingEvents();
-                                    System.out.println("1. Buy tickets");
-                                    System.out.println("2. Back");
-
-                                    int evInput = scanner.nextInt();
-
-                                switch(evInput) {
+                                switch (atInput){
                                     case 1:
-                                        System.out.println("Enter event number to check details or 0 to go back.");
-                                        int response = scanner.nextInt();
-                                        if (response == 0) {
-                                            break;
-                                        }
-                                        Event e = new Event();
-                                        int count = 0;
-                                        for (Event event : Database.events) {
-                                            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
-                                                count++;
-                                            }
-                                            if (count == response) {
-                                                e = event;
-                                                break;
-                                            }
+                                        attendee.showUpcomingEvents();
+                                        System.out.println("1. Buy tickets");
+                                        System.out.println("2. Back");
 
+                                        int evInput = scanner.nextInt();
+
+                                        switch(evInput) {
+                                            case 1:
+                                                System.out.println("Enter event number to check details or 0 to go back.");
+                                                int response = scanner.nextInt();
+                                                if (response == 0) {
+                                                    break;
+                                                }
+                                                Event e = new Event();
+                                                int count = 0;
+                                                for (Event event : Database.events) {
+                                                    if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
+                                                        count++;
+                                                    }
+                                                    if (count == response) {
+                                                        e = event;
+                                                        break;
+                                                    }
+
+                                                }
+                                                attendee.buyTickets(e);
+                                            case 2:
+                                                break;
                                         }
-                                        attendee.buyTickets(e);
-                                    case 2:
                                         break;
 
+                                    case 2:
+                                        attendee.showUpcomingEvents();
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
+                                        scanner.nextLine();
+                                        break;
+                                    case 3:
+                                        attendee.showPersonalDetails();
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
+                                        scanner.nextLine();
+                                        break;
+                                    case 4:
+                                        double amount;
+                                        System.out.println("Enter the amount: ");
+                                        amount = scanner.nextDouble();
+                                        if(attendee.getWallet().addBalance(amount) == 1){
+                                            System.out.println("Cannot add negative amount!");
+                                        }else System.out.println("Balance added successfully!");
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
+                                        scanner.nextLine();
+                                        break;
+                                    case 5:
+                                        logout = true;
+                                        break;
                                 }
-
-                                case 2:
-                                    attendee.showUpcomingEvents();
-                                case 3:
-                                    attendee.showPersonalDetails();
-                                case 4:
-                                    double amount;
-                                    System.out.println("Enter the amount: ");
-                                    amount = scanner.nextDouble();
-                                    attendee.getWallet().addBalance(amount);
-                                case 5:
-                                    break;
+                                if (logout) break;
                             }
                             break;
                     }
