@@ -155,5 +155,5 @@ public class Attendee extends User{
 
 
     public void chooseEvent(){}
-    public void buyTickets(){}
+    public void buyTickets(Event event){}
 }
