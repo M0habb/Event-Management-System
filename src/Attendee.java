@@ -157,6 +157,7 @@ public class Attendee extends User{
 
 
     public void chooseEvent(){}
+<<<<<<< HEAD
     public void buyTickets(Event event){}
     public int showUpcomingEvents(){
         int count = 1;
@@ -171,5 +172,15 @@ public class Attendee extends User{
             return 0;
         }
         return count - 1;
+=======
+    public void buyTickets(Event event){
+        int i = this.getWallet().deductBalance(event.getFees());
+        if(i == 0){
+            System.out.println("Ticket purchased!");
+            event.getAttendees().add(this);
+        }else if(i == 2){
+            System.out.println("Insufficient Funds!");
+        }
+>>>>>>> 689a8c7e15bf9daf20b6d895c86477be2693b160
     }
 }

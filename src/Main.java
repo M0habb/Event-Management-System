@@ -179,6 +179,10 @@ public class Main {
                                     System.out.println("Date: " + e.getEventDate());
                                     System.out.println("Room Number: " + e.getRoomNum());
                                     System.out.println("Number of Attendees: " + e.getNumberofAttendees());
+                                    System.out.println(" ");
+                                    System.out.println("Press enter to go back.");
+                                    scanner.nextLine();
+                                    scanner.nextLine();
                                     break;
                                 case 2:
                                     organizer.showOrgPreviousEvents();
@@ -302,6 +306,9 @@ public class Main {
         Database.events.add(event1);
         Database.events.add(event2);
         Database.events.add(event3);
+        Database.rooms.add(room1);
+        Database.rooms.add(room2);
+        Database.rooms.add(room3);
 
         ArrayList<Event> org1EventsCreated = new ArrayList<Event>();
         org1EventsCreated.add(event1);

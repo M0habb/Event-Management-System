@@ -26,6 +26,7 @@ public class Event {
         this.organizer = organizer;
         this.category = category;
         this.room.setAvailable(false);
+        this.attendees = new ArrayList<>();
     }
 
     //Setters & Getters
@@ -82,6 +83,9 @@ public class Event {
     }
     public int getNumberofAttendees(){
         return attendees.size();
+    }
+    public ArrayList<Attendee> getAttendees(){
+        return attendees;
     }
 
     public void showActivities(){
