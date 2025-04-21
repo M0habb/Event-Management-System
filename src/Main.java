@@ -1,4 +1,3 @@
-import java.io.*;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -72,71 +71,88 @@ public class Main {
                                         scanner.nextLine();
                                         break;
                                     case 5:
-                                        System.out.println("1. Create category");
-                                        System.out.println("2. Read category");
-                                        System.out.println("3. Update category");
-                                        System.out.println("4. Delete category");
-                                        System.out.println("5. Back");
+                                        while (true){
+                                            System.out.println("1. Create category");
+                                            System.out.println("2. Read category");
+                                            System.out.println("3. Update category");
+                                            System.out.println("4. Delete category");
+                                            System.out.println("5. Back");
 
-                                        int catInput = scanner.nextInt();
+                                            boolean back = false;
 
-                                        switch (catInput){
+                                            int catInput = scanner.nextInt();
 
-                                            case 1:
-                                                System.out.print("Enter category ID: ");
-                                                int createId = scanner.nextInt();
+                                            switch (catInput){
 
-                                                System.out.print("Enter category type (e.g., SPORTS, MUSIC, TECH): ");
-                                                String typeInput = scanner.nextLine().toUpperCase();
+                                                case 1:
+                                                    System.out.print("Enter category ID: ");
+                                                    int createId = scanner.nextInt();
 
-                                                CategoryType type;
-                                                try {
-                                                    type = CategoryType.valueOf(typeInput);
-                                                } catch (IllegalArgumentException e) {
-                                                    System.out.println("Invalid category type.");
+                                                    System.out.println("Choose category type:");
+                                                    CategoryType[] types = CategoryType.values();
+                                                    for (int i = 0; i < types.length; i++) {
+                                                        System.out.println((i + 1) + ". " + types[i].name().charAt(0) + types[i].name().substring(1).toLowerCase());
+                                                    }
+
+                                                    int typeInput = scanner.nextInt();
+                                                    CategoryType type;
+
+                                                    if (typeInput >= 1 && typeInput <= types.length) {
+                                                        type = types[typeInput - 1];
+                                                    } else {
+                                                        System.out.println("Invalid choice. Defaulting to OTHER.");
+                                                        type = CategoryType.OTHER;
+                                                    }
+
+                                                    System.out.print("Enter category description: ");
+                                                    scanner.nextLine();
+                                                    String desc = scanner.nextLine();
+
+                                                    Category newCategory = new Category(createId, type, desc);
+                                                    admin.create(newCategory);
+
+                                                    System.out.println("Category Succesfully Created!");
+                                                    System.out.println("Press enter to go back.");
+                                                    scanner.nextLine();
                                                     break;
-                                                }
-
-                                                System.out.print("Enter category description: ");
-                                                String desc = scanner.nextLine();
-
-                                                Category newCategory = new Category(createId, type, desc);
-                                                admin.create(newCategory);
-                                                break;
-                                            case 2:
-                                                admin.read();
-                                                break;
-                                            case 3:
-                                                System.out.print("Enter ID of category to update: ");
-                                                int updateId = scanner.nextInt();
-                                                scanner.nextLine();
-
-                                                System.out.print("Enter new category type: ");
-                                                String newTypeInput = scanner.nextLine().toUpperCase();
-
-                                                CategoryType newType;
-                                                try {
-                                                    newType = CategoryType.valueOf(newTypeInput);
-                                                } catch (IllegalArgumentException e) {
-                                                    System.out.println("Invalid category type.");
+                                                case 2:
+                                                    admin.read();
                                                     break;
-                                                }
+                                                case 3:
+                                                    System.out.print("Enter ID of category to update: ");
+                                                    int updateId = scanner.nextInt();
+                                                    scanner.nextLine();
 
-                                                System.out.print("Enter new description: ");
-                                                String newDesc = scanner.nextLine();
+                                                    System.out.print("Enter new category type: ");
+                                                    scanner.nextLine();
+                                                    String newTypeInput = scanner.nextLine().toUpperCase();
 
-                                                Category updatedCategory = new Category(updateId, newType, newDesc);
-                                                admin.update(updatedCategory);
-                                                break;
-                                            case 4:
-                                                System.out.print("Enter category ID to delete: ");
-                                                int deleteId = scanner.nextInt();
-                                                admin.delete(deleteId);
-                                                break;
-                                            case 5:
-                                                continue;
+                                                    CategoryType newType;
+                                                    try {
+                                                        newType = CategoryType.valueOf(newTypeInput);
+                                                    } catch (IllegalArgumentException e) {
+                                                        System.out.println("Invalid category type.");
+                                                        break;
+                                                    }
 
+                                                    System.out.print("Enter new description: ");
+                                                    String newDesc = scanner.nextLine();
+
+                                                    Category updatedCategory = new Category(updateId, newType, newDesc);
+                                                    admin.update(updatedCategory);
+                                                    break;
+                                                case 4:
+                                                    System.out.print("Enter category ID to delete: ");
+                                                    int deleteId = scanner.nextInt();
+                                                    admin.delete(deleteId);
+                                                    break;
+                                                case 5:
+                                                    back = true;
+                                                    break;
+                                            }
+                                            if (back) break;
                                         }
+                                        break;
                                     case 6:
                                         logout = true;
                                         break;
@@ -149,52 +165,78 @@ public class Main {
                             Organizer organizer = (Organizer) User.currentUser;
                             Scanner sc = new Scanner(System.in);
 
-                            System.out.println("1. Upcoming Events");
-                            System.out.println("2. Previous Events");
-                            System.out.println("3. Create Event");
-                            System.out.println("4. Logout");
+                            while (true){
+                                System.out.println("1. Upcoming Events");
+                                System.out.println("2. Previous Events");
+                                System.out.println("3. Create Event");
+                                System.out.println("4. Logout");
 
-                            int orgInput = sc.nextInt();
+                                int orgInput = sc.nextInt();
 
-                            switch (orgInput){
-                                case 1:
-                                    int nEvents = organizer.showOrgUpcomingEvents();
-                                    System.out.println("Enter event number to check details or 0 to go back.");
-                                    int response = scanner.nextInt();
-                                    if (response == 0){
-                                        break;
-                                    }
-                                    Event e = new Event();
-                                    int count = 0;
-                                    for (Event event : organizer.getEventsCreated()){
-                                        if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
-                                            count++;
-                                        }
-                                        if (count == response){
-                                            e = event;
+                                switch (orgInput){
+                                    case 1:
+                                        organizer.showOrgUpcomingEvents();
+                                        System.out.println("Enter event number to check details or 0 to go back.");
+                                        int response = scanner.nextInt();
+                                        if (response == 0){
                                             break;
                                         }
-                                    }
-                                    System.out.println("Name: " + e.getEventName());
-                                    System.out.println("Date: " + e.getEventDate());
-                                    System.out.println("Room Number: " + e.getRoomNum());
-                                    System.out.println("Number of Attendees: " + e.getNumberofAttendees());
-                                    System.out.println(" ");
-                                    System.out.println("Press enter to go back.");
-                                    scanner.nextLine();
-                                    scanner.nextLine();
-                                    break;
-                                case 2:
-                                    organizer.showOrgPreviousEvents();
-                                    break;
-                                case 3:
-                                    //organizer.create();
-                                    break;
-                                case 4:
-                                    logout = true;
-                                    break;
+                                        Event e = new Event();
+                                        int count = 0;
+                                        for (Event event : organizer.getEventsCreated()){
+                                            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                                                count++;
+                                            }
+                                            if (count == response){
+                                                e = event;
+                                                break;
+                                            }
+                                        }
+                                        System.out.println("Name: " + e.getEventName());
+                                        System.out.println("Date: " + e.getEventDate());
+                                        System.out.println("Room Number: " + e.getRoomNum());
+                                        System.out.println("Number of Attendees: " + e.getNumberofAttendees());
+                                        System.out.println(" ");
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
+                                        scanner.nextLine();
+                                        break;
+                                    case 2:
+                                        organizer.showOrgPreviousEvents();
+                                        System.out.println("Enter event number to check details or 0 to go back.");
+                                        int response2 = scanner.nextInt();
+                                        if (response2 == 0){
+                                            break;
+                                        }
+                                        Event e2 = new Event();
+                                        int count2 = 0;
+                                        for (Event event : organizer.getEventsCreated()){
+                                            if (event.getEventDate().before(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                                                count2++;
+                                            }
+                                            if (count2 == response2){
+                                                e2 = event;
+                                                break;
+                                            }
+                                        }
+                                        System.out.println("Name: " + e2.getEventName());
+                                        System.out.println("Date: " + e2.getEventDate());
+                                        System.out.println("Room Number: " + e2.getRoomNum());
+                                        System.out.println("Number of Attendees: " + e2.getNumberofAttendees());
+                                        System.out.println(" ");
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
+                                        scanner.nextLine();
+                                        break;
+                                    case 3:
+                                        //organizer.create();
+                                        break;
+                                    case 4:
+                                        logout = true;
+                                        break;
+                                }
+                                if (logout) break;
                             }
-                            if (logout) break;
                             break;
                         case 3:
                             // Attendee Menu
