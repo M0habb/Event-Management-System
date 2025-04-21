@@ -5,8 +5,7 @@ public class Room {
     private int roomNum;
     private Size size; //no. of ppl
     private boolean available;
-    private ArrayList<Room> Room;
-    public ArrayList<String> room = new ArrayList<>();
+
 
     Room(int roomNum, Size size, boolean available){
         this.roomNum = roomNum;
@@ -32,20 +31,30 @@ public class Room {
     public void setRoomNum(int roomNum) {
         this.roomNum = roomNum;
     }
+<<<<<<< HEAD
+=======
+    public void setRoom(ArrayList<Room> room) {
+        Database.rooms = room;
+    }
+>>>>>>> a2c4c58d25ad307cb999546b00e0c9133b6b1ee0
 
     public void isAvailable(){
         System.out.println("Rooms available");
-        if (Room.isEmpty()){
+       boolean exists=false;
+        if (room.getAvailable()){
+            boolean exists=true;
+        }
+        if(!exists){
             System.out.println("no available rooms");
         }
         else {
             System.out.println("available rooms are:");
-            for(Room room:Room) {
-                System.out.println("-" + room);
+            for(Room room:Database.rooms) {
+                if(room.getAvailable()){
+                System.out.println("-" + roomNum);}
             }
         }
     }
-
 
 }
 
