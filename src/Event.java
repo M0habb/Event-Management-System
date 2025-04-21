@@ -27,6 +27,7 @@ public class Event {
     //Setters & Getters
     public Date getEventDate() {
         return eventDate;
+        System.out.println("hiiiiiiii");
     }
     public void setEventDate(Date eventDate) {
         this.eventDate = eventDate;
