@@ -33,7 +33,7 @@ public class Admin extends User implements Crud<Category>{
         for (Event event : Database.events) {
             System.out.println(event.getEventName() +
                     " | Date: " + event.getEventDate() +
-                    " | Location: " + event.getLocation() +
+                    " | Room: " + event.getRoomNum() +
                     " | Category: " + event.getCategory().getType());
         }
 
