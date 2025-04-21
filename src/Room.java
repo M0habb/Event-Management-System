@@ -41,7 +41,7 @@ public class Room {
         if (room.getAvailable()){
             boolean exists=true;
         }
-        if(exists =="false"){
+        if(!exists){
             System.out.println("no available rooms");
         }
         else {
