@@ -31,28 +31,22 @@ public class Room {
     public void setRoomNum(int roomNum) {
         this.roomNum = roomNum;
     }
-<<<<<<< HEAD
-=======
     public void setRoom(ArrayList<Room> room) {
         Database.rooms = room;
     }
->>>>>>> a2c4c58d25ad307cb999546b00e0c9133b6b1ee0
 
     public void isAvailable(){
         System.out.println("Rooms available");
-       boolean exists=false;
-        if (room.getAvailable()){
-            boolean exists=true;
+        boolean exists=false;
+        System.out.println("available rooms are:");
+        for(Room room:Database.rooms) {
+            if(room.getAvailable()){
+                exists=true;
+                System.out.println("-" + roomNum);
+            }
         }
         if(!exists){
-            System.out.println("no available rooms");
-        }
-        else {
-            System.out.println("available rooms are:");
-            for(Room room:Database.rooms) {
-                if(room.getAvailable()){
-                System.out.println("-" + roomNum);}
-            }
+            System.out.println("none");
         }
     }
 
