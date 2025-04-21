@@ -203,6 +203,7 @@ public class Attendee extends User{
         if(i == 0){
             System.out.println("Ticket purchased!");
             event.getAttendees().add(this);
+            event.getOrganizer().getWallet().addBalance(event.getFees());
             eventsAttended.add(event);
         }else if(i == 2){
             System.out.println("Insufficient Funds!");

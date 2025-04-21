@@ -1,13 +1,11 @@
-public class Wallet {
+import java.util.Random;
 
-    private int walletID;
-    private double balance;
+public class Wallet {
+    Random random = new Random();
+    private int walletID = random.nextInt(100000);
+    private double balance = 0.0;
     Wallet(){
 
-    }
-    Wallet(int walletID){
-        this.walletID = walletID;
-        balance = 0;
     }
 
     //Setters & Getters

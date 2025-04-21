@@ -203,7 +203,8 @@ public class Main {
                             System.out.println("1. View Available Events");
                             System.out.println("2. View My Events");
                             System.out.println("3. View My Profile");
-                            System.out.println("4. Exit");
+                            System.out.println("4. AddFunds");
+                            System.out.println("5. Exit");
 
                             int atInput = scanner.nextInt();
 
@@ -244,7 +245,13 @@ public class Main {
                                     attendee.showUpcomingEvents();
                                 case 3:
                                     attendee.showPersonalDetails();
-
+                                case 4:
+                                    double amount;
+                                    System.out.println("Enter the amount: ");
+                                    amount = scanner.nextDouble();
+                                    attendee.getWallet().addBalance(amount);
+                                case 5:
+                                    break;
                             }
                             break;
                     }
@@ -299,7 +306,7 @@ public class Main {
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 
-        Database.admins.add(admin1)x;
+        Database.admins.add(admin1);
         Database.admins.add(admin2);
         Database.admins.add(admin3);
         Database.organizers.add(organizer1);
