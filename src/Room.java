@@ -32,9 +32,6 @@ public class Room {
     public void setRoomNum(int roomNum) {
         this.roomNum = roomNum;
     }
-    public void setRoom(ArrayList<Room> room) {
-        Room = room;
-    }
 
     public void isAvailable(){
         System.out.println("Rooms available");
