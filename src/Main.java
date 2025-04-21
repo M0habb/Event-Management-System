@@ -237,7 +237,14 @@ public class Main {
                                         attendee.buyTickets(e);
                                     case 2:
                                         break;
+
                                 }
+
+                                case 2:
+                                    attendee.showUpcomingEvents();
+                                case 3:
+                                    attendee.showPersonalDetails();
+
                             }
                             break;
                     }
@@ -292,7 +299,7 @@ public class Main {
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 
-        Database.admins.add(admin1);
+        Database.admins.add(admin1)x;
         Database.admins.add(admin2);
         Database.admins.add(admin3);
         Database.organizers.add(organizer1);

@@ -1,5 +1,7 @@
+import java.security.spec.RSAOtherPrimeInfo;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -8,13 +10,38 @@ public class Attendee extends User{
 
     private List<Category> interests;
     private Address address;
-    private List<Ticket> ticketsOwned;
+    private ArrayList<Event> eventsAttended;
     Attendee(){
         super();
     }
     Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
+        this.eventsAttended = new ArrayList<>();
         this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<Category> getInterests() {
+        return interests;
+    }
+
+    public void setInterests(List<Category> interests) {
+        this.interests = interests;
+    }
+
+    public ArrayList<Event> getEventsAttended() {
+        return eventsAttended;
+    }
+
+    public void setEventsAttended(ArrayList<Event> eventsAttended) {
+        this.eventsAttended = eventsAttended;
     }
 
     @Override
@@ -157,30 +184,45 @@ public class Attendee extends User{
 
 
     public void chooseEvent(){}
-<<<<<<< HEAD
-    public void buyTickets(Event event){}
-    public int showUpcomingEvents(){
+    public int showUpcomingEvents() {
         int count = 1;
-        for (Event event : Database.events){
-            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+        for (Event event : Database.events) {
+            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
                 System.out.println(count + ". " + event.getEventName() + ": " + event.getEventDate());
                 count++;
             }
         }
-        if (count == 1){
+        if (count == 1) {
             System.out.println("No Upcoming Events.");
             return 0;
         }
         return count - 1;
-=======
+    }
     public void buyTickets(Event event){
         int i = this.getWallet().deductBalance(event.getFees());
         if(i == 0){
             System.out.println("Ticket purchased!");
             event.getAttendees().add(this);
+            eventsAttended.add(event);
         }else if(i == 2){
             System.out.println("Insufficient Funds!");
         }
->>>>>>> 689a8c7e15bf9daf20b6d895c86477be2693b160
+    }
+    public void showEventsAttended(){
+        int count = 0;
+        for (Event event : eventsAttended){
+            count++;
+            System.out.println(count + ". " + event.getEventName() + ", " + event.getEventDate());
+        }
+        if (count == 0){
+            System.out.println("No events attended.");
+        }
+    }
+    public void showPersonalDetails(){
+        System.out.println("Username: "+ getUserName());
+        System.out.println("Gender: "+ getGender());
+        System.out.println("Address: "+ getAddress());
+        System.out.println("BirthDate: "+ getBirthDate());
+        System.out.println("PhoneNumber: "+ getPhoneNumber());
     }
 }
