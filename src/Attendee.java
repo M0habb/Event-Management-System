@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -156,4 +158,18 @@ public class Attendee extends User{
 
     public void chooseEvent(){}
     public void buyTickets(Event event){}
+    public int showUpcomingEvents(){
+        int count = 1;
+        for (Event event : Database.events){
+            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
+                System.out.println(count + ". " + event.getEventName() + ": " + event.getEventDate());
+                count++;
+            }
+        }
+        if (count == 1){
+            System.out.println("No Upcoming Events.");
+            return 0;
+        }
+        return count - 1;
+    }
 }
