@@ -6,7 +6,9 @@ public class Room {
     private Size size; //no. of ppl
     private boolean available;
 
+    Room(){
 
+    }
     Room(int roomNum, Size size, boolean available){
         this.roomNum = roomNum;
         this.size = size;

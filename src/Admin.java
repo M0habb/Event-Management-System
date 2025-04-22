@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Scanner;
 
 public class Admin extends User implements Crud<Category>{
     private int workingHours;
@@ -70,8 +71,33 @@ public class Admin extends User implements Crud<Category>{
     }
 
     @Override
-    public void create(Category category) {
-        Database.categories.add(category);
+    public void create() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter category ID: ");
+        int createId = scanner.nextInt();
+
+        System.out.println("Choose category type:");
+        CategoryType[] types = CategoryType.values();
+        for (int i = 0; i < types.length; i++) {
+            System.out.println((i + 1) + ". " + types[i].name().charAt(0) + types[i].name().substring(1).toLowerCase());
+        }
+
+        int typeInput = scanner.nextInt();
+        CategoryType type;
+
+        if (typeInput >= 1 && typeInput <= types.length) {
+            type = types[typeInput - 1];
+        } else {
+            System.out.println("Invalid choice. Defaulting to OTHER.");
+            type = CategoryType.OTHER;
+        }
+
+        System.out.print("Enter category description: ");
+        scanner.nextLine();
+        String desc = scanner.nextLine();
+
+        Category newCategory = new Category(createId, type, desc);
+        Database.categories.add(newCategory);
     }
 
     @Override

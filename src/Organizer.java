@@ -1,13 +1,16 @@
+import javax.xml.crypto.Data;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Organizer extends User implements Crud<Event>{
 
     private ArrayList<Event> eventsCreated;
     Organizer(){
         super();
+        Database.organizers.add(this);
     }
     Organizer(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         super(userName, password, gender, birthDate, phoneNumber);
@@ -25,8 +28,19 @@ public class Organizer extends User implements Crud<Event>{
 
     }
 
-    public void rentRoom(Event event, Room room){
-
+    public Room rentRoom(){
+        showAvRooms();
+        while (true){
+            System.out.println("Enter room number: ");
+            Scanner scanner = new Scanner(System.in);
+            int roomNum = scanner.nextInt();
+            for (Room room : Database.rooms){
+                if (room.getRoomNum() == roomNum){
+                    return room;
+                }
+            }
+            System.out.println("Room not found!");
+        }
     }
     public void showAvRooms(){
         System.out.println("Rooms available: ");
@@ -34,7 +48,7 @@ public class Organizer extends User implements Crud<Event>{
         for(Room room:Database.rooms) {
             if(room.getAvailable()){
                 exists=true;
-                System.out.println("-" + room.getRoomNum());
+                System.out.println("-" + room.getRoomNum() + ", Size: " + room.getSize());
             }
         }
         if(!exists){
@@ -82,8 +96,45 @@ public class Organizer extends User implements Crud<Event>{
     }
 
     @Override
-    public void create(Event event) {
+    public void create() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter event name: ");
+        String eventName = scanner.nextLine();
+        System.out.println("Enter event date (day): ");
+        int day = scanner.nextInt();
+        System.out.println("Enter event date (month): ");
+        int month = scanner.nextInt();
+        System.out.println("Enter event date (year): ");
+        int year = scanner.nextInt();
+        Date eventDate = new Date(year, month, day);
+        System.out.println("Choose event category: ");
+        int count = 1;
+        for (Category category : Database.categories){
+            System.out.println(count + ". " + category.getID());
+        }
+        Category category = Database.categories.get(scanner.nextInt());
+        boolean validInput = false;
+        boolean outdoors = false;
+        while (!validInput){
+            System.out.println("Outdoors? (Y/N): ");
+            String outdoorsString = scanner.nextLine();
+            if(outdoorsString == "Y"){
+                outdoors = true;
+                validInput = true;
+            }else if (outdoorsString == "N"){
+                outdoors = false;
+                validInput = true;
+            }else System.out.println("Invalid Input!");
+        }
 
+        Room room = rentRoom();
+        System.out.println("Enter ticket price: ");
+        double fees = scanner.nextDouble();
+        System.out.println("Enter max number of attendees: ");
+        int maxAttendees = scanner.nextInt();
+        Event event = new Event(eventName, eventDate, outdoors, room, maxAttendees, this, category);
+        event.setFees(fees);
+        Database.events.add(event);
     }
 
     @Override
