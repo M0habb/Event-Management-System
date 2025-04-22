@@ -29,13 +29,13 @@ public class Main {
                         succesfulLogin = User.login();
                     }
                     boolean logout = false;
-                    switch (succesfulLogin) {
+                    switch (succesfulLogin){
                         case 1:
                             // Admin Menu
                             Admin admin = (Admin) User.currentUser;
 
 
-                            while (true) {
+                            while (true){
                                 System.out.println("1. Show Rooms");
                                 System.out.println("2. Show Events");
                                 System.out.println("3. Show Attendees");
@@ -45,7 +45,7 @@ public class Main {
 
                                 int adInput = scanner.nextInt();
 
-                                switch (adInput) {
+                                switch (adInput){
                                     case 1:
                                         admin.showRooms();
                                         System.out.println("Press enter to go back.");
@@ -71,7 +71,7 @@ public class Main {
                                         scanner.nextLine();
                                         break;
                                     case 5:
-                                        while (true) {
+                                        while (true){
                                             System.out.println("1. Create category");
                                             System.out.println("2. Read category");
                                             System.out.println("3. Update category");
@@ -82,7 +82,7 @@ public class Main {
 
                                             int catInput = scanner.nextInt();
 
-                                            switch (catInput) {
+                                            switch (catInput){
 
                                                 case 1:
                                                     admin.create();
@@ -140,7 +140,7 @@ public class Main {
                             Organizer organizer = (Organizer) User.currentUser;
                             Scanner sc = new Scanner(System.in);
 
-                            while (true) {
+                            while (true){
                                 System.out.println("1. Upcoming Events");
                                 System.out.println("2. Previous Events");
                                 System.out.println("3. Create Event");
@@ -148,21 +148,21 @@ public class Main {
 
                                 int orgInput = sc.nextInt();
 
-                                switch (orgInput) {
+                                switch (orgInput){
                                     case 1:
                                         organizer.showOrgUpcomingEvents();
                                         System.out.println("Enter event number to check details or 0 to go back.");
                                         int response = scanner.nextInt();
-                                        if (response == 0) {
+                                        if (response == 0){
                                             break;
                                         }
                                         Event e = new Event();
                                         int count = 0;
-                                        for (Event event : organizer.getEventsCreated()) {
-                                            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
+                                        for (Event event : organizer.getEventsCreated()){
+                                            if (event.getEventDate().after(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
                                                 count++;
                                             }
-                                            if (count == response) {
+                                            if (count == response){
                                                 e = event;
                                                 break;
                                             }
@@ -180,16 +180,16 @@ public class Main {
                                         organizer.showOrgPreviousEvents();
                                         System.out.println("Enter event number to check details or 0 to go back.");
                                         int response2 = scanner.nextInt();
-                                        if (response2 == 0) {
+                                        if (response2 == 0){
                                             break;
                                         }
                                         Event e2 = new Event();
                                         int count2 = 0;
-                                        for (Event event : organizer.getEventsCreated()) {
-                                            if (event.getEventDate().before(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))) {
+                                        for (Event event : organizer.getEventsCreated()){
+                                            if (event.getEventDate().before(Date.from(LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))){
                                                 count2++;
                                             }
-                                            if (count2 == response2) {
+                                            if (count2 == response2){
                                                 e2 = event;
                                                 break;
                                             }
@@ -229,7 +229,7 @@ public class Main {
 
                                 int atInput = scanner.nextInt();
 
-                                switch (atInput) {
+                                switch (atInput){
                                     case 1:
                                         attendee.showUpcomingEvents();
                                         System.out.println("1. Buy tickets");
@@ -237,7 +237,7 @@ public class Main {
 
                                         int evInput = scanner.nextInt();
 
-                                        switch (evInput) {
+                                        switch(evInput) {
                                             case 1:
                                                 System.out.println("Enter event number to check details or 0 to go back.");
                                                 int response = scanner.nextInt();
@@ -278,9 +278,9 @@ public class Main {
                                         double amount;
                                         System.out.println("Enter the amount: ");
                                         amount = scanner.nextDouble();
-                                        if (attendee.getWallet().addBalance(amount) == 1) {
+                                        if(attendee.getWallet().addBalance(amount) == 1){
                                             System.out.println("Cannot add negative amount!");
-                                        } else System.out.println("Balance added successfully!");
+                                        }else System.out.println("Balance added successfully!");
                                         System.out.println("Press enter to go back.");
                                         scanner.nextLine();
                                         scanner.nextLine();
@@ -289,20 +289,6 @@ public class Main {
                                         logout = true;
                                         break;
                                 }
-                            }
-
-                        case 2:
-                            attendee.showUpcomingEvents();
-                        case 3:
-                            attendee.showPersonalDetails();
-                        case 4:
-                            double amount;
-                            System.out.println("Enter the amount: ");
-                            amount = scanner.nextDouble();
-                            attendee.getWallet().addBalance(amount);
-                        case 5:
-                            break;
-                    }
                                 if (logout) break;
                             }
                             break;

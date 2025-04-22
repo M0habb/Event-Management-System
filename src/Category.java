@@ -13,7 +13,6 @@ public class Category {
         this.ID = ID;
         this.type = type;
         this.description = description;
-        Database.categories.add(this);
     }
 
     //Setters & Getters
