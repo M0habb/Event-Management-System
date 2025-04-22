@@ -229,7 +229,7 @@ public class Main {
                                         scanner.nextLine();
                                         break;
                                     case 3:
-                                        //organizer.create();
+                                        organizer.create();
                                         break;
                                     case 4:
                                         logout = true;
