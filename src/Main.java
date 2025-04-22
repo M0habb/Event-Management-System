@@ -324,6 +324,7 @@ public class Main {
         Room room1 = new Room(1, Size.SINGLE, true);
         Room room2 = new Room(2, Size.DOUBLE, true);
         Room room3 = new Room(3, Size.TRIPLE, true);
+        Room room4 = new Room(4, Size.SINGLE, true);
 
         Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
@@ -340,7 +341,8 @@ public class Main {
         Category category1 = new Category(1, CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
-        Event event1 = new Event("ASU Music Concert", bd, false, room1, 100, organizer3, category1);
+        Event event1 = new Event("ASU Music Concert", bd, false, room1,
+                00, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 
@@ -361,6 +363,7 @@ public class Main {
         Database.rooms.add(room1);
         Database.rooms.add(room2);
         Database.rooms.add(room3);
+        Database.rooms.add(room4);
 
         ArrayList<Event> org1EventsCreated = new ArrayList<Event>();
         org1EventsCreated.add(event1);

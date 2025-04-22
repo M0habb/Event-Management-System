@@ -117,6 +117,6 @@ public abstract class User {
         System.out.println("Username: " + this.userName);
         System.out.println("Gender: " + this.gender);
         System.out.println("Date of Birth: " + this.birthDate);
-        System.out.println("Wallet ID: " + this.wallet.getWalletID());
+        System.out.println("Wallet Balance: " + this.wallet.getBalance());
     }
 }

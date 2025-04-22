@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -7,12 +8,13 @@ public class Category {
     private CategoryType type;
     private int ID;
     private String description;
-    private List<Event> events;
+    private ArrayList<Event> events;
 
     Category(int ID, CategoryType type, String description){
         this.ID = ID;
         this.type = type;
         this.description = description;
+        this.events = new ArrayList<Event>();
     }
 
     //Setters & Getters
@@ -37,7 +39,7 @@ public class Category {
         return events;
     }
 
-    public void setEvents(List<Event> events) {
+    public void setEvents(ArrayList<Event> events) {
         this.events = events;
     }
     public int getID(){

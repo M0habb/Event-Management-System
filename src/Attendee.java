@@ -13,6 +13,7 @@ public class Attendee extends User{
     private ArrayList<Event> eventsAttended;
     Attendee(){
         super();
+        this.eventsAttended = new ArrayList<>();
     }
     Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
@@ -225,5 +226,6 @@ public class Attendee extends User{
         System.out.println("Address: "+ getAddress());
         System.out.println("BirthDate: "+ getBirthDate());
         System.out.println("PhoneNumber: "+ getPhoneNumber());
+        System.out.println("Wallet Balance: " + getWallet().getBalance());
     }
 }
