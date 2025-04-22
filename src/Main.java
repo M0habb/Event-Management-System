@@ -85,32 +85,7 @@ public class Main {
                                             switch (catInput){
 
                                                 case 1:
-                                                    System.out.print("Enter category ID: ");
-                                                    int createId = scanner.nextInt();
-
-                                                    System.out.println("Choose category type:");
-                                                    CategoryType[] types = CategoryType.values();
-                                                    for (int i = 0; i < types.length; i++) {
-                                                        System.out.println((i + 1) + ". " + types[i].name().charAt(0) + types[i].name().substring(1).toLowerCase());
-                                                    }
-
-                                                    int typeInput = scanner.nextInt();
-                                                    CategoryType type;
-
-                                                    if (typeInput >= 1 && typeInput <= types.length) {
-                                                        type = types[typeInput - 1];
-                                                    } else {
-                                                        System.out.println("Invalid choice. Defaulting to OTHER.");
-                                                        type = CategoryType.OTHER;
-                                                    }
-
-                                                    System.out.print("Enter category description: ");
-                                                    scanner.nextLine();
-                                                    String desc = scanner.nextLine();
-
-                                                    Category newCategory = new Category(createId, type, desc);
-                                                    admin.create(newCategory);
-
+                                                    admin.create();
                                                     System.out.println("Category Succesfully Created!");
                                                     System.out.println("Press enter to go back.");
                                                     scanner.nextLine();
@@ -230,6 +205,9 @@ public class Main {
                                         break;
                                     case 3:
                                         organizer.create();
+                                        System.out.println("Event Succesfully Created!");
+                                        System.out.println("Press enter to go back.");
+                                        scanner.nextLine();
                                         break;
                                     case 4:
                                         logout = true;
