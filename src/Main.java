@@ -289,23 +289,7 @@ public class Main {
                                         logout = true;
                                         break;
                                 }
-<<<<<<< HEAD
-
-                                case 2:
-                                    attendee.showUpcomingEvents();
-                                case 3:
-                                    attendee.showPersonalDetails();
-                                case 4:
-                                    double amount;
-                                    System.out.println("Enter the amount: ");
-                                    amount = scanner.nextDouble();
-                                    attendee.getWallet().addBalance(amount);
-                                case 5:
-                                    break;+
-
-=======
                                 if (logout) break;
->>>>>>> 528bcb8b216d0a38c30f705bf3758809493d6430
                             }
                             break;
                     }

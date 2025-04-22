@@ -13,7 +13,6 @@ public class Room {
         this.roomNum = roomNum;
         this.size = size;
         this.available = available;
-        Database.rooms.add(this);
     }
 //setters and getters
     public Size getSize() {
