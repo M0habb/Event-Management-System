@@ -293,7 +293,8 @@ public class Main {
                                     amount = scanner.nextDouble();
                                     attendee.getWallet().addBalance(amount);
                                 case 5:
-                                    break;
+                                    break;+
+
                             }
                             break;
                     }

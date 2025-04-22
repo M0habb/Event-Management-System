@@ -8,6 +8,7 @@ public class Admin extends User implements Crud<Category>{
     Admin(String userName, String password, Gender gender, Date birthDate, long phoneNumber, int workingHours){
         super(userName, password, gender, birthDate, phoneNumber);
         this.workingHours = workingHours;
+        Database.admins.add(this);
     }
 
     //Setters & Getters

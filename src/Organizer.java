@@ -11,6 +11,7 @@ public class Organizer extends User implements Crud<Event>{
     }
     Organizer(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         super(userName, password, gender, birthDate, phoneNumber);
+        Database.organizers.add(this);
     }
 
     public void setEventsCreated(ArrayList<Event> eventsCreated){
