@@ -136,6 +136,23 @@ public class Attendee extends User{
         long postalCode = sc.nextLong();
         Address address = new Address(country, city, street, postalCode);
 
+        System.out.println("Choose 2 categories of interests: ");
+        for (Category category : Database.categories) {
+            System.out.println(category.getID() + ", " + category.getType() + ": " + category.getDescription());
+        }
+        System.out.println("Category 1: ");
+        int c1 = sc.nextInt();
+        System.out.println("Category 2: ");
+        int c2 = sc.nextInt();
+        int count = 0;
+        for (Category category : Database.categories) {
+            if (category.getID() == c1 || category.getID() == c2) {
+                count++;
+                interests.add(category);
+            }
+            if (count == 2) break;
+        }
+        
         this.setUserName(username);
         this.setPassword(password);
         this.setPhoneNumber(phonenumber);
