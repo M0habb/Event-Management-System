@@ -31,14 +31,24 @@ public class Organizer extends User implements Crud<Event>{
     public Room rentRoom(){
         showAvRooms();
         while (true){
+            boolean avail = true;
             System.out.println("Enter room number: ");
             Scanner scanner = new Scanner(System.in);
             int roomNum = scanner.nextInt();
             for (Room room : Database.rooms){
                 if (room.getRoomNum() == roomNum){
-                    return room;
+                    if (room.getAvailable()){
+                        room.setAvailable(false);
+                        return room;
+                    }else {
+                        System.out.println("Room not available!");
+                        avail = false;
+                        break;
+                    }
+
                 }
             }
+            if (avail) continue;
             System.out.println("Room not found!");
         }
     }
@@ -110,18 +120,19 @@ public class Organizer extends User implements Crud<Event>{
         System.out.println("Choose event category: ");
         int count = 1;
         for (Category category : Database.categories){
-            System.out.println(count + ". " + category.getID());
+            System.out.println("Category ID: " + category.getID() + ", Category Description: " + category.getDescription());
         }
         Category category = Database.categories.get(scanner.nextInt());
         boolean validInput = false;
         boolean outdoors = false;
         while (!validInput){
             System.out.println("Outdoors? (Y/N): ");
+            scanner.nextLine();
             String outdoorsString = scanner.nextLine();
-            if(outdoorsString == "Y"){
+            if(outdoorsString.equals("Y")){
                 outdoors = true;
                 validInput = true;
-            }else if (outdoorsString == "N"){
+            }else if (outdoorsString.equals("N")){
                 outdoors = false;
                 validInput = true;
             }else System.out.println("Invalid Input!");
