@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("../fonts/MyFont.ttf"); /* adjust path relative to this CSS file */
+}
+
+.custom-label {
+    -fx-font-family: "MyCustomFont";
+    -fx-font-size: 16px;
+}
