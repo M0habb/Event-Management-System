@@ -52,7 +52,10 @@
       <font>
          <Font size="17.0" />
       </font></Hyperlink>
-   <CheckBox layoutX="161.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" text="Remember me?" />
+   <CheckBox layoutX="161.0" layoutY="478.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="134.0" text="Remember me?">
+      <font>
+         <Font size="15.0" />
+      </font></CheckBox>
    <Label layoutX="220.0" layoutY="547.0" prefHeight="34.0" prefWidth="123.0" text="Not a member?">
       <font>
          <Font size="17.0" />
