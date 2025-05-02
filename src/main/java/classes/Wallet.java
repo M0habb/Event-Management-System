@@ -1,7 +1,9 @@
+package classes;
+
 import java.util.Random;
 
 public class Wallet {
-    Random random = new Random();
+    public Random random = new Random();
     private int walletID = random.nextInt(100000);
     private double balance = 0.0;
     Wallet(){

@@ -1,3 +1,5 @@
+package classes;
+
 public interface Crud<T> {
     public void create();
     public void read();
