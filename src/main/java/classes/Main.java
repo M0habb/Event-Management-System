@@ -1,3 +1,4 @@
+/*
 package classes;
 
 import java.time.LocalDate;
@@ -375,3 +376,6 @@ public class Main {
         organizer3.setEventsCreated(org1EventsCreated);
     }
 }
+
+
+ */

@@ -12,7 +12,7 @@ public class Category {
     private String description;
     private ArrayList<Event> events;
 
-    Category(int ID, CategoryType type, String description){
+    public Category(int ID, CategoryType type, String description){
         this.ID = ID;
         this.type = type;
         this.description = description;

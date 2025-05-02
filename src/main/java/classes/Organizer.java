@@ -13,7 +13,7 @@ public class Organizer extends User implements Crud<Event>{
         super();
         Database.organizers.add(this);
     }
-    Organizer(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
+    public Organizer(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         super(userName, password, gender, birthDate, phoneNumber);
         Database.organizers.add(this);
     }
