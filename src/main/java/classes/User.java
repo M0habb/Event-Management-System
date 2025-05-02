@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.Date;
 import java.util.Scanner;
 
@@ -11,10 +13,10 @@ public abstract class User {
     private Wallet wallet;
     public static User currentUser;
 
-    User(){
+    public User(){
         this.wallet = new Wallet();
     }
-    User(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
+    public User(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
         this.userName = userName;
         this.password = password;
         this.gender = gender;

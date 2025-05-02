@@ -1,3 +1,7 @@
+package classes;
+
+import classes.Controller;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -7,7 +11,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         initializeDummyData();
+
 
         while(true){
             // Startup Menu
@@ -309,8 +315,6 @@ public class Main {
                 break;
             }
         }
-
-
     }
     public static void initializeDummyData() {
         Date bd = new Date(2006, 07, 23);
