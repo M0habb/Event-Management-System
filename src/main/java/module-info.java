@@ -4,4 +4,6 @@ module Event.Management.System {
 
     opens classes to javafx.fxml;
     exports classes;
+    exports GUI;
+    opens GUI to javafx.fxml;
 }
