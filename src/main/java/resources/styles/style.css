@@ -23,3 +23,20 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
+
+.black-link {
+    -fx-text-fill: black;
+}
+
+.black-link:visited {
+    -fx-text-fill: black;
+}
+
+.black-link:hover {
+    -fx-text-fill: #0096C9;
+}
+
+.black-link:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

@@ -7,8 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -21,10 +20,19 @@ public class LoginController {
     @FXML
     private TextField passwordField;
     @FXML
-    private Label loginFailed;
-    @FXML
     private Label invalidLogin;
-    
+    @FXML
+    private PasswordField hiddenPasswordField;
+    @FXML
+    private Hyperlink showPasswordHyperlink;
+
+    private boolean passwordVisible = false;
+
+    @FXML
+    private void initialize(){
+        passwordField.textProperty().bindBidirectional(hiddenPasswordField.textProperty());
+    }
+
     @FXML
     private void handleLogin(ActionEvent event) throws IOException {
 
@@ -87,5 +95,19 @@ public class LoginController {
 
         window.setScene(scene);
         window.show();
+    }
+
+    @FXML
+    private void togglePasswordVisibility(){
+
+        if (passwordField.getText().isBlank()) return;
+
+        passwordVisible = !passwordVisible;
+
+
+        passwordField.setVisible(passwordVisible);
+        hiddenPasswordField.setVisible(!passwordVisible);
+
+        showPasswordHyperlink.setText(passwordVisible ? "Hide Password" : "Show Password");
     }
 }
