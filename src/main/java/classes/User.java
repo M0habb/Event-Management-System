@@ -69,16 +69,7 @@ public abstract class User {
         this.wallet = wallet;
     }
 
-    public static int login(){
-        String username, password;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter your username: ");
-        username = sc.nextLine();
-
-        System.out.println("Enter your password: ");
-        password = sc.nextLine();
+    public static int login(String username, String password){
 
         for (Admin admin : Database.admins) {
             if (username.equals(admin.getUserName())){

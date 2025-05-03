@@ -12,11 +12,11 @@ public class Attendee extends User{
     private List<Category> interests;
     private Address address;
     private ArrayList<Event> eventsAttended;
-    Attendee(){
+    public Attendee(){
         super();
         this.eventsAttended = new ArrayList<>();
     }
-    Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
+    public Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
         this.eventsAttended = new ArrayList<>();
         this.address = address;

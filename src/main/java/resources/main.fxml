@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Label?>
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="classes.Controller" prefWidth="600" prefHeight="400">
-    <Label text="Welcome to Event Management System" layoutX="150" layoutY="180"/>
-</AnchorPane>

@@ -11,7 +11,7 @@ public class Room {
     Room(){
 
     }
-    Room(int roomNum, Size size, boolean available){
+    public Room(int roomNum, Size size, boolean available){
         this.roomNum = roomNum;
         this.size = size;
         this.available = available;
