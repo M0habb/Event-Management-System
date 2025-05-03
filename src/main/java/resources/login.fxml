@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="642" prefWidth="1142" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
-   <Button layoutX="156.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="108.0" text="LOGIN">
+   <Button layoutX="153.0" layoutY="427.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="108.0" text="LOGIN">
       <font>
          <Font name="Arial Bold" size="16.0" />
       </font>
@@ -43,25 +43,30 @@
          <Image url="@images/password.png" />
       </image>
    </ImageView>
-   <Label layoutX="186.0" layoutY="164.0" prefHeight="78.0" prefWidth="279.0" text="Login to your account">
+   <Label layoutX="195.0" layoutY="165.0" prefHeight="78.0" prefWidth="279.0" text="Login to your account">
       <font>
          <Font name="Arial Bold" size="26.0" />
       </font>
    </Label>
-   <Hyperlink layoutX="374.0" layoutY="424.0" prefHeight="34.0" prefWidth="145.0" text="Forgot password?">
+   <Hyperlink layoutX="371.0" layoutY="436.0" prefHeight="34.0" prefWidth="145.0" text="Forgot password?">
       <font>
          <Font size="17.0" />
       </font></Hyperlink>
-   <CheckBox layoutX="161.0" layoutY="478.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="134.0" text="Remember me?">
+   <CheckBox layoutX="158.0" layoutY="490.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="134.0" text="Remember me">
       <font>
          <Font size="15.0" />
       </font></CheckBox>
-   <Label layoutX="220.0" layoutY="547.0" prefHeight="34.0" prefWidth="123.0" text="Not a member?">
+   <Label layoutX="217.0" layoutY="559.0" prefHeight="34.0" prefWidth="123.0" text="Not a member?">
       <font>
          <Font size="17.0" />
       </font></Label>
-   <Hyperlink layoutX="341.0" layoutY="548.0" text="SIGNUP">
+   <Hyperlink layoutX="338.0" layoutY="560.0" onAction="#handleSignup" text="SIGNUP">
       <font>
          <Font size="17.0" />
       </font></Hyperlink>
+   <Label fx:id="invalidLogin" layoutX="153.0" layoutY="383.0" prefHeight="46.0" prefWidth="209.0" text="Incorrect username or password!" textFill="RED" visible="false">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
 </AnchorPane>

@@ -18,3 +18,8 @@
 .text-field {
     -fx-padding: 0 0 0 50; /* top right bottom left */
 }
+
+.hyperlink:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
