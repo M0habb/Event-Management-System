@@ -11,7 +11,7 @@
 }
 
 .root {
-    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-image: url("../images/bg-overlay-3.png");
     -fx-background-size: cover;
 }
 
