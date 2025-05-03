@@ -12,7 +12,7 @@ public class Attendee extends User{
     private List<Category> interests;
     private Address address;
     private ArrayList<Event> eventsAttended;
-    Attendee(){
+    public Attendee(){
         super();
         this.eventsAttended = new ArrayList<>();
     }
