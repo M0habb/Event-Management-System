@@ -8,8 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="application" />
-    <orderEntry type="library" name="JavaFX 24" level="project" />
     <orderEntry type="library" name="JavaFX" level="application" />
+    <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="JavaFX 2" level="project" />
   </component>
 </module>
