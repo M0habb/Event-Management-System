@@ -1,5 +1,5 @@
 .root {
-    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-color: #f3ead9;
         -fx-background-size: cover;
 
 }
