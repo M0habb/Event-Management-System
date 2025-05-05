@@ -20,7 +20,7 @@ public class MainController extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         initializeDummyData();
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/allAccess.fxml"));
         primaryStage.setTitle("Event Management System");
         primaryStage.setScene(new Scene(root, 1142, 642));
         primaryStage.show();
