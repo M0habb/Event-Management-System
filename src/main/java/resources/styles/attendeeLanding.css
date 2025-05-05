@@ -4,28 +4,28 @@
 
 }
 .ViewEventsButton{
--fx-background-color: #154c79; /* Red */
+-fx-background-color: #da9d66; /* Red */
 -fx-text-fill: white; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
 }
 .ViewUpcomingEvents{
--fx-background-color: #154c79; /* Red */
+-fx-background-color: #da9d66; /* Red */
 -fx-text-fill: white; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
 }
 .ProceedToCheckout{
--fx-background-color: #154c79; /* Red */
+-fx-background-color: #da9d66; /* Red */
 -fx-text-fill: white; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
 }
 .SignOutButton{
--fx-background-color: #154c79; /* Red */
+-fx-background-color: #da9d66; /* Red */
 -fx-text-fill: white; /* Text color */
 -fx-font-size: 12px;
 -fx-background-radius:5px;
