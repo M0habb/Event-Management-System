@@ -29,10 +29,19 @@
       <Button layoutX="209.0" layoutY="152.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
       <Button layoutX="727.0" layoutY="288.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="245.0" styleClass="ViewUpcomingEvents" text="View My Events" />
       <Button layoutX="209.0" layoutY="477.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="237.0" styleClass="ProceedToCheckout" text="Proceed To Checkout" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="754.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="754.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/red-carpet.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Downloads/schedule.png" />
+            <Image url="@images/schedule.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="754.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/wallet%20(1).png" />
          </image>
       </ImageView>
    </children>
