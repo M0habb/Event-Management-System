@@ -36,7 +36,7 @@
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/schedule.png" />
+            <Image url="@images/events.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="754.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
