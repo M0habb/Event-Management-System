@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
 
-public class 5LoginController {
+public class LoginController {
 
     @FXML
     private TextField usernameField;
