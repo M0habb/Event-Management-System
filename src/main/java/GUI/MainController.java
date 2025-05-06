@@ -42,7 +42,7 @@ public class MainController extends Application{
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
-        Attendee attendee3 = new Attendee("Jana", "asda", Gender.FEMALE, bd3, 85635436, address3);
+        Attendee attendee3 = new Attendee("Sarah", "1234", Gender.FEMALE, bd3, 85635436, address3);
 
         Admin admin1 = new Admin("Sama", "123", Gender.FEMALE, bd, 155573, 3);
         Admin admin2 = new Admin("Omar", "1325", Gender.MALE, bd2, 5236, 6);
@@ -50,7 +50,8 @@ public class MainController extends Application{
 
         Organizer organizer1 = new Organizer("Michael", "123", Gender.MALE, bd, 155573);
         Organizer organizer2 = new Organizer("Ahmad", "1325", Gender.MALE, bd2, 5236);
-        Organizer organizer3 = new Organizer("Saah", "asda", Gender.FEMALE, bd3, 85635436);
+        Organizer organizer3 = new Organizer("Jana","123",Gender.FEMALE,bd3,123456);
+
 
         Category category1 = new Category(1, CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
