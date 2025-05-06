@@ -1,0 +1,13 @@
+.root {
+    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-size: cover;
+}
+
+.category-button{
+    -fx-background-radius: 30;
+    -fx-min-width: 60;
+    -fx-min-height: 30;
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
