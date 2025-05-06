@@ -3,3 +3,7 @@
     -fx-background-size: cover;
 }
 
+.button{
+    -fx-cursor: hand;
+}
+

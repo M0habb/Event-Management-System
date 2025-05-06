@@ -1,0 +1,18 @@
+.root {
+    -fx-background-color: #f3ead9;
+    -fx-background-size: cover;
+
+}
+
+.category-button{
+    -fx-background-radius: 30;
+    -fx-min-width: 60;
+    -fx-min-height: 30;
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
+
+.button{
+    -fx-cursor: hand;
+}
