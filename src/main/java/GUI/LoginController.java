@@ -1,5 +1,6 @@
 package GUI;
 
+import classes.Database;
 import classes.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
