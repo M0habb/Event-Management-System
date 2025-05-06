@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class AdminLandingController {
 
     @FXML
@@ -23,4 +24,48 @@ public class AdminLandingController {
         window.setScene(scene);
         window.show();
     }
+    @FXML
+    private void handleShowRooms(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showRooms.fxml"));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+    @FXML
+    private void handleShowEvents(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showEvents.fxml"));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+    @FXML
+    private void handleShowAttendees(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showAttendess.fxml"));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+    @FXML
+    private void handleShowOrganizers(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showOrganizers.fxml"));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+    @FXML
+    private void handleManageCategories(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/manageCategories.fxml"));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
+
+
+
+
 }
