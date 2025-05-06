@@ -50,11 +50,8 @@ public class MainController extends Application{
 
         Organizer organizer1 = new Organizer("Michael", "123", Gender.MALE, bd, 155573);
         Organizer organizer2 = new Organizer("Ahmad", "1325", Gender.MALE, bd2, 5236);
-<<<<<<< HEAD
         Organizer organizer3 = new Organizer("Jana","123",Gender.FEMALE,bd3,123456);
-=======
-        Organizer organizer3 = new Organizer("Saah", "asda", Gender.FEMALE, bd3, 85635436);
->>>>>>> 6c234112425f645ad32606cae8874c109048cde5
+
 
         Category category1 = new Category(1, CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
