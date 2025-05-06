@@ -3,19 +3,7 @@
     -fx-border-color: black;
     -fx-border-width: 2;
     -fx-padding: 5;
-
 }
 .HBox {
-    -fx-background-image: url("..\images\roomsbg.jpeg")
-     -fx-background-size: cover;
-}
-
-.roomText{
-    font-family: "Playfair Display";
-
-}
-
-@font-face {
-    font-family: "Playfair Display";
-    src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf"); /* adjust path relative to this CSS file */
+    -fx-background-image: url("C:\Users\SIGMA\Downloads\roomsbg2.jpeg"
 }

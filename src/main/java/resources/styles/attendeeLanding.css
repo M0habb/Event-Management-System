@@ -1,32 +1,33 @@
 .root {
-    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-color: #f3ead9;
         -fx-background-size: cover;
 
 }
 .ViewEventsButton{
--fx-background-color: #da9d66; /* Red */
--fx-text-fill: white; /* Text color */
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill: black; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
+
 }
 .ViewUpcomingEvents{
--fx-background-color: #da9d66; /* Red */
--fx-text-fill: white; /* Text color */
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill: black; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
 }
 .ProceedToCheckout{
--fx-background-color: #da9d66; /* Red */
--fx-text-fill: white; /* Text color */
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill: black; /* Text color */
 -fx-font-size: 18px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;
 }
 .SignOutButton{
--fx-background-color: #da9d66; /* Red */
--fx-text-fill: white; /* Text color */
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
 -fx-font-size: 12px;
 -fx-background-radius:5px;
     -fx-border-radius: 5px;

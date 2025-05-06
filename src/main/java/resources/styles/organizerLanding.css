@@ -1,0 +1,16 @@
+.root {
+    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-size: cover;
+}
+
+.circular-button{
+    -fx-background-radius: 50%;
+    -fx-background-color: white;
+    -fx-text-fill:black;
+    -fx-text-size: 100;
+}
+.ViewSignOut-button{
+-fx-background-radius:5px;
+ -fx-border-radius:5px;
+    }
+    
