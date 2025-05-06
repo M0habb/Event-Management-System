@@ -35,7 +35,6 @@
     "Application.Controller.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MainController.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
