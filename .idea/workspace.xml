@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="" />
+    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Event Management System/ShowRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Event Management System/ShowRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Event Management System/resources/showRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Event Management System/resources/showRooms.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images",
