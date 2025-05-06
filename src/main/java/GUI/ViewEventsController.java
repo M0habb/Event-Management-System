@@ -9,12 +9,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.*;
 
-public class ViewEventsController { 
+public class ViewEventsController {
 
     @FXML private Button musicCategory;
     @FXML private Button sportsCategory;
@@ -22,12 +23,15 @@ public class ViewEventsController {
     @FXML private Button conferenceCategory;
     @FXML private Button otherCategory;
     @FXML private Label usernameLabel;
+    @FXML private VBox expandableBox;
 
     private List<Button> categoryButtons;
     private Map<Button, String> categoryButtonColors;
 
     @FXML
     public void initialize() {
+
+        expandableBox.setManaged(false);
 
         usernameLabel.setText(Attendee.currentUser.getUserName());
 
@@ -89,5 +93,11 @@ public class ViewEventsController {
 
         window.setScene(scene);
         window.show();
+    }
+
+    @FXML
+    private void expandBox(){
+        expandableBox.setVisible(!expandableBox.isVisible());
+        expandableBox.setManaged(!expandableBox.isManaged());
     }
 }

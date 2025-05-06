@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/conference.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/football.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/music.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/theater.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/viewEvents.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/viewEvents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/black-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/images/down-arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/AttendeeLandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/AttendeeLandingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/attendeeLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/attendeeLanding.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/adminLanding.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/adminLanding.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/attendeeLanding.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/attendeeLanding.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/showRooms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/showRooms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/viewMyEvents.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/viewMyEvents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/viewEvents.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/viewEvents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/viewEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/viewEvents.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
