@@ -104,7 +104,6 @@ public abstract class User {
         return 0;
 
     }
-    public abstract void signup();
 
     public void getUserDetails(){
         System.out.println("Username: " + this.userName);

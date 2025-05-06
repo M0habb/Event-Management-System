@@ -65,11 +65,6 @@ public class Admin extends User implements Crud<Category>{
         Database.rooms.add(newRoom);
     }
 
-    @Override
-    public void signup() { // come back to later
-        // Admin-specific signup logic
-
-    }
 
     @Override
     public void create() {

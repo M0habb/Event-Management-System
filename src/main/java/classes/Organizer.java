@@ -24,10 +24,7 @@ public class Organizer extends User implements Crud<Event>{
     public ArrayList<Event> getEventsCreated(){
         return eventsCreated;
     }
-    @Override
-    public void signup() {
 
-    }
 
     public Room rentRoom(){
         showAvRooms();
