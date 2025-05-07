@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/ProceedToCheckout.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/proceedToCheckout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/AttendeeLandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/AttendeeLandingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ViewMyEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ViewMyEventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/ProceedToCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/proceedToCheckout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/attendeeLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/attendeeLanding.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
