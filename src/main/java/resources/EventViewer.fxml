@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="resources.styles.EventViewer"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #f3ead9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EventViewerController">
+    <children>
+        <ImageView fitHeight="642.0" fitWidth="1156.0" layoutY="-367.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../Downloads/OIP.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="890.0" layoutY="36.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="Sign Out" textFill="#ec0707">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Text layoutX="986.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1083.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/user.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="36.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="446.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organized by">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="470.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MSJ worldwide partners" wrappingWidth="161.99218750000006" />
+        <Text layoutX="459.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Upcoming Event" textAlignment="CENTER">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of attendees">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total profit">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendee list">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="845.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room number">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price 3500">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+        <Text layoutX="845.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="847.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bathrooms">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="845.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food services">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="845.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="846.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parking">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button layoutX="36.0" layoutY="552.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="98.0" text="Back" />
+        <Text layoutX="36.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AZ Zaytoun Al Qebleyah, Zeitoun, Cairo Governorate">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="36.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="48.0" fitWidth="80.0" layoutX="1074.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
+        </ImageView>
+        <Text layoutX="983.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sponsored By">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+    </children>
 </AnchorPane>
