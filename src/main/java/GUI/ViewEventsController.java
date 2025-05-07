@@ -382,7 +382,6 @@ public class ViewEventsController {
                 }
             }
         }else {
-            System.out.println("I am working");
             displayEvents();
         }
     }
@@ -398,4 +397,10 @@ public class ViewEventsController {
         window.setScene(scene);
         window.show();
     }
+
+    @FXML
+    public static void handleBuy(ActionEvent event, Label eventName){
+        Ticket ticket = new Ticket();
+    }
+
 }

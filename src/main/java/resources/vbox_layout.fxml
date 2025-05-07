@@ -12,7 +12,7 @@
    <children>
       <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" styleClass="HBox">
          <children>
-            <Label fx:id="eventName1" prefHeight="30.0" prefWidth="322.0" text="Event Name">
+            <Label fx:id="eventName" prefHeight="30.0" prefWidth="322.0" text="Event Name">
                <font>
                   <Font size="24.0" />
                </font>
@@ -64,7 +64,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#handleBuy" text="Buy Ticket!" />
                </children>
             </HBox>
          </children>
