@@ -1,6 +1,7 @@
 package GUI;
 
 import classes.Address;
+import classes.Attendee;
 import classes.Database;
 import classes.User;
 import javafx.fxml.FXML;
@@ -16,8 +17,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProceedToCheckoutController {
+    @FXML private Label totalLabel;
+
+    @FXML
+    private Label usernameLabel;
+    @FXML
+    private double sum;;
+    @FXML
+    private void initialize(){
+        usernameLabel.setText(Attendee.currentUser.getUserName());
+        totalLabel.setText("Total: "+String.valueOf(sum));
+    }
     @FXML
     private ScrollPane scrollpane;
+
 
     @FXML
 
@@ -44,6 +57,7 @@ public class ProceedToCheckoutController {
                 eventPriceLabel.setText(String.valueOf(Database.tickets.get(i).getFees()));
 
                 rootV.getChildren().add(rootH);
+                sum= sum+Database.tickets.get(i).getFees();
 
 
             }
