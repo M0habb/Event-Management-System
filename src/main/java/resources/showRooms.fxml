@@ -12,11 +12,16 @@
    <children>
       <TableView fx:id="roomsTable" layoutX="-2.0" layoutY="287.0" prefHeight="354.0" prefWidth="676.0">
         <columns>
-          <TableColumn fx:id="roomNumColumn" prefWidth="75.0" styleClass="tabv" text="room num" />
-          <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="size" />
+          <TableColumn fx:id="roomNumColumn" prefWidth="75.0" styleClass="tabv" text="Room #" />
+          <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="Size" />
+            <TableColumn fx:id="availableColumn" prefWidth="75.0" text="Available" />
+            <TableColumn fx:id="eventColumn" prefWidth="75.0" text="Event" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <Text fill="#6b360d" layoutX="169.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-ROOMS-" textAlignment="CENTER" wrappingWidth="298.1367301940918">
+      <Text fill="#6b360d" layoutX="169.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-ROOMS-" textAlignment="CENTER" wrappingWidth="334.1367301940918">
          <font>
             <Font name="Dubai Regular" size="70.0" />
          </font>

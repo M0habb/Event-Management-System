@@ -20,6 +20,12 @@ public class ShowRoomsController {
     @FXML
     private TableColumn<Room, String> sizeColumn;
 
+    @FXML
+    private TableColumn<Room, String> availableColumn;
+
+    @FXML
+    private TableColumn<Room, String> eventColumn;
+
 
 
     @FXML
@@ -31,7 +37,7 @@ public class ShowRoomsController {
                 new javafx.beans.property.SimpleStringProperty(cellData.getValue().getSize().toString())
         );
 
-        
+
 
         // Fill the table with data
         ObservableList<Room> roomList = FXCollections.observableArrayList(Database.rooms);
