@@ -9,7 +9,7 @@ public class HBoxController {
 
     @FXML
     public void initiate(){
-        eventNameLabel=
+        eventNameLabel;
     }
 
 
