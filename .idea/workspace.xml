@@ -39,14 +39,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< Updated upstream
     "git-widget-placeholder": "main",
+=======
+    "git-widget-placeholder": "<unknown>",
+>>>>>>> Stashed changes
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+<<<<<<< Updated upstream
     "settings.editor.selected.configurable": "preferences.lookFeel"
+=======
+    "settings.editor.selected.configurable": "advanced.settings"
+>>>>>>> Stashed changes
   }
 }]]></component>
   <component name="RecentsManager">
