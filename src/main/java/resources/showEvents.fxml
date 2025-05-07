@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.ShowEventsController"
-            prefHeight="642.0" prefWidth="1142.0">
 
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowEventsController">
+   <children>
+      <TableView fx:id="showEvents" layoutX="136.0" layoutY="84.0" prefHeight="424.0" prefWidth="659.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="name" />
+          <TableColumn fx:id="dateColumn" prefWidth="75.0" text="date" />
+            <TableColumn fx:id="roomColumn" prefWidth="75.0" text="room" />
+            <TableColumn fx:id="categoryColumn" prefWidth="75.0" text="category" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
