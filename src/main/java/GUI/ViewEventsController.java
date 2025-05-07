@@ -14,7 +14,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+    
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -80,7 +80,8 @@ public class ViewEventsController {
             Label eventOrganizer = (Label) innerV.getChildren().get(1);
             Label eventOutdoors = (Label) innerV.getChildren().get(2);
             Label eventActivities = (Label) innerV.getChildren().get(3);
-            Label eventFees = (Label) innerV.getChildren().get(4);
+            HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+            Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
             Address address = Database.events.get(i).getAddress();
 
@@ -147,7 +148,8 @@ public class ViewEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
-                    Label eventFees = (Label) innerV.getChildren().get(4);
+                    HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+                    Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
                     Address address = Database.events.get(i).getAddress();
 
@@ -201,7 +203,8 @@ public class ViewEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
-                    Label eventFees = (Label) innerV.getChildren().get(4);
+                    HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+                    Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
                     Address address = Database.events.get(i).getAddress();
 
@@ -255,7 +258,8 @@ public class ViewEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
-                    Label eventFees = (Label) innerV.getChildren().get(4);
+                    HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+                    Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
                     Address address = Database.events.get(i).getAddress();
 
@@ -309,7 +313,8 @@ public class ViewEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
-                    Label eventFees = (Label) innerV.getChildren().get(4);
+                    HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+                    Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
                     Address address = Database.events.get(i).getAddress();
 
@@ -363,7 +368,8 @@ public class ViewEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
-                    Label eventFees = (Label) innerV.getChildren().get(4);
+                    HBox bottomHBox = (HBox) innerV.getChildren().get(4);
+                    Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
                     Address address = Database.events.get(i).getAddress();
 
