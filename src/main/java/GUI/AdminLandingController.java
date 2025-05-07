@@ -25,12 +25,18 @@ public class AdminLandingController {
         window.show();
     }
     @FXML
+
     private void handleShowRooms(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/showRooms.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(root));
+
+        window.setScene(scene);
         window.show();
     }
+
 
     @FXML
     private void handleShowEvents(ActionEvent event) throws IOException {
@@ -56,6 +62,7 @@ public class AdminLandingController {
         window.show();
     }
 
+
     @FXML
     private void handleManageCategories(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/manageCategories.fxml"));
@@ -63,6 +70,7 @@ public class AdminLandingController {
         window.setScene(new Scene(root));
         window.show();
     }
+
 
 
 

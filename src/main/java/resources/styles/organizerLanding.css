@@ -13,6 +13,7 @@
 -fx-background-radius:5px;
  -fx-border-radius:5px;
     }
- .ListView{
-    -fx-background-color: "#e8d8c9";
- }
+
+.button{
+    -fx-cursor: hand;
+}

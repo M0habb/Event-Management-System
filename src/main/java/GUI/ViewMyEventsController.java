@@ -16,9 +16,13 @@ public class ViewMyEventsController {
 
     @FXML
     private Label usernameLabel;
+
+    @FXML
+    private Label greetingLabel;
     @FXML
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
+        greetingLabel.setText("Hello "+Attendee.currentUser.getUserName());
     }
     @FXML
      private void username(){

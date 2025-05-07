@@ -56,9 +56,9 @@ public class MainController extends Application{
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
         Event event1 = new Event("ASU Music Concert", bd, false, room1,
-                00, organizer3, category1);
-        Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
-        Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
+                00, organizer3, category1, address1);
+        Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2, address2);
+        Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1, address3);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);

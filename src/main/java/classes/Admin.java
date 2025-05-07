@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Admin extends User implements Crud<Category>{
     private int workingHours;
-    Admin(){
+    public Admin(){
         super();
     }
     public Admin(String userName, String password, Gender gender, Date birthDate, long phoneNumber, int workingHours){
