@@ -20,7 +20,7 @@
             <Image url="@images/sarah.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="210.0" layoutY="152.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
+      <Button layoutX="210.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleViewEvents" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
       <Button layoutX="722.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleViewMyEvents" prefHeight="66.0" prefWidth="245.0" styleClass="ViewUpcomingEvents" text="View My Events" textFill="#ffae00" />
       <Button layoutX="209.0" layoutY="477.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="237.0" styleClass="ProceedToCheckout" text="Proceed To Checkout" />
       <ImageView fitHeight="168.0" fitWidth="223.0" layoutX="761.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
@@ -40,6 +40,5 @@
          </image>
       </ImageView>
       <Label fx:id="usernameLabel" layoutX="934.0" layoutY="34.0" text="Username" />
-      <Label fx:id="greetingLabel" layoutX="43.0" layoutY="25.0" prefHeight="36.0" prefWidth="174.0" />
    </children>
 </AnchorPane>

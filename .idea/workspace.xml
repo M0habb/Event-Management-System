@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/HBoxController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/hbox_layout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowAttendeesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowAttendeesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showAttendees.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showAttendees.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -99,15 +98,5 @@
       <updated>1746188400638</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
