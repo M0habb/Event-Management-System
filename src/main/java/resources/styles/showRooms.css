@@ -7,3 +7,7 @@
 .HBox {
     -fx-background-image: url("C:\Users\SIGMA\Downloads\roomsbg2.jpeg"
 }
+
+.table-view{
+    -fx-background-image: url("../images/roomsbg.jpg"
+}
