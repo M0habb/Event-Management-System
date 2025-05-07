@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class AttendeeLandingController {
 
+
     @FXML
     private Label usernameLabel;
     @FXML

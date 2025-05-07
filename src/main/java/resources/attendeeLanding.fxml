@@ -40,5 +40,6 @@
          </image>
       </ImageView>
       <Label fx:id="usernameLabel" layoutX="934.0" layoutY="34.0" text="Username" />
+      <Label fx:id="greetingLabel" layoutX="43.0" layoutY="25.0" prefHeight="36.0" prefWidth="174.0" />
    </children>
 </AnchorPane>
