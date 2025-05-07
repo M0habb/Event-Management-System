@@ -1,6 +1,8 @@
 package GUI;
 
 import classes.Attendee;
+import classes.Database;
+import classes.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,13 +11,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ViewEventsController {
+
+    @FXML private ScrollPane scrollpane;
 
     @FXML private Button musicCategory;
     @FXML private Button sportsCategory;
@@ -23,17 +30,47 @@ public class ViewEventsController {
     @FXML private Button conferenceCategory;
     @FXML private Button otherCategory;
     @FXML private Label usernameLabel;
-    @FXML private VBox expandableBox;
+
+    User currentUserU = Attendee.currentUser;
+    Attendee currentUser = (Attendee) currentUserU;
 
     private List<Button> categoryButtons;
     private Map<Button, String> categoryButtonColors;
 
+
     @FXML
     public void initialize() {
 
-        expandableBox.setManaged(false);
+        for (int i =0; i < Database.events.size(); i++){
+            VBox newVBox;
+            try {
+                newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Node hbox1 = newVBox.getChildren().get(0);
+            HBox hbox = (HBox) hbox1;
+            Label eventName = (Label) hbox.getChildren().get(0);
+            Label eventDate = (Label) hbox.getChildren().get(1);
 
-        usernameLabel.setText(Attendee.currentUser.getUserName());
+            eventName.setText(Database.events.get(i).getEventName());
+            Date date = Database.events.get(i).getEventDate();
+            SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
+            String dateString = formatter.format(date);
+            eventDate.setText(dateString);
+
+            VBox innerV = (VBox) newVBox.getChildren().get(1);
+            Label eventLoc = (Label) innerV.getChildren().get(0);
+            Label eventOrganizer = (Label) innerV.getChildren().get(1);
+            Label eventOutdoors = (Label) innerV.getChildren().get(2);
+            Label eventActivities = (Label) innerV.getChildren().get(3);
+            Label eventFees = (Label) innerV.getChildren().get(4);
+
+            VBox rootV = (VBox) scrollpane.getContent();
+            rootV.getChildren().add(newVBox);
+        }
+
+        usernameLabel.setText(currentUser.getUserName());
 
         categoryButtons = Arrays.asList(musicCategory, sportsCategory, theaterCategory, conferenceCategory, otherCategory);
 
@@ -93,11 +130,5 @@ public class ViewEventsController {
 
         window.setScene(scene);
         window.show();
-    }
-
-    @FXML
-    private void expandBox(){
-        expandableBox.setVisible(!expandableBox.isVisible());
-        expandableBox.setManaged(!expandableBox.isManaged());
     }
 }
