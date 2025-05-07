@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="137.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="GUI.VBoxController" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="137.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VBoxController">
    <children>
       <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" styleClass="HBox">
          <children>
@@ -56,11 +57,16 @@
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label text="-Fees: ">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="858.0" text="-Fees: ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>
