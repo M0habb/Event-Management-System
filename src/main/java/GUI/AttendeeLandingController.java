@@ -56,5 +56,16 @@ public class AttendeeLandingController {
         window.setScene(scene);
         window.show();
     }
+    @FXML
+    private void handleProceedToCheckout(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/proceedToCheckout.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+    }
 
 }

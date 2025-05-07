@@ -14,7 +14,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-    
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -30,8 +30,8 @@ public class ViewEventsController {
     @FXML private Button otherCategory;
     @FXML private Label usernameLabel;
 
-    User currentUserU = Attendee.currentUser;
-    Attendee currentUser = (Attendee) currentUserU;
+    static User currentUserU = Attendee.currentUser;
+    static Attendee currentUser = (Attendee) currentUserU;
 
     private List<Button> categoryButtons;
     private Map<Button, String> categoryButtonColors;
@@ -104,8 +104,6 @@ public class ViewEventsController {
         for (Button b : categoryButtons) {
             b.setStyle("-fx-background-color: transparent;");
         }
-
-        // Apply the unique color if it's not already set
 
         if (!colored) {
             clickedButton.setStyle("-fx-background-color: " + color + ";");
@@ -384,7 +382,6 @@ public class ViewEventsController {
                 }
             }
         }else {
-            System.out.println("I am working");
             displayEvents();
         }
     }
@@ -400,4 +397,22 @@ public class ViewEventsController {
         window.setScene(scene);
         window.show();
     }
+
+    @FXML
+    public static void handleBuy(Label eventName){
+
+
+
+        Event event = new Event();
+        for (int i = 0; i < Database.events.size(); i++){
+            if (Database.events.get(i).getEventName().equals(eventName)){
+                event = Database.events.get(i);
+            }
+        }
+
+        Ticket ticket = new Ticket(event.getEventName(), currentUser, event.getFees(), event.getEventDate());
+
+        Database.tickets.add(ticket);
+    }
+
 }
