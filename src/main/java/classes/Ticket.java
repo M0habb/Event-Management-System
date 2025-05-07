@@ -4,7 +4,9 @@ public class Ticket {
     private Attendee owner;
     private double fees;
     private Date date;
-    Ticket(Attendee owner, double fees, Date date){
+    private String eventName;
+    Ticket(String eventName,Attendee owner, double fees, Date date){
+        this.eventName=eventName;
         this.owner=owner;
         this.fees=fees;
         this.date=date;
@@ -13,6 +15,14 @@ public class Ticket {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+
+    public String getEventName() {
+        return eventName;
     }
 
     public Attendee getOwner() {
