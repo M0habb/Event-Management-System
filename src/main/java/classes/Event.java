@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Event {
 
+    private Address address;
     private String eventName;
     private Date eventDate;
     private boolean outdoors;
@@ -19,7 +20,7 @@ public class Event {
     public Event(){
 
     }
-    public Event(String eventName, Date eventDate, boolean outdoors, Room room, int maxAttendees, Organizer organizer, Category category) {
+    public Event(String eventName, Date eventDate, boolean outdoors, Room room, int maxAttendees, Organizer organizer, Category category, Address address) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.outdoors = outdoors;
@@ -29,9 +30,19 @@ public class Event {
         this.category = category;
         this.room.setAvailable(false);
         this.attendees = new ArrayList<>();
+        this.address = address;
     }
 
     //Setters & Getters
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public Date getEventDate() {
         return eventDate;
     }

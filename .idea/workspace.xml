@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowEvenetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "<unknown>",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images",
@@ -59,6 +52,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
+      <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\styles" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
