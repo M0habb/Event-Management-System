@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="137.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VBoxController">
+   <children>
+      <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" styleClass="HBox">
+         <children>
+            <Label fx:id="eventName1" prefHeight="30.0" prefWidth="322.0" text="Event Name">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="eventDate1" prefHeight="35.0" prefWidth="571.0" text="Event Date">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/music.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="28.0" />
+            <ImageView fitHeight="25.0" fitWidth="28.0" styleClass="dropdown">
+               <image>
+                  <Image url="@../../../../../../../Downloads/down-arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox fx:id="expandableBox" prefHeight="80.0" prefWidth="714.0" styleClass="innerVBox" visible="false">
+         <children>
+            <Label text="-Event is set in">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="-Organized by">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="-Located ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label text="-Activities: ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="858.0" text="-Fees: ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

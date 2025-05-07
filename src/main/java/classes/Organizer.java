@@ -141,7 +141,8 @@ public class Organizer extends User implements Crud<Event>{
         double fees = scanner.nextDouble();
         System.out.println("Enter max number of attendees: ");
         int maxAttendees = scanner.nextInt();
-        Event event = new Event(eventName, eventDate, outdoors, room, maxAttendees, this, category);
+        Address address = new Address("Egypt", "Cairo", "St", 123);
+        Event event = new Event(eventName, eventDate, outdoors, room, maxAttendees, this, category, address);
         event.setFees(fees);
         Database.events.add(event);
     }

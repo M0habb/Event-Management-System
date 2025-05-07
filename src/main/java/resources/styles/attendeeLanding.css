@@ -37,3 +37,7 @@
     -fx-border-radius: 5px;
 
 }
+
+.button{
+    -fx-cursor: hand;
+}
