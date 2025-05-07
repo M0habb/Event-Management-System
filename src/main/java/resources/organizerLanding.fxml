@@ -100,5 +100,20 @@
          </image>
       </ImageView>
       <ListView layoutX="913.0" layoutY="354.0" prefHeight="185.0" prefWidth="165.0" styleClass="ListView" />
+      <Label layoutX="315.0" layoutY="603.0" prefHeight="21.0" prefWidth="117.0" text="EVENT NAME">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="606.0" prefHeight="16.0" prefWidth="117.0" text="EVENT NAME">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="603.0" prefHeight="21.0" prefWidth="117.0" text="EVENT NAME">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
