@@ -18,7 +18,7 @@
          </font>
       </Button>
       <Button layoutX="112.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" text="Show Rooms" />
-      <Button fx:id="btnManageCategories" layoutX="430.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" text="Manage Categories" />
+      <Button layoutX="430.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" text="Manage Categories" />
       <Button fx:id="btnShowOrganizers" layoutX="112.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleShowOrganizers" prefHeight="79.0" prefWidth="202.0" text="Show Organizers" />
       <Button layoutX="754.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowAttendees" prefHeight="79.0" prefWidth="202.0" text="Show Attendees" />
       <Button layoutX="430.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowEvents" prefHeight="79.0" prefWidth="202.0" text="Show Events" />
