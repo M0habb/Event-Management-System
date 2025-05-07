@@ -5,7 +5,7 @@ public class Ticket {
     private double fees;
     private Date date;
     private String eventName;
-    Ticket(String eventName,Attendee owner, double fees, Date date){
+    public Ticket(String eventName, Attendee owner, double fees, Date date){
         this.eventName=eventName;
         this.owner=owner;
         this.fees=fees;

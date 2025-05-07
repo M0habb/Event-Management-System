@@ -64,7 +64,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#handleBuy" text="Buy Ticket!" />
+                  <Button fx:id="buyButton" mnemonicParsing="false" onAction="#handleBuy" prefHeight="25.0" prefWidth="112.0" text="Buy Ticket!" />
                </children>
             </HBox>
          </children>
