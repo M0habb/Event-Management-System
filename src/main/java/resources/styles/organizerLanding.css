@@ -17,3 +17,6 @@
 .button{
     -fx-cursor: hand;
 }
+.list-view {
+    -fx-background-color: "#fcf1ef"; /* Replace with your desired color */
+}

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.ManageCategoriesController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ManageCategoriesController">
+   <children>
+      <VBox layoutX="74.0" layoutY="38.0" prefHeight="200.0" prefWidth="100.0" />
+      <VBox layoutX="571.0" layoutY="121.0" prefHeight="642.0" prefWidth="1142.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="manageCategories" prefHeight="643.0" prefWidth="1142.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="CatID" />
+                <TableColumn fx:id="typeColumn" prefWidth="75.0" text="TYPE" />
+                  <TableColumn fx:id="updateColumn" prefWidth="75.0" text="UPDATE" />
+                  <TableColumn fx:id="deleteColumn" prefWidth="75.0" text="DELETE" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
