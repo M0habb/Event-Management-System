@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="resources.ShowRooms"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #f2e5d4;" stylesheets="@styles/showRooms.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowRoomsController">
+   <children>
+      <TableView fx:id="roomsTable" layoutX="-2.0" layoutY="287.0" prefHeight="354.0" prefWidth="676.0">
+        <columns>
+          <TableColumn fx:id="roomNumColumn" prefWidth="75.0" styleClass="tabv" text="room num" />
+          <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="size" />
+        </columns>
+      </TableView>
+      <Text fill="#6b360d" layoutX="169.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-ROOMS-" textAlignment="CENTER" wrappingWidth="298.1367301940918">
+         <font>
+            <Font name="Dubai Regular" size="70.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="847.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="641.0" fitWidth="506.0" layoutX="673.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/roomsbg.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
