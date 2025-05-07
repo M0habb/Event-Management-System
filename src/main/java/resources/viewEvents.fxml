@@ -60,11 +60,6 @@
       </ImageView>
       <Line endX="100.0" endY="22.00000762939453" layoutX="793.0" layoutY="40.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
       <Label fx:id="usernameLabel" layoutX="944.0" layoutY="44.0" text="Username" />
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="67.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/black-circle.png" />
-         </image>
-      </ImageView>
       <ScrollPane fx:id="scrollpane" hbarPolicy="NEVER" layoutX="104.0" layoutY="236.0" prefHeight="332.0" prefWidth="980.0" styleClass="scrollpane" vmax="332.0">
          <content>
             <VBox prefHeight="331.0" prefWidth="980.0" />
