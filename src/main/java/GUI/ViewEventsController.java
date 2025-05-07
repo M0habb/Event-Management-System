@@ -14,7 +14,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-    
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -104,8 +104,6 @@ public class ViewEventsController {
         for (Button b : categoryButtons) {
             b.setStyle("-fx-background-color: transparent;");
         }
-
-        // Apply the unique color if it's not already set
 
         if (!colored) {
             clickedButton.setStyle("-fx-background-color: " + color + ";");
@@ -384,7 +382,6 @@ public class ViewEventsController {
                 }
             }
         }else {
-            System.out.println("I am working");
             displayEvents();
         }
     }
@@ -400,4 +397,10 @@ public class ViewEventsController {
         window.setScene(scene);
         window.show();
     }
+
+    @FXML
+    public static void handleBuy(ActionEvent event, Label eventName){
+        Ticket ticket = new Ticket();
+    }
+
 }

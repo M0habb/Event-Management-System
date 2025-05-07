@@ -1,12 +1,13 @@
 package GUI;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-public class VBoxController {
+public class VBoxController{
 
-    @FXML private Label eventName1;
+    @FXML private Label eventName;
     @FXML private Label eventDate1;
 
 
@@ -22,5 +23,10 @@ public class VBoxController {
     private void expandBox(){
         expandableBox.setVisible(!expandableBox.isVisible());
         expandableBox.setManaged(!expandableBox.isManaged());
+    }
+
+    @FXML
+    public void handleBuy(ActionEvent event){
+        ViewEventsController.handleBuy(event, eventName);
     }
 }
