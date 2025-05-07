@@ -8,7 +8,7 @@ public class ProceedToCheckoutController {
     @FXML
     private ScrollPane scrollpane;
     private void displayTicketsBought(){
-        VBox rootV= (Vbox)scrollpane.getContent();
+        VBox rootV= (VBox)scrollpane.getContent();
 
 
     }
