@@ -21,6 +21,7 @@
         <option value="module-info" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -40,6 +41,7 @@
     "Application.Controller.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MainController.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -60,6 +62,7 @@
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\20101\Documents\GitHub\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\resources\classes" />
