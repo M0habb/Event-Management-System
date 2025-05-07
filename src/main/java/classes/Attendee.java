@@ -5,13 +5,13 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
 public class Attendee extends User{
 
     private List<Category> interests;
     private Address address;
     private ArrayList<Event> eventsAttended;
+    private Attendee attendee;
     public Attendee(){
         super();
         this.eventsAttended = new ArrayList<>();
@@ -112,6 +112,7 @@ public class Attendee extends User{
         return count - 1;
     }
     public void buyTickets(Event event){
+        Ticket ticket=new Ticket(attendee,event.getFees(),event.getEventDate());
         int i = this.getWallet().deductBalance(event.getFees());
         if(i == 0){
             System.out.println("Ticket purchased!");
@@ -121,6 +122,7 @@ public class Attendee extends User{
         }else if(i == 2){
             System.out.println("Insufficient Funds!");
         }
+        Database.tickets.add(ticket);
     }
     public void showEventsAttended(){
         int count = 0;
