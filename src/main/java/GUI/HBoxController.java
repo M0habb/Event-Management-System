@@ -7,10 +7,7 @@ import javafx.scene.control.Label;
 
 public class HBoxController {
 
-    @FXML
-    public void initiate(){
-        eventNameLabel;
-    }
+
 
 
 }

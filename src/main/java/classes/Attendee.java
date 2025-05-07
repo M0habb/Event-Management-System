@@ -112,7 +112,7 @@ public class Attendee extends User{
         return count - 1;
     }
     public void buyTickets(Event event){
-        Ticket ticket=new Ticket(attendee,event.getFees(),event.getEventDate());
+        Ticket ticket=new Ticket(event.getEventName(),attendee,event.getFees(),event.getEventDate());
         int i = this.getWallet().deductBalance(event.getFees());
         if(i == 0){
             System.out.println("Ticket purchased!");
