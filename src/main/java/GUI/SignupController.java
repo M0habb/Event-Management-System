@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.time.Instant;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.function.UnaryOperator;
 
@@ -43,6 +44,9 @@ public class SignupController {
 
     @FXML
     private Label requiredLabel;
+
+    @FXML
+    private Label passwordNotMatch;
 
     @FXML
     private ComboBox<String> genderComboBox;
@@ -100,7 +104,11 @@ public class SignupController {
     }
 
     @FXML
-    private void handleSignUp(){
+    private void handleSignUp(ActionEvent event) throws IOException {
+
+        requiredLabel.setVisible(false);
+        takenUsername.setVisible(false);
+        passwordNotMatch.setVisible(false);
 
         if (usernameTextfield.getText().isEmpty() || genderComboBox.getValue() == null || countryComboBox.getValue() == null || cityComboBox.getValue() == null || passwordTextField.getText().isEmpty() || confirmTextField.getText().isEmpty() || phoneTextField.getText().isEmpty() || birthDate.getValue() == null){
             requiredLabel.setVisible(true);
@@ -110,9 +118,17 @@ public class SignupController {
         for (int i = 0; i < totalAttendees.size(); i++){
             if (usernameTextfield.getText().equals(totalAttendees.get(i).getUserName())){
                 takenUsername.setVisible(true);
+                usernameTextfield.setText("");
                 return;
             }
         }
+
+        if (!confirmTextField.getText().equals(passwordTextField.getText())){
+            passwordNotMatch.setVisible(true);
+            confirmTextField.setText("");
+            return;
+        }
+
 
         Attendee attendee = new Attendee();
 
@@ -123,7 +139,7 @@ public class SignupController {
             gender = Gender.FEMALE;
         }
 
-        Date birthdate = Date.from(Instant.from(birthDate.getValue()));
+        Date birthdate = Date.from(Instant.from(birthDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
 
         String country = countryComboBox.getValue();
         String city = cityComboBox.getValue();
@@ -133,11 +149,16 @@ public class SignupController {
 
         long phoneNumber = Long.valueOf(phoneTextField.getText());
 
-        String password = passwordTextField.getText();
+        attendee.signup(usernameTextfield.getText(), gender, birthdate, address, phoneNumber, passwordTextField.getText());
 
-        attendee.signup(usernameTextfield.getText(), gender, birthdate, address, phoneNumber, password);
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
 
+        Scene scene = new Scene(root, 1142, 642);
 
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
     }
 
     @FXML

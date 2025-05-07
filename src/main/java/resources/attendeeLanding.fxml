@@ -15,18 +15,13 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="910.0" layoutY="26.0" prefHeight="36.0" prefWidth="86.0" text="username">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="1004.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="51.0" fitWidth="73.0" layoutX="1055.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
          <image>
-            <Image url="@images/user.png" />
+            <Image url="@images/sarah.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="210.0" layoutY="152.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
-      <Button layoutX="722.0" layoutY="312.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="245.0" styleClass="ViewUpcomingEvents" text="View My Events" textFill="#ffae00" />
+      <Button layoutX="215.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleViewEvents" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
+      <Button layoutX="722.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleViewMyEvents" prefHeight="66.0" prefWidth="245.0" styleClass="ViewUpcomingEvents" text="View My Events" textFill="#ffae00" />
       <Button layoutX="209.0" layoutY="477.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="237.0" styleClass="ProceedToCheckout" text="Proceed To Checkout" />
       <ImageView fitHeight="168.0" fitWidth="223.0" layoutX="761.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -35,11 +30,12 @@
       </ImageView>
       <ImageView fitHeight="174.0" fitWidth="322.0" layoutX="742.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/wallet%20(1).png" />
+            <Image url="@images/wallet (1).png" />
          </image>
       </ImageView>
       <Line endX="100.0" endY="22.00000762939453" layoutX="783.0" layoutY="30.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
-      <ImageView fitHeight="187.0" fitWidth="187.0" layoutX="234.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="usernameLabel" layoutX="934.0" layoutY="34.0" text="Username" />
+      <ImageView fitHeight="187.0" fitWidth="187.0" layoutX="214.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/events.png" />
          </image>

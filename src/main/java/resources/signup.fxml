@@ -90,7 +90,6 @@
       <Hyperlink layoutX="530.0" layoutY="471.0" text="*" textFill="RED" />
       <ComboBox fx:id="countryComboBox" layoutX="479.0" layoutY="228.0" prefHeight="38.0" prefWidth="214.0" promptText="Select country" />
       <ComboBox fx:id="cityComboBox" layoutX="478.0" layoutY="320.0" prefHeight="38.0" prefWidth="214.0" promptText="Select city" />
-      <Hyperlink layoutX="930.0" layoutY="445.0" text="Password doesn't match" textFill="RED" />
       <Button layoutX="185.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
          <font>
             <Font size="20.0" />
@@ -109,5 +108,6 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <Label fx:id="passwordNotMatch" layoutX="927.0" layoutY="455.0" text="Password doesn't match" textFill="RED" visible="false" />
    </children>
 </AnchorPane>
