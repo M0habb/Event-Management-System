@@ -30,8 +30,8 @@ public class ProceedToCheckoutController {
     @FXML
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
-        totalLabel.setText("Total: "+String.valueOf(sum));
         displayTicketsBought();
+        totalLabel.setText("Total: $ "+String.valueOf(sum));
     }
 
     @FXML
@@ -52,9 +52,9 @@ public class ProceedToCheckoutController {
                     throw new RuntimeException(e);
                 }
 
-                Label eventNameLabel = (Label) rootH.getChildren().get(0);
+                Label eventNameLabel = (Label) rootH.getChildren().get(1);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
-                Label eventDateLabel = (Label) rootH.getChildren().get(1);
+                Label eventDateLabel = (Label) rootH.getChildren().get(2);
                 Date date = Database.tickets.get(i).getDate();
                 SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                 String dateString = "";
@@ -62,8 +62,8 @@ public class ProceedToCheckoutController {
                     dateString = formatter.format(date);
                 }
                 eventDateLabel.setText(dateString);
-                Label eventPriceLabel = (Label)rootH.getChildren().get(2);
-                eventPriceLabel.setText(String.valueOf(Database.tickets.get(i).getFees()));
+                Label eventPriceLabel = (Label)rootH.getChildren().get(3);
+                eventPriceLabel.setText("$"+String.valueOf(Database.tickets.get(i).getFees()));
 
                 rootV.getChildren().add(rootH);
                 sum = sum+Database.tickets.get(i).getFees();
