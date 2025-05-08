@@ -81,6 +81,7 @@ public class MainController extends Application{
         Database.rooms.add(room2);
         Database.rooms.add(room3);
         Database.rooms.add(room4);
+        attendee1.getWallet().addBalance(400);
 
         ArrayList<Event> org1EventsCreated = new ArrayList<Event>();
         org1EventsCreated.add(event1);
