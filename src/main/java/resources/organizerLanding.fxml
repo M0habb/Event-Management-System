@@ -31,7 +31,7 @@
             <Font name="Bodoni MT" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="973.0" layoutY="51.0" text="username">
+      <Label fx:id="usernameLabel" layoutX="973.0" layoutY="51.0" text="username">
          <font>
             <Font size="18.0" />
          </font>
@@ -41,11 +41,6 @@
             <Font name="Bodoni MT" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="1074.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/user.png" />
-         </image>
-      </ImageView>
       <Button layoutX="926.0" layoutY="132.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleImageClick" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
             <Font size="18.0" />
@@ -124,5 +119,10 @@
             </AnchorPane>
         </content>
       </ScrollPane>
+      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1063.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/img_2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

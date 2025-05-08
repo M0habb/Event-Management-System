@@ -22,9 +22,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
-
+import static GUI.ViewEventsController.currentUser;
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
+
+    @FXML
+    private Label EmptyCart;
 
     @FXML
     private Label usernameLabel;
@@ -37,10 +40,12 @@ public class ProceedToCheckoutController {
         usernameLabel.setText(Attendee.currentUser.getUserName());
         displayTicketsBought();
         totalLabel.setText("Total: $ "+String.valueOf(sum));
+        notification.setVisible(false);
+        EmptyCart.setVisible(false);
     }
 
     @FXML
-    private ScrollPane scrollpane;
+        private ScrollPane scrollpane;
 
 
     @FXML
@@ -97,6 +102,7 @@ public class ProceedToCheckoutController {
     //make label not visible in back
     @FXML
     private void handlePayByWallet(){
+        VBox rootV = (VBox) scrollpane.getContent();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText("Are you sure?");
@@ -106,17 +112,17 @@ public class ProceedToCheckoutController {
         if (result.isPresent() && result.get() == ButtonType.OK){
             // User clicked OK
             notification.setVisible(true);
+            if(Attendee.currentUser.getWallet().deductBalance(sum)){
+                notification.setText("*Transaction Successful");
+                rootV.getChildren().clear();
+                sum = 0;
+                EmptyCart.setVisible(true);
 
-            //currentUser.getWallet.deductbalance;
-           // notification.setText();
+            }
+            else{
+                notification.setText("*Insufficient Funds");
+            }
 
-            //User.currentUser..buyTicket
-            //notification.setText();
-
-            System.out.println("Confirmed!");
-        } else {
-            // User canceled
-            System.out.println("Cancelled!");
         }
     }
     @FXML
@@ -130,5 +136,7 @@ public class ProceedToCheckoutController {
         window.setScene(scene);
         window.show();
         notification.setVisible(false);
+
     }
+
 }
