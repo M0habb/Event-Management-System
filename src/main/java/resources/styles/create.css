@@ -6,3 +6,17 @@
 .View-Button{
 -fx-background-color: #b4aea1;
 }
+.create-label{
+    -fx-background-color: #e0f7fa;
+    -fx-padding: 12 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.3, 0, 2);
+}
+.missing-label{
+    -fx-background-color: #f8d7da;
+        -fx-padding: 12 20;
+        -fx-background-radius: 10;
+        -fx-border-radius: 10;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.3, 0, 2);
+}

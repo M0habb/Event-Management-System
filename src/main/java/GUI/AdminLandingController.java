@@ -48,7 +48,7 @@ public class AdminLandingController {
 
     @FXML
     private void handleShowAttendees(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/showAttendess.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showAttendees.fxml"));
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(new Scene(root));
         window.show();

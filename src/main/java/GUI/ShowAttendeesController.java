@@ -11,7 +11,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class ShowAttendeesController {
 
-    @FXML private TableView<Attendee> attendeeTable;
+    @FXML private TableView<Attendee> showAttendees;
     @FXML private TableColumn<Attendee, String> usernameColumn;
     @FXML private TableColumn<Attendee, String> balanceColumn;
 
@@ -29,6 +29,6 @@ public class ShowAttendeesController {
         );
 
         // Fill table with all attendees from the database
-        attendeeTable.setItems(FXCollections.observableArrayList(Database.totalAttendees));
+        showAttendees.setItems(FXCollections.observableArrayList(Database.totalAttendees));
     }
 }
