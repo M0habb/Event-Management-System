@@ -56,11 +56,11 @@ public class OrganizerLandingController {
         window.setScene(scene);
         window.show();
     }
-    private void handleUpcomingEvents(){
+    private void handleUpcomingEvents() {
         HBox rootH = (HBox) scrollpane.getContent();
-        for (int i = 0; i < Database.events.size(); i++){
-            if(User.currentUser == Database.events.get(i).getOrganizer()) {
-                
+        for (int i = 0; i < Database.events.size(); i++) {
+            if (User.currentUser == Database.events.get(i).getOrganizer()) {
+
                 try {
                     rootH = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
                 } catch (IOException e) {
@@ -69,22 +69,9 @@ public class OrganizerLandingController {
 
                 Label eventNameLabel = (Label) rootH.getChildren().get(1);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
+            }
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
