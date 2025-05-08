@@ -41,6 +41,9 @@ public class CreateEventController {
 
     @FXML
     private CheckBox outdoorsCheckbox;
+    @FXML
+    private ComboBox typecombobox;
+
 
     @FXML
     private Label missingLabel;
@@ -59,8 +62,17 @@ public class CreateEventController {
                     rentComboBox.getItems().add(Database.rooms.get(i).getRoomName());
                 }
             }
+            typecombobox.getItems().addAll(
+                    "Concert",
+                    "Conference",
+                    "Sports event"
+            );
         }
+
     }
+
+
+
 
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
@@ -122,6 +134,6 @@ public class CreateEventController {
         }
 
     }
-    
+
 }
 
