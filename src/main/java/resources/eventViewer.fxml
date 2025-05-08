@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #f3ead9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EventViewerController">
     <children>
         <ImageView fitHeight="642.0" fitWidth="1156.0" layoutY="-367.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
@@ -15,12 +14,12 @@
                 <Image url="@../../../../../../../Downloads/OIP.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="890.0" layoutY="36.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="Sign Out" textFill="#ec0707">
+        <Button layoutX="890.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="36.0" prefWidth="73.0" text="Sign Out" textFill="#ec0707">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
-        <Text layoutX="986.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+        <Text fx:id="usernameLabel" layoutX="986.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
             <font>
                 <Font size="18.0" />
             </font>
@@ -106,7 +105,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="36.0" layoutY="552.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="98.0" text="Back" />
+        <Button layoutX="36.0" layoutY="540.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="60.0" prefWidth="125.0" text="Back" />
         <Text layoutX="36.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AZ Zaytoun Al Qebleyah, Zeitoun, Cairo Governorate">
             <font>
                 <Font size="18.0" />
@@ -124,5 +123,10 @@
                 <Font size="14.0" />
             </font>
         </Text>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1074.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ichep%20logo.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

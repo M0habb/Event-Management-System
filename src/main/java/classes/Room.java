@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Room {
 
     private String roomName;
-    private Size size; //no. of ppl
+    private int size; //no. of ppl
     private boolean available;
     private Address address;
     private boolean outdoors;
-    Room(){
+    public Room(){
 
     }
-    public Room(String roomName, Size size, boolean available, Address address, boolean outdoors){
+    public Room(String roomName, int size, boolean available, Address address, boolean outdoors){
         this.roomName = roomName;
         this.size = size;
         this.available = available;
@@ -28,10 +28,10 @@ public class Room {
         this.outdoors = outdoors;
     }
 
-    public Size getSize() {
+    public int getSize() {
         return size;
     }
-    public void setSize(Size size) {
+    public void setSize(int size) {
         this.size = size;
     }
     public boolean getAvailable() {

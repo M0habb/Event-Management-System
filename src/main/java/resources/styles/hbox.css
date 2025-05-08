@@ -1,20 +1,20 @@
 .HLabel1{
 
--fx-text-fill:#476f95; /* Text color */
+-fx-text-fill:##736f67; /* Text color */
 -fx-font-size: 24px;
  -fx-alignment: center-left;
 
 }
 .HLabel2{
 
--fx-text-fill:#476f95; /* Text color */
+-fx-text-fill:#736f67; /* Text color */
 -fx-font-size: 24px;
  -fx-alignment: center;
 
 }
 .HLabel3{
 
- -fx-text-fill:#476f95; /* Text color */
+ -fx-text-fill:#736f67; /* Text color */
  -fx-font-size: 22px;
  -fx-alignment: center-right;
  -fx-font-weight: bold;
