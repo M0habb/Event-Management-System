@@ -27,7 +27,7 @@
          <Font size="21.0" />
       </font>
    </PasswordField>
-   <TextField fx:id="usernameField" layoutX="151.0" layoutY="255.0" prefHeight="56.0" prefWidth="367.0" promptText="Username">
+   <TextField fx:id="usernameField" layoutX="151.0" layoutY="255.0" onKeyPressed="#handleEnter" prefHeight="56.0" prefWidth="367.0" promptText="Username">
       <opaqueInsets>
          <Insets />
       </opaqueInsets>
