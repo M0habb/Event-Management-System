@@ -4,30 +4,42 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="649.0" prefWidth="1142.0" style="-fx-background-color: #f3ead9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ManageCategoriesController">
+<AnchorPane prefHeight="649.0" prefWidth="1142.0" style="-fx-background-color: #f3ead9;" stylesheets="@styles/manageCategories.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ManageCategoriesController">
    <children>
-      <TableView fx:id="manageCategories" layoutX="840.0" prefHeight="635.0" prefWidth="301.0">
+      <TableView fx:id="manageCategories" layoutX="711.0" prefHeight="650.0" prefWidth="431.0">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="75.0" text="CatID" />
-          <TableColumn fx:id="typeColumn" prefWidth="75.0" text="TYPE" />
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Category Name" />
+          <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
             <TableColumn fx:id="updateColumn" prefWidth="75.0" text="UPDATE" />
             <TableColumn fx:id="deleteColumn" prefWidth="75.0" text="DELETE" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <HBox layoutY="1.0" prefHeight="106.0" prefWidth="839.0" style="-fx-background-color: #d5b895;" />
-      <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER">
+      <TextArea layoutX="123.0" layoutY="418.0" prefHeight="38.0" prefWidth="270.0" />
+      <Button layoutX="41.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Sports" />
+      <Button layoutX="479.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Theatre" />
+      <Button layoutX="264.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Music" />
+      <ImageView fitHeight="151.0" fitWidth="712.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Pictures/vector-watercolor-art-background-old-260nw-2399844377.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="23.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER" wrappingWidth="235.18002319335938">
          <font>
-            <Font name="Dubai Medium" size="45.0" />
+            <Font name="Arial Bold Italic" size="45.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Categories">
+      <Text layoutX="28.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="99.51553344726562">
          <font>
-            <Font name="Arial" size="28.0" />
+            <Font size="25.0" />
          </font>
       </Text>
       <Text layoutX="28.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="99.51553344726562">
@@ -35,14 +47,15 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Text layoutX="28.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="99.51553344726562">
+      <Button layoutX="579.0" layoutY="522.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
-            <Font size="25.0" />
+            <Font size="18.0" />
          </font>
-      </Text>
-      <TextArea layoutX="78.0" layoutY="419.0" prefHeight="38.0" prefWidth="270.0" />
-      <Button layoutX="41.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Sports" />
-      <Button layoutX="479.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Theatre" />
-      <Button layoutX="264.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Music" />
+      </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="67.0" fitWidth="59.0" layoutX="597.0" layoutY="540.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/plus.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

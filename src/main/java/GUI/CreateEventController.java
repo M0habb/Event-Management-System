@@ -25,9 +25,6 @@ public class CreateEventController {
     private Label eventCreatedLabel;
 
     @FXML
-    private TextField typeTextfield;
-
-    @FXML
     private TextField nameTextfield;
 
     @FXML
@@ -42,8 +39,7 @@ public class CreateEventController {
     @FXML
     private CheckBox outdoorsCheckbox;
     @FXML
-    private ComboBox typecombobox;
-
+    private ComboBox<String> typecombobox;
 
     @FXML
     private Label missingLabel;
@@ -63,15 +59,15 @@ public class CreateEventController {
                 }
             }
             typecombobox.getItems().addAll(
-                    "Concert",
+                    "Music",
                     "Conference",
-                    "Sports event"
+                    "Sports",
+                    "Theater",
+                    "Other"
             );
         }
 
     }
-
-
 
 
     @FXML
@@ -89,6 +85,14 @@ public class CreateEventController {
     @FXML
     private void handleCreate (ActionEvent actionEvent) throws IOException {
 
+        if(typecombobox.getValue()==null||nameTextfield.getText().isEmpty()||rentComboBox.getValue()==null||priceTextField.getText().isEmpty()||  eventDate.getValue()==null)
+        {
+            missingLabel.setVisible(true);
+            return;
+
+        }
+
+        missingLabel.setVisible(false);
         String name = nameTextfield.getText();
         Date birthdate = Date.from(Instant.from(eventDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         boolean outdoors = outdoorsCheckbox.isSelected();
@@ -100,21 +104,11 @@ public class CreateEventController {
         }
         int maxAttendees = room.getSize();
 
-        Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, new Category(1, CategoryType.MUSIC, "Test"));
+        Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, new Category("Techno", CategoryType.MUSIC, "Test"));
 
         Database.events.add(event);
 
         eventCreatedLabel.setVisible(true);
-
-        // return to landing
-//        Parent root = FXMLLoader.load(getClass().getResource("/resources/organizerLanding.fxml"));
-//
-//        Scene scene = new Scene(root, 1142, 642);
-//
-//        Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//
-//        window.setScene(scene);
-//        window.show();
     }
 
 

@@ -11,7 +11,7 @@ import javafx.util.converter.DefaultStringConverter;
 
 public class ManageCategoriesController {
     @FXML private TableView<Category> manageCategories;
-    @FXML private TableColumn<Category, Number> idColumn;
+    @FXML private TableColumn<Category, String> idColumn;
     @FXML private TableColumn<Category, String> typeColumn;
     @FXML private TableColumn<Category, Void> updateColumn;
     @FXML private TableColumn<Category, Void> deleteColumn;
@@ -23,7 +23,7 @@ public class ManageCategoriesController {
         categoryList = FXCollections.observableArrayList(Database.categories);
         manageCategories.setItems(categoryList);
 
-        idColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleIntegerProperty(data.getValue().getID()));
+        idColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getName()));
         typeColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getType().toString()));
 
         typeColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -59,7 +59,7 @@ public class ManageCategoriesController {
             {
                 btn.setOnAction(e -> {
                     Category category = getTableView().getItems().get(getIndex());
-                    new Admin().delete(category.getID());
+                    new Admin().delete(category.getName());
                     categoryList.remove(category);
                 });
             }
@@ -75,4 +75,6 @@ public class ManageCategoriesController {
             }
         });
     }
+
+
 }

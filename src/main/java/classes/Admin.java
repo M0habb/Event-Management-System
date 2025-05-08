@@ -70,7 +70,7 @@ public class Admin extends User implements Crud<Category>{
     public void create() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter category ID: ");
-        int createId = scanner.nextInt();
+        String createId = scanner.nextLine();
 
         System.out.println("Choose category type:");
         CategoryType[] types = CategoryType.values();
@@ -108,9 +108,9 @@ public class Admin extends User implements Crud<Category>{
     @Override
     public void update(Category updatedCategory) {
         for (int i = 0; i < Database.categories.size(); i++) {
-            if (Database.categories.get(i).getID() == updatedCategory.getID()) {
+            if (Database.categories.get(i).getName() == updatedCategory.getName()) {
                 Database.categories.set(i, updatedCategory);
-                System.out.println("Category updated: " + updatedCategory.getID());
+                System.out.println("Category updated: " + updatedCategory.getName());
                 return;
             }
         }
@@ -119,10 +119,10 @@ public class Admin extends User implements Crud<Category>{
     }
 
     @Override
-    public void delete(int categoryID) {
+    public void delete(String categoryID) {
         Category toRemove = null;
         for (Category category : Database.categories) {
-            if (category.getID() == categoryID) {
+            if (category.getName().equals(categoryID)) {
                 toRemove = category;
                 break;
             }
