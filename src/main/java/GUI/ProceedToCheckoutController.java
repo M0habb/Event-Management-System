@@ -41,7 +41,7 @@ public class ProceedToCheckoutController {
     @FXML
 
     private void displayTicketsBought(){
-        VBox rootV = (VBox)scrollpane.getContent();
+        VBox rootV = (VBox) scrollpane.getContent();
         for (int i = 0; i < Database.tickets.size(); i++){
             if(User.currentUser == Database.tickets.get(i).getOwner()) {
 
@@ -52,7 +52,7 @@ public class ProceedToCheckoutController {
                     throw new RuntimeException(e);
                 }
 
-                Label eventNameLabel=(Label)rootH.getChildren().get(0);
+                Label eventNameLabel = (Label) rootH.getChildren().get(0);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
                 Label eventDateLabel = (Label) rootH.getChildren().get(1);
                 Date date = Database.tickets.get(i).getDate();
@@ -66,7 +66,7 @@ public class ProceedToCheckoutController {
                 eventPriceLabel.setText(String.valueOf(Database.tickets.get(i).getFees()));
 
                 rootV.getChildren().add(rootH);
-                sum= sum+Database.tickets.get(i).getFees();
+                sum = sum+Database.tickets.get(i).getFees();
 
 
             }

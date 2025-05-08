@@ -7,14 +7,16 @@ public class Room {
     private int roomNum;
     private Size size; //no. of ppl
     private boolean available;
+    private Address address;
 
     Room(){
 
     }
-    public Room(int roomNum, Size size, boolean available){
+    public Room(int roomNum, Size size, boolean available, Address address){
         this.roomNum = roomNum;
         this.size = size;
         this.available = available;
+        this.address = address;
     }
 //setters and getters
     public Size getSize() {
@@ -37,6 +39,12 @@ public class Room {
     }
     public void setRoom(ArrayList<Room> room) {
         Database.rooms = room;
+    }
+    public Address getAddress() {
+        return address;
+    }
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public void isAvailable(){
