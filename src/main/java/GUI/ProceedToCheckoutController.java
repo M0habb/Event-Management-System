@@ -25,6 +25,8 @@ import java.util.Optional;
 import static GUI.ViewEventsController.currentUser;
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
+    @FXML
+    private Label EmptyCart;
 
     @FXML
     private Label usernameLabel;
@@ -38,10 +40,11 @@ public class ProceedToCheckoutController {
         displayTicketsBought();
         totalLabel.setText("Total: $ "+String.valueOf(sum));
         notification.setVisible(false);
+        EmptyCart.setVisible(false);
     }
 
     @FXML
-    private ScrollPane scrollpane;
+        private ScrollPane scrollpane;
 
 
     @FXML
@@ -98,6 +101,7 @@ public class ProceedToCheckoutController {
     //make label not visible in back
     @FXML
     private void handlePayByWallet(){
+        VBox rootV = (VBox) scrollpane.getContent();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText("Are you sure?");
@@ -109,6 +113,10 @@ public class ProceedToCheckoutController {
             notification.setVisible(true);
             if(Attendee.currentUser.getWallet().deductBalance(sum)){
                 notification.setText("*Transaction Successful");
+                rootV.getChildren().clear();
+                sum = 0;
+                EmptyCart.setVisible(true);
+
             }
             else{
                 notification.setText("*Insufficient Funds");
@@ -127,5 +135,7 @@ public class ProceedToCheckoutController {
         window.setScene(scene);
         window.show();
         notification.setVisible(false);
+
     }
+
 }

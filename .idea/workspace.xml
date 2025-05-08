@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="" />
+    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/HboxEventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/hboxEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,10 +46,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "<unknown>",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/wanil/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+=======
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+>>>>>>> 2642b5467ac3ddba414d4f1cde47ad4ec9c1fe4c
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

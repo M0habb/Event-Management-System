@@ -15,10 +15,13 @@
             <TableColumn fx:id="usernameColumn" text="Username" />
             <TableColumn fx:id="eventsCreatedColumn" text="Events Created" />
         </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
     </TableView>
    <ImageView fitHeight="776.0" fitWidth="515.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../../../../../Downloads/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
+         <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
       </image>
    </ImageView>
    <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORGANIZERS">
