@@ -60,6 +60,8 @@ public class MainController extends Application{
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2, address2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1, address3);
 
+        event1.setFees(200);
+
         Database.admins.add(admin1);
         Database.admins.add(admin2);
         Database.admins.add(admin3);

@@ -28,5 +28,9 @@
          </font>
       </Label>
       <Label fx:id="usernameLabel" layoutX="921.0" layoutY="34.0" prefHeight="17.0" prefWidth="130.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="309.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="814.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="524.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
