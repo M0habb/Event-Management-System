@@ -20,7 +20,11 @@
                   <VBox prefHeight="371.0" prefWidth="960.0" styleClass="vbox" />
                </content>
             </ScrollPane>
-            <Label prefHeight="46.0" prefWidth="257.0" />
+            <Label fx:id="EmptyCart" prefHeight="46.0" prefWidth="285.0" text="Shopping cart is empty">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </StackPane>
       <Label layoutX="24.0" layoutY="12.0" prefHeight="70.0" prefWidth="325.0" text="Checkout" textAlignment="CENTER" wrapText="true">
