@@ -25,7 +25,7 @@ public class Admin extends User implements Crud<Category>{
 
     public void showRooms(){
         for (Room room : Database.rooms) {
-            System.out.println("Room #" + room.getRoomNum() +
+            System.out.println("Room #" + room.getRoomName() +
                     " | Size: " + room.getSize() +
                     " | Available: " + room.getAvailable());
         }
@@ -60,8 +60,8 @@ public class Admin extends User implements Crud<Category>{
 
         }
     }
-    public void addRoom(int roomNum, Size size, Address address){
-        Room newRoom = new Room(roomNum, size, true, address);
+    public void addRoom(String roomName, Size size, Address address, boolean outdoors){
+        Room newRoom = new Room(roomName, size, true, address, outdoors);
         Database.rooms.add(newRoom);
     }
 

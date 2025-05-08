@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/proceedToCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/proceedToCheckout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/proceedToCheckout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/proceedToCheckout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "<unknown>",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/wanil/Documents/GitHub/Event-Management-System/src/main/java/resources",
+    "last_opened_file_path": "C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -54,11 +56,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wanil\Documents\GitHub\Event-Management-System\src\main\java\resources" />
+      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\resources\classes" />

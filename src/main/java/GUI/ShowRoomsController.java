@@ -50,7 +50,7 @@ public class ShowRoomsController {
 
         eventColumn.setCellValueFactory(cellData -> {
             for (int i = 0; i < Database.events.size(); i++){
-                if (cellData.getValue().getRoomNum() == Database.events.get(i).getRoom().getRoomNum()){
+                if (cellData.getValue().getRoomName() == Database.events.get(i).getRoom().getRoomName()){
                     return new SimpleStringProperty(Database.events.get(i).getEventName());
                 }
             }

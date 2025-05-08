@@ -10,46 +10,50 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="421.0" prefWidth="662.0" stylesheets="@styles/proceedToCheckout.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProceedToCheckoutController">
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/proceedToCheckout.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProceedToCheckoutController">
    <children>
-      <ScrollPane fx:id="scrollpane" layoutX="69.0" layoutY="131.0" prefHeight="200.0" prefWidth="478.0" styleClass="scrollpane">
+      <ScrollPane fx:id="scrollpane" layoutX="140.0" layoutY="135.0" prefHeight="371.0" prefWidth="960.0" styleClass="scrollpane">
          <content>
-            <VBox prefHeight="198.0" prefWidth="478.0" />
+            <VBox prefHeight="371.0" prefWidth="960.0" styleClass="vbox" />
          </content>
       </ScrollPane>
-      <Label layoutX="24.0" layoutY="14.0" prefHeight="54.0" prefWidth="143.0" text="Checkout" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="24.0" layoutY="12.0" prefHeight="70.0" prefWidth="325.0" text="Checkout" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold Italic" size="32.0" />
+            <Font name="System Bold Italic" size="48.0" />
          </font>
       </Label>
-      <Button layoutX="431.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="36.0" prefWidth="73.0" styleClass="SignOutButton" text="Sign Out" textAlignment="CENTER" textFill="#0f0808">
+      <Button layoutX="841.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="36.0" prefWidth="73.0" styleClass="SignOutButton" text="Sign Out" textAlignment="CENTER" textFill="#0f0808">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Line endX="100.0" endY="22.00000762939453" layoutX="423.0" layoutY="20.0" startX="100.0" startY="1.9999961853027344" stroke="#807474" strokeWidth="3.0" />
-      <Label fx:id="usernameLabel" layoutX="534.0" layoutY="22.0" text="Username" />
-      <ImageView fitHeight="36.0" fitWidth="54.0" layoutX="597.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
+      <Line endX="100.0" endY="22.00000762939453" layoutX="838.0" layoutY="24.0" startX="100.0" startY="1.9999961853027344" stroke="#807474" strokeWidth="3.0" />
+      <Label fx:id="usernameLabel" layoutX="951.0" layoutY="24.0" prefHeight="25.0" prefWidth="61.0" text="Username" />
+      <ImageView fitHeight="36.0" fitWidth="54.0" layoutX="1037.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
          <image>
             <Image url="@images/sarah.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="totalLabel" layoutX="360.0" layoutY="339.0" prefHeight="30.0" prefWidth="186.0" textAlignment="RIGHT" wrapText="true">
+      <Label fx:id="totalLabel" layoutX="913.0" layoutY="506.0" prefHeight="30.0" prefWidth="186.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="104.0" layoutY="84.0" prefHeight="36.0" prefWidth="126.0" text="Your Shopping Cart" wrapText="true">
+      <Label layoutX="131.0" layoutY="71.0" prefHeight="54.0" prefWidth="344.0" text="Your Shopping Cart" wrapText="true">
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="497.0" layoutY="381.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" styleClass="PayByWallet" text="Pay By Wallet" />
-      <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="69.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="937.0" layoutY="573.0" mnemonicParsing="false" onAction="#handlePayByWallet" prefHeight="36.0" prefWidth="150.0" styleClass="PayByWallet" text="Pay By Wallet" />
+      <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="69.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/shopping-cart%20(1).png" />
+            <Image url="@images/shopping-cart.png" />
          </image>
       </ImageView>
+      <Label fx:id="notification" layoutX="349.0" layoutY="20.0" prefHeight="54.0" prefWidth="431.0" styleClass="notification" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

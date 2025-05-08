@@ -10,6 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
@@ -19,6 +21,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Optional;
 
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
@@ -26,12 +29,14 @@ public class ProceedToCheckoutController {
     @FXML
     private Label usernameLabel;
     @FXML
+    private Label notification;
+    @FXML
     private double sum;;
     @FXML
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
-        totalLabel.setText("Total: "+String.valueOf(sum));
         displayTicketsBought();
+        totalLabel.setText("Total: $ "+String.valueOf(sum));
     }
 
     @FXML
@@ -52,9 +57,9 @@ public class ProceedToCheckoutController {
                     throw new RuntimeException(e);
                 }
 
-                Label eventNameLabel = (Label) rootH.getChildren().get(0);
+                Label eventNameLabel = (Label) rootH.getChildren().get(1);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
-                Label eventDateLabel = (Label) rootH.getChildren().get(1);
+                Label eventDateLabel = (Label) rootH.getChildren().get(2);
                 Date date = Database.tickets.get(i).getDate();
                 SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                 String dateString = "";
@@ -62,8 +67,8 @@ public class ProceedToCheckoutController {
                     dateString = formatter.format(date);
                 }
                 eventDateLabel.setText(dateString);
-                Label eventPriceLabel = (Label)rootH.getChildren().get(2);
-                eventPriceLabel.setText(String.valueOf(Database.tickets.get(i).getFees()));
+                Label eventPriceLabel = (Label)rootH.getChildren().get(3);
+                eventPriceLabel.setText("$"+String.valueOf(Database.tickets.get(i).getFees()));
 
                 rootV.getChildren().add(rootH);
                 sum = sum+Database.tickets.get(i).getFees();
@@ -87,5 +92,38 @@ public class ProceedToCheckoutController {
 
         window.setScene(scene);
         window.show();
+    }
+    //make remove ticket button
+    //make label not visible in back
+    @FXML
+    private void handlePayByWallet(){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Are you sure?");
+        alert.setContentText("You are about to pay " + sum + ". Do you want to proceed?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK){
+            // User clicked OK
+            notification.setVisible(true);
+            User.currentUser..buyTicket
+            notification.setText();
+            System.out.println("Confirmed!");
+        } else {
+            // User canceled
+            System.out.println("Cancelled!");
+        }
+    }
+    @FXML
+    private void handleBack(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/attendeeLanding.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+        notification.setVisible(false);
     }
 }

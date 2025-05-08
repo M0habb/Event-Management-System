@@ -36,6 +36,7 @@ public class OrganizerLandingController {
         window.show();
     }
 
+
 }
 
 

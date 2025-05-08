@@ -28,27 +28,28 @@ public class Organizer extends User implements Crud<Event>{
 
     public Room rentRoom(){
         showAvRooms();
-        while (true){
-            boolean avail = true;
-            System.out.println("Enter room number: ");
-            Scanner scanner = new Scanner(System.in);
-            int roomNum = scanner.nextInt();
-            for (Room room : Database.rooms){
-                if (room.getRoomNum() == roomNum){
-                    if (room.getAvailable()){
-                        room.setAvailable(false);
-                        return room;
-                    }else {
-                        System.out.println("Room not available!");
-                        avail = false;
-                        break;
-                    }
-
-                }
-            }
-            if (avail) continue;
-            System.out.println("Room not found!");
-        }
+        return new Room();
+//        while (true){
+//            boolean avail = true;
+//            System.out.println("Enter room number: ");
+//            Scanner scanner = new Scanner(System.in);
+//            int roomNum = scanner.nextInt();
+//            for (Room room : Database.rooms){
+//                if (room.getRoomName() == roomName){
+//                    if (room.getAvailable()){
+//                        room.setAvailable(false);
+//                        return room;
+//                    }else {
+//                        System.out.println("Room not available!");
+//                        avail = false;
+//                        break;
+//                    }
+//
+//                }
+//            }
+//            if (avail) continue;
+//            System.out.println("Room not found!");
+//        }
     }
     public void showAvRooms(){
         System.out.println("Rooms available: ");
@@ -56,7 +57,7 @@ public class Organizer extends User implements Crud<Event>{
         for(Room room:Database.rooms) {
             if(room.getAvailable()){
                 exists=true;
-                System.out.println("-" + room.getRoomNum() + ", Size: " + room.getSize());
+                System.out.println("-" + room.getRoomName() + ", Size: " + room.getSize());
             }
         }
         if(!exists){
