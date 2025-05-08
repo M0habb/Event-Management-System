@@ -86,7 +86,7 @@
          </children>
       </AnchorPane>
       <ListView layoutX="913.0" layoutY="354.0" prefHeight="185.0" prefWidth="165.0" styleClass="ListView" />
-      <ScrollPane layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane">
+      <ScrollPane layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="601.0" styleClass="anchor-pane">
                <children>

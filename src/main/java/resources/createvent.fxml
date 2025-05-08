@@ -18,10 +18,6 @@
             <Font name="Georgia Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="typeTextfield" layoutX="216.0" layoutY="164.0" prefHeight="48.0" prefWidth="167.0" stylesheets="@styles/create.css">
-         <font>
-            <Font size="15.0" />
-         </font></TextField>
       <ImageView fitHeight="130.0" fitWidth="139.0" layoutX="616.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/schedule.png" />
@@ -99,10 +95,11 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="missingLabel" layoutX="77.0" layoutY="43.0" prefHeight="35.0" prefWidth="301.0" styleClass="create-label" text="* Event created successfully!" visible="false">
+      <Label fx:id="missingLabel" layoutX="77.0" layoutY="43.0" prefHeight="35.0" prefWidth="301.0" styleClass="missing-label" text="* Fill all fields!" visible="false">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
+      <ComboBox fx:id="typecombobox" layoutX="198.0" layoutY="171.0" prefHeight="43.0" prefWidth="174.0" />
    </children>
 </AnchorPane>
