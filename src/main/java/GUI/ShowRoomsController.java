@@ -1,6 +1,5 @@
 package GUI;
 
-import classes.Event;
 import classes.Room;
 import classes.Database;
 import javafx.beans.property.SimpleStringProperty;
@@ -51,7 +50,7 @@ public class ShowRoomsController {
 
         eventColumn.setCellValueFactory(cellData -> {
             for (int i = 0; i < Database.events.size(); i++){
-                if (cellData.getValue().getRoomNum() == Database.events.get(i).getRoomNum()){
+                if (cellData.getValue().getRoomNum() == Database.events.get(i).getRoom().getRoomNum()){
                     return new SimpleStringProperty(Database.events.get(i).getEventName());
                 }
             }

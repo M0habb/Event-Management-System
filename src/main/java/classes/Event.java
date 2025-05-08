@@ -48,8 +48,8 @@ public class Event {
     public void setOutdoors(boolean outdoors) {
         this.outdoors = outdoors;
     }
-    public int getRoomNum() {
-        return room.getRoomNum();
+    public Room getRoom() {
+        return room;
     }
     public void setRoom(Room room) {
         this.room = room;

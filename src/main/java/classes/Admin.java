@@ -37,7 +37,7 @@ public class Admin extends User implements Crud<Category>{
             System.out.println(event.getEventName() +
                     " | Date: " + event.getEventDate() +
 
-                    " | Room: " + event.getRoomNum() +
+                    " | Room: " + event.getRoom() +
 
                     " | Category: " + event.getCategory().getType());
         }
@@ -60,8 +60,8 @@ public class Admin extends User implements Crud<Category>{
 
         }
     }
-    public void addRoom(int roomNum, Size size){
-        Room newRoom = new Room(roomNum, size, true);
+    public void addRoom(int roomNum, Size size, Address address){
+        Room newRoom = new Room(roomNum, size, true, address);
         Database.rooms.add(newRoom);
     }
 

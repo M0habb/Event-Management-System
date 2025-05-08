@@ -83,7 +83,7 @@ public class ViewEventsController {
             HBox bottomHBox = (HBox) innerV.getChildren().get(4);
             Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-            Address address = Database.events.get(i).getAddress();
+            Address address = Database.events.get(i).getRoom().getAddress();
 
             eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
             eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
@@ -149,7 +149,7 @@ public class ViewEventsController {
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-                    Address address = Database.events.get(i).getAddress();
+                    Address address = Database.events.get(i).getRoom().getAddress();
 
                     eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
@@ -204,7 +204,7 @@ public class ViewEventsController {
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-                    Address address = Database.events.get(i).getAddress();
+                    Address address = Database.events.get(i).getRoom().getAddress();
 
                     eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
@@ -259,7 +259,7 @@ public class ViewEventsController {
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-                    Address address = Database.events.get(i).getAddress();
+                    Address address = Database.events.get(i).getRoom().getAddress();
 
                     eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
@@ -314,7 +314,7 @@ public class ViewEventsController {
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-                    Address address = Database.events.get(i).getAddress();
+                    Address address = Database.events.get(i).getRoom().getAddress();
 
                     eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
@@ -369,7 +369,7 @@ public class ViewEventsController {
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
-                    Address address = Database.events.get(i).getAddress();
+                    Address address = Database.events.get(i).getRoom().getAddress();
 
                     eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
