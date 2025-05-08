@@ -1,10 +1,10 @@
 package GUI;
 
-<<<<<<< HEAD
+
 import classes.Organizer;
-=======
+
 import classes.Database;
->>>>>>> 2642b5467ac3ddba414d4f1cde47ad4ec9c1fe4c
+
 import classes.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,23 +15,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
-<<<<<<< HEAD
+
 import javafx.scene.text.Text;
-=======
+
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
->>>>>>> 2642b5467ac3ddba414d4f1cde47ad4ec9c1fe4c
+
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class OrganizerLandingController {
-<<<<<<< HEAD
-=======
+
     @FXML
     private ScrollPane scrollpane;
 
->>>>>>> 2642b5467ac3ddba414d4f1cde47ad4ec9c1fe4c
+
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
@@ -67,11 +66,11 @@ public class OrganizerLandingController {
         window.setScene(scene);
         window.show();
     }
-    private void handleUpcomingEvents(){
+    private void handleUpcomingEvents() {
         HBox rootH = (HBox) scrollpane.getContent();
-        for (int i = 0; i < Database.events.size(); i++){
-            if(User.currentUser == Database.events.get(i).getOrganizer()) {
-                
+        for (int i = 0; i < Database.events.size(); i++) {
+            if (User.currentUser == Database.events.get(i).getOrganizer()) {
+
                 try {
                     rootH = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
                 } catch (IOException e) {
@@ -80,24 +79,10 @@ public class OrganizerLandingController {
 
                 Label eventNameLabel = (Label) rootH.getChildren().get(1);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
-    }
+            }
 
 
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
+    }}
