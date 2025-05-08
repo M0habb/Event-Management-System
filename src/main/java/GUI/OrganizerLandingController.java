@@ -80,14 +80,6 @@ public class OrganizerLandingController {
                 Label eventNameLabel = (Label) rootH.getChildren().get(1);
                 eventNameLabel.setText(Database.tickets.get(i).getEventName());
             }
-
         }
     }
 }
-
-
-
-
-
-
-    

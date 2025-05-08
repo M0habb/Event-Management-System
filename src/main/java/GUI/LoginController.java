@@ -9,6 +9,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -110,5 +112,56 @@ public class LoginController {
         hiddenPasswordField.setVisible(!passwordVisible);
 
         showPasswordHyperlink.setText(passwordVisible ? "Hide Password" : "Show Password");
+    }
+
+    @FXML
+    private void handleEnter(KeyEvent event) throws IOException {
+        if (event.getCode() == KeyCode.ENTER){
+            if (usernameField.getText().isBlank() || passwordField.getText().isBlank()){
+                invalidLogin.setText("Username/Password Required.");
+                invalidLogin.setVisible(true);
+                return;
+            }
+            int loginStatus = User.login(usernameField.getText(), passwordField.getText());
+
+            if (loginStatus == 0){
+                invalidLogin.setText("Incorrect username or password!");
+                invalidLogin.setVisible(true);
+                return;
+            }
+
+            if (loginStatus == 1){
+                Parent root = FXMLLoader.load(getClass().getResource("/resources/adminLanding.fxml"));
+
+                Scene scene = new Scene(root, 1142, 642);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                window.setScene(scene);
+                window.show();
+            }
+
+            if (loginStatus == 2){
+                Parent root = FXMLLoader.load(getClass().getResource("/resources/organizerLanding.fxml"));
+
+                Scene scene = new Scene(root, 1142, 642);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                window.setScene(scene);
+                window.show();
+            }
+
+            if (loginStatus == 3){
+                Parent root = FXMLLoader.load(getClass().getResource("/resources/attendeeLanding.fxml"));
+
+                Scene scene = new Scene(root, 1142, 642);
+
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                window.setScene(scene);
+                window.show();
+            }
+        }
     }
 }

@@ -104,7 +104,7 @@ public class CreateEventController {
         }
         int maxAttendees = room.getSize();
 
-        Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, new Category(1, CategoryType.MUSIC, "Test"));
+        Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, new Category("Techno", CategoryType.MUSIC, "Test"));
 
         Database.events.add(event);
 

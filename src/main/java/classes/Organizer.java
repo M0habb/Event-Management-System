@@ -119,7 +119,7 @@ public class Organizer extends User implements Crud<Event>{
         System.out.println("Choose event category: ");
         int count = 1;
         for (Category category : Database.categories){
-            System.out.println("Category ID: " + category.getID() + ", Category Description: " + category.getDescription());
+            System.out.println("Category ID: " + category.getName() + ", Category Description: " + category.getDescription());
         }
         Category category = Database.categories.get(scanner.nextInt());
         boolean validInput = false;
@@ -158,7 +158,7 @@ public class Organizer extends User implements Crud<Event>{
     }
 
     @Override
-    public void delete(int i) { // Parameter Come Back Later
+    public void delete(String i) { // Parameter Come Back Later
 
     }
 }
