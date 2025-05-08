@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/organizerLanding.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OrganizerLandingController">
+<AnchorPane onMouseClicked="#handleImageClick" prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/organizerLanding.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OrganizerLandingController">
    <children>
       <Label layoutX="336.0" layoutY="38.0" text="Organizer Landing Page" textAlignment="CENTER">
          <font>
@@ -45,12 +45,12 @@
             <Image url="@images/user.png" />
          </image>
       </ImageView>
-      <Button layoutX="926.0" layoutY="132.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
+      <Button layoutX="926.0" layoutY="132.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleImageClick" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="67.0" fitWidth="59.0" layoutX="944.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="67.0" fitWidth="59.0" layoutX="944.0" layoutY="150.0" mouseTransparent="true" onMouseClicked="#handleImageClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/plus.png" />
          </image>
