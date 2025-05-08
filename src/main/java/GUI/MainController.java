@@ -39,7 +39,8 @@ public class MainController extends Application{
         Room room2 = new Room("Opera Hall", Size.DOUBLE, true, address2, true);
         Room room3 = new Room("Cairo International Stadium", Size.TRIPLE, true, address3, true);
         Room room4 = new Room("The London Palladium", Size.SINGLE, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
-
+        Room room5 = new Room("Open Air Theater", Size.TRIPLE, true, new Address("EGY", "cairo", "1st St.", 126123), true);
+        Room room6 = new Room("The London Palladium", Size.SINGLE, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
