@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/manageCategories.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/CreateEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/CreateEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ManageCategoriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ManageCategoriesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Organizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/manageCategories.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/manageCategories.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showAttendees.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showAttendees.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
