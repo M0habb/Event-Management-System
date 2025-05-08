@@ -10,60 +10,63 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/viewEvents.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowEventsController">
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowEventsController">
    <children>
-      <Label layoutX="96.0" layoutY="84.0" prefHeight="55.0" prefWidth="126.0" text="Events">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="musicCategory" layoutX="159.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleMusicCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
-      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="207.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/music.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="sportsCategory" layoutX="274.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleSportsCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
-      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="322.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/football.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="theaterCategory" layoutX="390.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleTheaterCategory" prefHeight="39.0" prefWidth="86.0" styleClass="category-button" text="Theater        " />
-      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="446.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/theater.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="conferenceCategory" layoutX="509.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleConferenceCategory" prefHeight="39.0" prefWidth="105.0" styleClass="category-button" text="Conference       " />
-      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="584.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/conference.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="otherCategory" layoutX="648.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleOtherCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Other        " />
-      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="696.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/more.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="791.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="36.0" prefWidth="73.0" styleClass="Back" text="Sign Out" textAlignment="CENTER" textFill="#0f0808">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="51.0" fitWidth="73.0" layoutX="1065.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
-         <image>
-            <Image url="@images/user.png" />
-         </image>
-      </ImageView>
-      <Line endX="100.0" endY="22.00000762939453" layoutX="793.0" layoutY="40.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
-      <Label fx:id="usernameLabel" layoutX="944.0" layoutY="44.0" text="Username" />
-      <ScrollPane fx:id="scrollpane" hbarPolicy="NEVER" layoutX="104.0" layoutY="236.0" prefHeight="332.0" prefWidth="980.0" styleClass="scrollpane" vmax="332.0">
-         <content>
-            <VBox prefHeight="331.0" prefWidth="980.0" />
-         </content>
-      </ScrollPane>
-      <Button layoutX="1039.0" layoutY="586.0" mnemonicParsing="false" onAction="#handleBack" styleClass="Back" text="Back" />
+      <AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/viewEvents.css">
+         <children>
+            <Label layoutX="96.0" layoutY="84.0" prefHeight="55.0" prefWidth="126.0" text="Events">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <Button fx:id="musicCategory" layoutX="159.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleMusicCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="207.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/music.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="sportsCategory" layoutX="274.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleSportsCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="322.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/football.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="theaterCategory" layoutX="390.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleTheaterCategory" prefHeight="39.0" prefWidth="86.0" styleClass="category-button" text="Theater        " />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="446.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/theater.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="conferenceCategory" layoutX="509.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleConferenceCategory" prefHeight="39.0" prefWidth="105.0" styleClass="category-button" text="Conference       " />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="584.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/conference.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="otherCategory" layoutX="648.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleOtherCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Other        " />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="696.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/more.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="791.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="36.0" prefWidth="73.0" styleClass="SignOutButton" text="Sign Out" textAlignment="CENTER" textFill="#0f0808">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="73.0" layoutX="1065.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
+               <image>
+                  <Image url="@images/sarah.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" endY="22.00000762939453" layoutX="793.0" layoutY="40.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
+            <Label fx:id="usernameLabel" layoutX="944.0" layoutY="44.0" text="Username" />
+            <ScrollPane fx:id="scrollpane" hbarPolicy="NEVER" layoutX="104.0" layoutY="236.0" prefHeight="332.0" prefWidth="980.0" styleClass="scrollpane" vmax="332.0">
+               <content>
+                  <VBox prefHeight="331.0" prefWidth="980.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
