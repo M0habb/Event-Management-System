@@ -405,7 +405,7 @@ public class ViewEventsController {
 
         Event event = new Event();
         for (int i = 0; i < Database.events.size(); i++){
-            if (Database.events.get(i).getEventName().equals(eventName)){
+            if (Database.events.get(i).getEventName().equals(eventName.getText())){
                 event = Database.events.get(i);
             }
         }

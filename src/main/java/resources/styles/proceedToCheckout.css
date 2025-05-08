@@ -19,7 +19,10 @@
 }
 
 .scrollpane{
-    -fx-background-color: transparent;
+    -fx-background-color: #f3ead9;
     -fx-background-insets: 0;
     -fx-padding: 0;
+}
+.vbox{
+-fx-background-color:#f3ead9 ;
 }
