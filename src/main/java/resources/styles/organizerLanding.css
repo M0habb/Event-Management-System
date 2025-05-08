@@ -1,5 +1,5 @@
 .root {
-    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-color: #f3ead9;
     -fx-background-size: cover;
 }
 
@@ -10,6 +10,8 @@
     -fx-text-size: 100;
 }
 .ViewSignOut-button{
+-fx-background-color: #b4aea1;
+-fx-text-fill: black;
 -fx-background-radius:5px;
  -fx-border-radius:5px;
     }
@@ -18,5 +20,9 @@
     -fx-cursor: hand;
 }
 .list-view {
-    -fx-background-color: "#fcf1ef"; /* Replace with your desired color */
+    -fx-background-color: #a98467; /* Replace with your desired color */
+}
+
+.anchor-pane{
+-fx-background-color: #f3ead9;
 }
