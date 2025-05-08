@@ -52,8 +52,9 @@
       </ImageView>
       <Label fx:id="notification" layoutX="349.0" layoutY="20.0" prefHeight="54.0" prefWidth="431.0" styleClass="notification" text="Label">
          <font>
-            <Font size="18.0" />
+            <Font name="System Italic" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="789.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="83.0" styleClass="Back" text="Back" />
    </children>
 </AnchorPane>

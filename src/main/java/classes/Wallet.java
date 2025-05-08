@@ -34,13 +34,12 @@ public class Wallet {
         balance += amount;
         return 0;
     }
-    public int deductBalance(double amount){
-        if (amount < 0){
-            return 1;
-        }else if (amount > balance){
-            return 2;
+    public boolean deductBalance(double amount){
+
+        if (amount > balance){
+            return false;
         }
         balance -= amount;
-        return 0;
+        return true;
     }
 }
