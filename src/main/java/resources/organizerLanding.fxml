@@ -56,7 +56,7 @@
             <Image url="@images/plus.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="216.0" fitWidth="461.0" layoutX="94.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="216.0" fitWidth="461.0" layoutX="94.0" layoutY="119.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/events.png" />
          </image>
@@ -90,7 +90,7 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="601.0" styleClass="anchor-pane">
                <children>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="14.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/events.png" />
                      </image>
@@ -100,12 +100,12 @@
                         <Font name="Georgia Bold" size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="405.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="405.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/events.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="202.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="202.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/events.png" />
                      </image>

@@ -2,25 +2,43 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="btnShowAttendees" prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminLandingController">
+<AnchorPane fx:id="btnShowAttendees" prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #dcd0c0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminLandingController">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Admin Page">
+      <ImageView fitHeight="644.0" fitWidth="436.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="380.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="314.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" wrappingWidth="65.5999755859375">
          <font>
-            <Font size="46.0" />
+            <Font size="15.0" />
          </font>
-      </Label>
-      <Button layoutX="814.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="34.0" prefWidth="81.0" text="Sign Out">
+      </Text>
+      <Button layoutX="14.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="34.0" prefWidth="81.0" text="Sign Out">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="112.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" text="Show Rooms" />
-      <Button layoutX="430.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" text="Manage Categories" />
-      <Button fx:id="btnShowOrganizers" layoutX="112.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleShowOrganizers" prefHeight="79.0" prefWidth="202.0" text="Show Organizers" />
-      <Button layoutX="754.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowAttendees" prefHeight="79.0" prefWidth="202.0" text="Show Attendees" />
-      <Button layoutX="430.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleShowEvents" prefHeight="79.0" prefWidth="202.0" text="Show Events" />
+      <Label alignment="CENTER" layoutX="67.0" layoutY="23.0" text="Admin Page">
+         <font>
+            <Font name="Arial Bold Italic" size="52.0" />
+         </font>
+      </Label>
+      <Button layoutX="707.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleShowEvents" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Events" />
+      <Button layoutX="707.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleShowOrganizers" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Organizers" />
+      <Button layoutX="707.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleShowAttendees" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Attendees" />
+      <Button layoutX="707.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Manage Categories" />
+      <Button layoutX="707.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Rooms" />
    </children>
 </AnchorPane>
