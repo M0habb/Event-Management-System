@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.CreateEventController"
-            prefHeight="642.0" prefWidth="1142.0">
 
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: f3ead9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CreateEventController">
+   <children>
+      <Label layoutX="423.0" layoutY="3.0" prefHeight="99.0" prefWidth="185.0" text="Create Event">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="209.0" layoutY="164.0" prefHeight="63.0" prefWidth="174.0" stylesheets="@styles/create.css" />
+      <ImageView fitHeight="130.0" fitWidth="139.0" layoutX="590.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/schedule.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="114.0" fitWidth="118.0" layoutX="32.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/event.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="109.0" layoutX="342.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/theater.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="164.0" layoutX="32.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/red-carpet.png" />
+         </image>
+      </ImageView>
+      <ComboBox layoutX="477.0" layoutY="514.0" prefHeight="43.0" prefWidth="174.0" />
+      <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="589.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/wallet%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="243.0" layoutY="123.0" text="Event Type">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="447.0" layoutY="346.0">
+         <font>
+            <Font name="Bookman Old Style Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="770.0" layoutY="105.0" prefHeight="23.0" prefWidth="145.0" text="Tickets price">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="771.0" layoutY="161.0" prefHeight="63.0" prefWidth="174.0" stylesheets="@styles/create.css" />
+      <TextField layoutX="779.0" layoutY="354.0" prefHeight="63.0" prefWidth="174.0" stylesheets="@styles/create.css" />
+      <TextField layoutX="205.0" layoutY="335.0" prefHeight="63.0" prefWidth="174.0" stylesheets="@styles/create.css" />
+      <Label layoutX="227.0" layoutY="288.0" prefHeight="23.0" prefWidth="145.0" text="Event Name">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="788.0" layoutY="301.0" prefHeight="23.0" prefWidth="145.0" text="Event Date">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="457.0" prefHeight="23.0" prefWidth="145.0" text="Rent Room">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
