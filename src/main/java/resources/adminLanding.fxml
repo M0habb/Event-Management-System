@@ -20,7 +20,7 @@
             <Image url="@images/user.png" />
          </image>
       </ImageView>
-      <Text layoutX="314.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" wrappingWidth="65.5999755859375">
+      <Text fx:id="usernameLabel" layoutX="314.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" wrappingWidth="65.5999755859375">
          <font>
             <Font size="15.0" />
          </font>

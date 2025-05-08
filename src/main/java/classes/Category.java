@@ -8,12 +8,12 @@ import java.util.List;
 
 public class Category {
     private CategoryType type;
-    private int ID;
+    private String name;
     private String description;
     private ArrayList<Event> events;
 
-    public Category(int ID, CategoryType type, String description){
-        this.ID = ID;
+    public Category(String name, CategoryType type, String description){
+        this.name = name;
         this.type = type;
         this.description = description;
         this.events = new ArrayList<Event>();
@@ -44,17 +44,17 @@ public class Category {
     public void setEvents(ArrayList<Event> events) {
         this.events = events;
     }
-    public int getID(){
-        return this.ID;
+    public String getName(){
+        return this.name;
     }
-    public void setID(int ID){
-        this.ID = ID;
+    public void setName(String name){
+        this.name = name;
     }
 
 
     public String getUpcomingEvents(){
 
-        String eventsString = "Upcoming " + this.ID +" events: ";
+        String eventsString = "Upcoming " + this.name +" events: ";
         int count = 0;
 
         for (Event e : Database.events){
