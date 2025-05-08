@@ -35,10 +35,10 @@ public class MainController extends Application{
         Address address2 = new Address("Egypt", "Alexnder", "456", 3624);
         Address address3 = new Address("Japan", "Tokyo", "890", 2385);
 
-        Room room1 = new Room(1, Size.SINGLE, true);
-        Room room2 = new Room(2, Size.DOUBLE, true);
-        Room room3 = new Room(3, Size.TRIPLE, true);
-        Room room4 = new Room(4, Size.SINGLE, true);
+        Room room1 = new Room(1, Size.SINGLE, true, address1);
+        Room room2 = new Room(2, Size.DOUBLE, true, address2);
+        Room room3 = new Room(3, Size.TRIPLE, true, address3);
+        Room room4 = new Room(4, Size.SINGLE, true, new Address("KSA", "Jeddah", "1st St.", 123123));
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
@@ -59,6 +59,8 @@ public class MainController extends Application{
                 00, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
+
+        event1.setFees(200);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
