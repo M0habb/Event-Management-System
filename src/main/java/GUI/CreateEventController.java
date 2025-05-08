@@ -1,5 +1,6 @@
 package GUI;
 
+import classes.Event;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.util.Date;
 
 
 public class CreateEventController {
@@ -47,21 +51,22 @@ public class CreateEventController {
         window.show();
     }
     @FXML
-    private void handleCreate (ActionEvent event) throws IOException {
+    private void handleCreate (ActionEvent actionEvent) throws IOException {
+
+        String name = nameTextfield.getText();
+        Date birthdate = Date.from(Instant.from(eventDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        
+
+        // return to landing
         Parent root = FXMLLoader.load(getClass().getResource("/resources/organizerLanding.fxml"));
 
         Scene scene = new Scene(root, 1142, 642);
 
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         window.setScene(scene);
         window.show();
     }
 
-    @FXML
-    private void handleButtonClick() {
-        
-
-    }
 }
 
