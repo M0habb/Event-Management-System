@@ -34,7 +34,7 @@
             <Image url="@images/sarah.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="totalLabel" layoutX="864.0" layoutY="515.0" prefHeight="30.0" prefWidth="186.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">
+      <Label fx:id="totalLabel" layoutX="913.0" layoutY="506.0" prefHeight="30.0" prefWidth="186.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -44,11 +44,16 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="938.0" layoutY="570.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" styleClass="PayByWallet" text="Pay By Wallet" />
+      <Button layoutX="937.0" layoutY="573.0" mnemonicParsing="false" onAction="#handlePayByWallet" prefHeight="36.0" prefWidth="150.0" styleClass="PayByWallet" text="Pay By Wallet" />
       <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="69.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/shopping-cart.png" />
          </image>
       </ImageView>
+      <Label fx:id="notification" layoutX="349.0" layoutY="20.0" prefHeight="54.0" prefWidth="431.0" styleClass="notification" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

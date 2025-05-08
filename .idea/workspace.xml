@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/hbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/hbox_layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/hbox_layout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/proceedToCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/proceedToCheckout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/proceedToCheckout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/proceedToCheckout.css" afterDir="false" />
     </list>
@@ -50,7 +47,11 @@
     "git-widget-placeholder": "<unknown>",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/wanil/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+=======
+    "last_opened_file_path": "C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+>>>>>>> 9c387e740395799331529b4ba732d297631458a5
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
