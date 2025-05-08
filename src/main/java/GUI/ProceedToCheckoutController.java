@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
-
+import static GUI.ViewEventsController.currentUser;
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
 
@@ -37,6 +37,7 @@ public class ProceedToCheckoutController {
         usernameLabel.setText(Attendee.currentUser.getUserName());
         displayTicketsBought();
         totalLabel.setText("Total: $ "+String.valueOf(sum));
+        notification.setVisible(false);
     }
 
     @FXML
@@ -106,12 +107,13 @@ public class ProceedToCheckoutController {
         if (result.isPresent() && result.get() == ButtonType.OK){
             // User clicked OK
             notification.setVisible(true);
-            //User.currentUser..buyTicket
-            //notification.setText();
-            System.out.println("Confirmed!");
-        } else {
-            // User canceled
-            System.out.println("Cancelled!");
+            if(Attendee.currentUser.getWallet().deductBalance(sum)){
+                notification.setText("*Transaction Successful");
+            }
+            else{
+                notification.setText("*Insufficient Funds");
+            }
+
         }
     }
     @FXML
