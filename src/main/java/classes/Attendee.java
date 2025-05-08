@@ -113,13 +113,13 @@ public class Attendee extends User{
     }
     public void buyTickets(Event event){
         Ticket ticket=new Ticket(event.getEventName(),attendee,event.getFees(),event.getEventDate());
-        int i = this.getWallet().deductBalance(event.getFees());
-        if(i == 0){
+
+        if(this.getWallet().deductBalance(event.getFees())){
             System.out.println("Ticket purchased!");
             event.getAttendees().add(this);
             event.getOrganizer().getWallet().addBalance(event.getFees());
             eventsAttended.add(event);
-        }else if(i == 2){
+        }else if(!this.getWallet().deductBalance(event.getFees())){
             System.out.println("Insufficient Funds!");
         }
         Database.tickets.add(ticket);

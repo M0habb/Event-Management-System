@@ -35,10 +35,10 @@ public class MainController extends Application{
         Address address2 = new Address("Egypt", "Alexnder", "456", 3624);
         Address address3 = new Address("Japan", "Tokyo", "890", 2385);
 
-        Room room1 = new Room("Al-Manara conference center", Size.SINGLE, true, address1, false);
-        Room room2 = new Room("Opera Hall", Size.DOUBLE, true, address2, true);
-        Room room3 = new Room("Cairo International Stadium", Size.TRIPLE, true, address3, true);
-        Room room4 = new Room("The London Palladium", Size.SINGLE, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
+        Room room1 = new Room("Al-Manara conference center", 50, true, address1, false);
+        Room room2 = new Room("Opera Hall", 1000, true, address2, true);
+        Room room3 = new Room("Cairo International Stadium", 50000, true, address3, true);
+        Room room4 = new Room("The London Palladium", 10000, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
 
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);

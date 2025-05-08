@@ -60,7 +60,7 @@ public class Admin extends User implements Crud<Category>{
 
         }
     }
-    public void addRoom(String roomName, Size size, Address address, boolean outdoors){
+    public void addRoom(String roomName, int size, Address address, boolean outdoors){
         Room newRoom = new Room(roomName, size, true, address, outdoors);
         Database.rooms.add(newRoom);
     }
