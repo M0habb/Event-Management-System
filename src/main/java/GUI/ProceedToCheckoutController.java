@@ -25,6 +25,7 @@ import java.util.Optional;
 import static GUI.ViewEventsController.currentUser;
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
+
     @FXML
     private Label EmptyCart;
 
@@ -44,7 +45,7 @@ public class ProceedToCheckoutController {
     }
 
     @FXML
-    private ScrollPane scrollpane;
+        private ScrollPane scrollpane;
 
 
     @FXML
