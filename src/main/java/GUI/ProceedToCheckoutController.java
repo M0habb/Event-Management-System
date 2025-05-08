@@ -106,7 +106,7 @@ public class ProceedToCheckoutController {
         if (result.isPresent() && result.get() == ButtonType.OK){
             // User clicked OK
             notification.setVisible(true);
-            User.currentUser..buyTicket
+            User.currentUser.buyTicket;
             notification.setText();
             System.out.println("Confirmed!");
         } else {
