@@ -35,10 +35,11 @@ public class MainController extends Application{
         Address address2 = new Address("Egypt", "Alexnder", "456", 3624);
         Address address3 = new Address("Japan", "Tokyo", "890", 2385);
 
-        Room room1 = new Room(1, Size.SINGLE, true, address1);
-        Room room2 = new Room(2, Size.DOUBLE, true, address2);
-        Room room3 = new Room(3, Size.TRIPLE, true, address3);
-        Room room4 = new Room(4, Size.SINGLE, true, new Address("KSA", "Jeddah", "1st St.", 123123));
+        Room room1 = new Room("Al-Manara conference center", 50, true, address1, false);
+        Room room2 = new Room("Opera Hall", 1000, true, address2, true);
+        Room room3 = new Room("Cairo International Stadium", 50000, true, address3, true);
+        Room room4 = new Room("The London Palladium", 10000, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
+
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
@@ -56,7 +57,7 @@ public class MainController extends Application{
         Category category2 = new Category(2, CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
         Event event1 = new Event("ASU Music Concert", bd, false, room1,
-                00, organizer3, category1);
+                60, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 

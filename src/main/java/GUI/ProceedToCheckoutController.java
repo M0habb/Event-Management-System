@@ -23,8 +23,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-import static GUI.ViewEventsController.currentUser;
-
 public class ProceedToCheckoutController {
     @FXML private Label totalLabel;
 
@@ -39,7 +37,6 @@ public class ProceedToCheckoutController {
         usernameLabel.setText(Attendee.currentUser.getUserName());
         displayTicketsBought();
         totalLabel.setText("Total: $ "+String.valueOf(sum));
-        notification.setVisible(false);
     }
 
     @FXML
@@ -98,7 +95,6 @@ public class ProceedToCheckoutController {
     }
     //make remove ticket button
     //make label not visible in back
-
     @FXML
     private void handlePayByWallet(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -110,14 +106,13 @@ public class ProceedToCheckoutController {
         if (result.isPresent() && result.get() == ButtonType.OK){
             // User clicked OK
             notification.setVisible(true);
-            if(currentUser.getWallet().deductBalance(sum)){
-            notification.setText("*Transaction Successful");
-            }
-            else{
-                notification.setText("*Insufficient Funds");
-            }
+            //User.currentUser..buyTicket
+            //notification.setText();
+            System.out.println("Confirmed!");
+        } else {
+            // User canceled
+            System.out.println("Cancelled!");
         }
-
     }
     @FXML
     private void handleBack(ActionEvent event) throws IOException {

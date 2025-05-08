@@ -4,25 +4,34 @@ import java.util.ArrayList;
 
 public class Room {
 
-    private int roomNum;
-    private Size size; //no. of ppl
+    private String roomName;
+    private int size; //no. of ppl
     private boolean available;
     private Address address;
-
-    Room(){
+    private boolean outdoors;
+    public Room(){
 
     }
-    public Room(int roomNum, Size size, boolean available, Address address){
-        this.roomNum = roomNum;
+    public Room(String roomName, int size, boolean available, Address address, boolean outdoors){
+        this.roomName = roomName;
         this.size = size;
         this.available = available;
         this.address = address;
     }
 //setters and getters
-    public Size getSize() {
+
+    public boolean isOutdoors() {
+        return outdoors;
+    }
+
+    public void setOutdoors(boolean outdoors) {
+        this.outdoors = outdoors;
+    }
+
+    public int getSize() {
         return size;
     }
-    public void setSize(Size size) {
+    public void setSize(int size) {
         this.size = size;
     }
     public boolean getAvailable() {
@@ -31,11 +40,11 @@ public class Room {
     public void setAvailable(boolean available) {
         this.available = available;
     }
-    public int getRoomNum() {
-        return roomNum;
+    public String getRoomName() {
+        return roomName;
     }
     public void setRoomNum(int roomNum) {
-        this.roomNum = roomNum;
+        this.roomName = roomName;
     }
     public void setRoom(ArrayList<Room> room) {
         Database.rooms = room;
@@ -53,7 +62,7 @@ public class Room {
         for(Room room:Database.rooms) {
             if(room.getAvailable()){
                 exists=true;
-                System.out.println("-" + room.roomNum);
+                System.out.println("-" + room.roomName);
             }
         }
         if(!exists){
