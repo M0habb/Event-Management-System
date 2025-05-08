@@ -1,10 +1,8 @@
 package GUI;
 
-<<<<<<< HEAD
 import classes.Database;
-=======
 import classes.Event;
->>>>>>> 54067f039d22bcee6c8becacef0d1ecdbad11248
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -86,7 +84,7 @@ public class CreateEventController {
         window.show();
     }
 
-<<<<<<< HEAD
+
     @FXML
     private void handleOutdoor(){
 
@@ -103,8 +101,6 @@ public class CreateEventController {
         }
 
     }
-
-=======
->>>>>>> 54067f039d22bcee6c8becacef0d1ecdbad11248
+    
 }
 
