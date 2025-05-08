@@ -42,6 +42,7 @@ public class ShowRoomsController {
         // Setup how data is pulled from Room
         roomNumColumn.setCellValueFactory(new PropertyValueFactory<>("roomNum"));
 
+
         sizeColumn.setCellValueFactory(cellData ->
                 new javafx.beans.property.SimpleStringProperty(cellData.getValue().getSize().toString())
         );
