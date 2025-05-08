@@ -44,7 +44,7 @@ public class ProceedToCheckoutController {
     }
 
     @FXML
-    private ScrollPane scrollpane;
+        private ScrollPane scrollpane;
 
 
     @FXML
