@@ -5,9 +5,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.Stage;
 import javafx.util.converter.DefaultStringConverter;
+
+import java.io.IOException;
 
 public class ManageCategoriesController {
     @FXML private TableView<Category> manageCategories;
@@ -20,6 +27,11 @@ public class ManageCategoriesController {
 
     @FXML
     public void initialize() {
+
+        manageCategories.setEditable(true);
+        idColumn.setEditable(true);
+        typeColumn.setEditable(true);
+
         categoryList = FXCollections.observableArrayList(Database.categories);
         manageCategories.setItems(categoryList);
 
@@ -38,7 +50,6 @@ public class ManageCategoriesController {
 
             {
                 btn.setOnAction(e -> {
-                    getTableView().edit(getIndex(), typeColumn);
                 });
             }
 
@@ -76,5 +87,16 @@ public class ManageCategoriesController {
         });
     }
 
+    @FXML
+    private void handleBack(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/adminLanding.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+    }
 
 }
