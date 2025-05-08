@@ -94,5 +94,15 @@
       <DatePicker fx:id="eventDate" layoutX="765.0" layoutY="347.0" prefHeight="43.0" prefWidth="192.0" />
       <Button layoutX="806.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="73.0" styleClass="View-Button" stylesheets="@styles/create.css" text="Back" />
       <Button layoutX="908.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="35.0" prefWidth="73.0" styleClass="View-Button" stylesheets="@styles/create.css" text="Create" />
+      <Label fx:id="eventCreatedLabel" layoutX="77.0" layoutY="43.0" prefHeight="35.0" prefWidth="301.0" styleClass="create-label" text="* Event created successfully!" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="missingLabel" layoutX="77.0" layoutY="43.0" prefHeight="35.0" prefWidth="301.0" styleClass="create-label" text="* Event created successfully!" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
