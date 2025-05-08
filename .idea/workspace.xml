@@ -44,10 +44,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
+    "git-widget-placeholder": "<unknown>",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/wanil/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+=======
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
+>>>>>>> 2642b5467ac3ddba414d4f1cde47ad4ec9c1fe4c
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -56,6 +63,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wanil\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />

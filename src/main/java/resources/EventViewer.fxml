@@ -125,7 +125,7 @@
         </Text>
       <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1074.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/ichep%20logo.png" />
+            <Image url="@images/ichep logo.png" />
          </image>
       </ImageView>
     </children>
