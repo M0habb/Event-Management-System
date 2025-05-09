@@ -69,7 +69,7 @@ public class ViewEventsController {
             Label eventName = (Label) hbox.getChildren().get(0);
             Label eventDate = (Label) hbox.getChildren().get(1);
 
-            eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+            eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
             Date date = Database.events.get(i).getEventDate();
             SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
             String dateString = formatter.format(date);
@@ -135,7 +135,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -190,7 +190,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -245,7 +245,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -300,7 +300,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -355,7 +355,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
