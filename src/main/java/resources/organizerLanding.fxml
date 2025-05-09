@@ -77,9 +77,9 @@
          </children>
       </AnchorPane>
       <ListView layoutX="913.0" layoutY="354.0" prefHeight="185.0" prefWidth="165.0" styleClass="ListView" />
-      <ScrollPane layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
+      <ScrollPane fx:id="scrollpane" layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
          <content>
-            <HBox fx:id="rootH" prefHeight="189.0" prefWidth="593.0" />
+            <HBox prefHeight="189.0" prefWidth="593.0" />
          </content>
       </ScrollPane>
       <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1063.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
@@ -87,5 +87,6 @@
             <Image url="@images/img_2.png" />
          </image>
       </ImageView>
+      <AnchorPane layoutX="110.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

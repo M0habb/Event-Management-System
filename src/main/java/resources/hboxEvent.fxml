@@ -12,7 +12,7 @@
    <graphic>
       <ImageView fitHeight="160.0" fitWidth="181.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/events.png" />
+            <Image url="@images/events2.png" />
          </image>
       </ImageView>
    </graphic>
