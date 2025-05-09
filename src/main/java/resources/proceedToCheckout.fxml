@@ -65,6 +65,6 @@
             <Font name="System Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="789.0" layoutY="578.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="83.0" styleClass="Back" text="Back" />
+      <Button layoutX="789.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" text="Back" />
    </children>
 </AnchorPane>
