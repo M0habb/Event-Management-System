@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.function.UnaryOperator;
@@ -65,6 +66,19 @@ public class SignupController {
 
     @FXML
     private void initialize(){
+
+        birthDate.setDayCellFactory(picker -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                // Disable dates before today
+                if (item != null && item.isAfter(LocalDate.now())) {
+                    setDisable(true);
+                    setStyle("-fx-background-color: #ffcccc;"); // Optional: change color to indicate disabled date
+                }
+            }
+        });
+
         genderComboBox.getItems().addAll(
           "Male",
           "Female"

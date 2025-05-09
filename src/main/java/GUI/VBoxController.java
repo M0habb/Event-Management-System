@@ -26,6 +26,21 @@ public class VBoxController{
 
     @FXML
     private void initialize(){
+
+        boolean bought = true;
+        for (int i = 0; i < Database.tickets.size(); i++){
+            if (Database.tickets.get(i).getOwner().equals(Attendee.currentUser) && Database.tickets.get(i).getEventName().equals(eventName.getText())){
+                buyButton.setText("Buy Ticket!");
+                cartLabel.setVisible(false);
+                bought = false;
+            }
+        }
+        if (bought) {
+            buyButton.setText("Remove from cart.");
+        }
+
+
+
         expandableBox.setManaged(false);
         cartLabel.setVisible(false);
         if (disableButton) {
