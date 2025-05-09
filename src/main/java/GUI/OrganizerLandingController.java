@@ -71,11 +71,12 @@ public class OrganizerLandingController {
         int count = 0;
         for (int i = 0; i < Database.events.size(); i++) {
             if (currentUser.getUserName().equals(Database.events.get(i).getOrganizer().getUserName())) {
-                count++;
-                if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).after(Database.events.get(i).getEventDate())) {
+                if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).before(Database.events.get(i).getEventDate())) {
+                    count++;
                     if (count == 1) {
 
                     }
+                    System.out.println("Working");
                     Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
                     mainLabel.setText(Database.events.get(i).getEventName());
