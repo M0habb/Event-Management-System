@@ -53,7 +53,7 @@
       </ImageView>
       <ImageView fitHeight="216.0" fitWidth="461.0" layoutX="94.0" layoutY="119.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/events.png" />
+            <Image url="@images/events2.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="310.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0">
@@ -87,7 +87,7 @@
                <children>
                   <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="14.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/events.png" />
+                        <Image url="@images/events2.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="28.0" layoutY="162.0" prefHeight="16.0" prefWidth="117.0" text="EVENT NAME">
@@ -97,12 +97,12 @@
                   </Label>
                   <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="405.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/events.png" />
+                        <Image url="@images/events2.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="202.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/events.png" />
+                        <Image url="@images/events2.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="223.0" layoutY="159.0" prefHeight="21.0" prefWidth="117.0" text="EVENT NAME">
