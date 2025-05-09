@@ -56,12 +56,13 @@ public class MainController extends Application{
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category("Football", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
-        Event event1 = new Event("ASU Music Concert", bd, false, room1,
-                60, organizer3, category1);
+        Event event1 = new Event("ASU Music Concert", bd, false, room1, 60, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
 
         event1.setFees(200);
+        event2.setFees(500);
+        event3.setFees(1000);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
