@@ -115,10 +115,13 @@ public class MainController extends Application{
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
 
 
+
+
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
+
 
         event5.setFees(2500);
         event6.setFees(1700);
