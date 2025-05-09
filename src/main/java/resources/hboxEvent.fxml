@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Font?>
 
-<Label fx:id="eventNameLabel" contentDisplay="TOP" prefHeight="237.0" prefWidth="160.0" text="EVENT NAME" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Label fx:controller="GUI.HboxEventController" fx:id="eventNameLabel" contentDisplay="TOP" prefHeight="237.0" prefWidth="160.0" text="EVENT NAME" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <font>
       <Font name="Georgia Bold" size="14.0" />
    </font>
