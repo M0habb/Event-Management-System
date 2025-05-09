@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ViewEventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/vbox_layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/vbox_layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/EventViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/EventViewerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ProceedToCheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/eventViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/eventViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
