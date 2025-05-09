@@ -15,9 +15,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="51.0" fitWidth="73.0" layoutX="1055.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
+      <ImageView fitHeight="57.0" fitWidth="54.0" layoutX="1037.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
          <image>
-            <Image url="@images/sarah.jpg" />
+            <Image url="@images/WhatsApp%20Image%202025-05-10%20at%2012.20.45%20AM.jpeg" />
          </image>
       </ImageView>
       <Button layoutX="210.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleViewEvents" prefHeight="66.0" prefWidth="194.0" styleClass="ViewEventsButton" text="View Events" />
