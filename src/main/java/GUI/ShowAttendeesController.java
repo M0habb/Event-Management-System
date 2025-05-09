@@ -15,6 +15,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ShowAttendeesController {
 
@@ -23,6 +25,8 @@ public class ShowAttendeesController {
     @FXML private TableColumn<Attendee, String> balanceColumn;
     @FXML private TableColumn<Attendee, String> genderColumn;
     @FXML private TableColumn<Attendee, String> addressColumn;
+    @FXML private TableColumn<Attendee, String> birthdateColumn;
+    @FXML private TableColumn<Attendee, String> phoneColumn;
 
 
     @FXML
@@ -31,7 +35,13 @@ public class ShowAttendeesController {
         balanceColumn.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getWallet().getBalance())));
         genderColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getGender().toString()));
         addressColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getAddress().toString()));
-        
+        birthdateColumn.setCellValueFactory(data -> {
+            Date date = data.getValue().getBirthDate();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            String formattedDate = formatter.format(date);
+            return new SimpleStringProperty(formattedDate);
+        });
+        phoneColumn.setCellValueFactory(data -> new SimpleStringProperty(Long.toString(data.getValue().getPhoneNumber())));
 
         showAttendees.setItems(FXCollections.observableArrayList(Database.totalAttendees));
     }
