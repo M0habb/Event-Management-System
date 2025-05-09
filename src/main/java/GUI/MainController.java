@@ -84,7 +84,7 @@ public class MainController extends Application{
 
         Category category1 = new Category("House", CategoryType.SPORTS, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category("Football", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
-<<<<<<< HEAD
+
         Category category3 = new Category("Techno", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category4 = new Category("Slow", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category5 = new Category("Swimming", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
@@ -114,7 +114,7 @@ public class MainController extends Application{
 
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
 
-=======
+
         Category category3 = new Category("Act", CategoryType.THEATER);
 
         Event event1 = new Event("ASU Music Concert", new Date(126, Calendar.MARCH, 12), false, room1, 60, organizer3, category1);
@@ -124,12 +124,12 @@ public class MainController extends Application{
         Event event5 = new Event("Jana prev event", new Date(123, Calendar.APRIL, 23), true, room1, 1230, organizer3, category2);
         Event event6 = new Event("Romeo & Juliet", new Date(126, Calendar.JANUARY, 15), false, room8, 100, organizer3, category3);
 
->>>>>>> 8659ba1cfd83a15492bb0889f0051ea10060bb80
+
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
-<<<<<<< HEAD
+
         event5.setFees(2500);
         event6.setFees(1700);
         event7.setFees(1500);
@@ -141,10 +141,10 @@ public class MainController extends Application{
         event14.setFees(1500);
         event15.setFees(150);
 
-=======
+
         event5.setFees(2000);
         event6.setFees(500);
->>>>>>> 8659ba1cfd83a15492bb0889f0051ea10060bb80
+
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
