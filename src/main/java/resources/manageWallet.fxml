@@ -16,9 +16,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="1051.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
+      <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="1013.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
          <image>
-            <Image url="@images/sarah.jpg" />
+            <Image url="@images/WhatsApp%20Image%202025-05-10%20at%2012.23.17%20AM.jpeg" />
          </image>
       </ImageView>
       <Line endX="100.0" endY="22.00000762939453" layoutX="825.0" layoutY="27.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
