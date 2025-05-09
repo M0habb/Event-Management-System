@@ -1,15 +1,15 @@
 .root {
-    -fx-background-color: #efd7cf;
+    -fx-background-color: #bca48c;
     -fx-background-size: cover;
 }
 .table-view {
-    -fx-background-color: #f7ebe7;
+    -fx-background-color: #f3ead9;
 }
 
 .table-row-cell {
-    -fx-background-color: #f7ebe7;
+    -fx-background-color: #f3ead9;
 }
 
 .table-cell {
-    -fx-background-color: #f7ebe7;
+    -fx-background-color: #f3ead9;
 }
