@@ -17,6 +17,10 @@ import javafx.stage.Stage;
 import javafx.util.converter.DefaultStringConverter;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ManageCategoriesController {
 
@@ -26,13 +30,29 @@ public class ManageCategoriesController {
     @FXML private TableColumn<Category, Void> updateColumn;
     @FXML private TableColumn<Category, Void> deleteColumn;
 
-    private ObservableList<Category> categoryList = FXCollections.observableArrayList(Database.categories);;
+    @FXML private Button musicCategory;
+    @FXML private Button sportsCategory;
+    @FXML private Button theaterCategory;
+    @FXML private Button conferenceCategory;
+    @FXML private Button otherCategory;
+
+    private ObservableList<Category> categoryList = FXCollections.observableArrayList(Database.categories);
+
+    private List<Button> categoryButtons;
+    private Map<Button, String> categoryButtonColors;
 
     @FXML private Text usernameLabel;
     Admin currentUser = (Admin) User.currentUser;
 
     @FXML
+    private TextField nameTextField;
+    @FXML
+    private Label required;
+
+    @FXML
     public void initialize() {
+
+        required.setVisible(false);
 
         usernameLabel.setText(currentUser.getUserName());
 
@@ -52,6 +72,17 @@ public class ManageCategoriesController {
 
         manageCategories.setItems(categoryList);
 
+        categoryButtons = Arrays.asList(musicCategory, sportsCategory, theaterCategory, conferenceCategory, otherCategory);
+
+        // Assign each button its unique color
+        categoryButtonColors = new HashMap<>();
+        categoryButtonColors.put(musicCategory, "#f1c40f");
+        categoryButtonColors.put(sportsCategory, "#16a085");
+        categoryButtonColors.put(theaterCategory, "#3498db");
+        categoryButtonColors.put(conferenceCategory, "#9b59b6");
+        categoryButtonColors.put(otherCategory, "#95a5a6");
+
+        categoryButtons.forEach(categoryButton -> categoryButton.setOnAction(e -> toggleBackground(categoryButton) ) );
     }
 
     private void addUpdateButtons() {
@@ -142,7 +173,55 @@ public class ManageCategoriesController {
 
     @FXML
     private void handleCreate(){
-        
+
+        String type = "";
+        for (int i = 0; i < categoryButtons.size(); i++){
+            if(categoryButtons.get(i).getStyle().contains(categoryButtonColors.get(categoryButtons.get(i)))){
+                type = categoryButtons.get(i).getText();
+            }
+        }
+
+        if (nameTextField.getText().isEmpty() || type.isEmpty()){
+            required.setVisible(true);
+            return;
+        }
+
+        type = type.replaceAll("\\s+$", "");
+
+        Category category = new Category(nameTextField.getText(), CategoryType.valueOf(type.toUpperCase()));
+
+        Database.categories.add(category);
+
+        categoryList = FXCollections.observableArrayList(Database.categories);
+        manageCategories.setItems(categoryList);
+        manageCategories.refresh();
+
+        required.setVisible(false);
+
+        nameTextField.setText("");
+        for (int i = 0; i < categoryButtons.size(); i++){
+            if(categoryButtons.get(i).getStyle().contains(categoryButtonColors.get(categoryButtons.get(i)))){
+                categoryButtons.get(i).setStyle("-fx-background-color: transparent;");
+            }
+        }
+
+    }
+
+    private boolean toggleBackground(Button clickedButton) {
+        boolean colored = true;
+        String color = categoryButtonColors.get(clickedButton);
+        if (!clickedButton.getStyle().contains(color)){
+            colored = false;
+        }
+        for (Button b : categoryButtons) {
+            b.setStyle("-fx-background-color: transparent;");
+        }
+
+        if (!colored) {
+            clickedButton.setStyle("-fx-background-color: " + color + ";");
+            return true;
+        }
+        return false;
     }
 
 }

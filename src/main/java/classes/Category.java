@@ -106,6 +106,11 @@ public class Category {
         this.editable = new SimpleBooleanProperty(false);
         this.description = description;
     }
+    public Category(String name, CategoryType type) {
+        this.categoryName = new SimpleStringProperty(name);
+        this.categoryType = new SimpleObjectProperty<>(type);
+        this.editable = new SimpleBooleanProperty(false);
+    }
 
     // Getters and setters
     public String getName() { return categoryName.get(); }
