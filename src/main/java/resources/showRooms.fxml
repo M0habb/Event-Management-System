@@ -13,7 +13,7 @@
    <children>
       <TableView fx:id="roomsTable" layoutX="-2.0" layoutY="287.0" prefHeight="354.0" prefWidth="676.0">
         <columns>
-          <TableColumn fx:id="roomNumColumn" prefWidth="75.0" styleClass="tabv" text="Room #" />
+          <TableColumn fx:id="roomNameColumn" prefWidth="75.0" styleClass="tabv" text="Room #" />
           <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="Size" />
             <TableColumn fx:id="availableColumn" prefWidth="75.0" text="Available" />
             <TableColumn fx:id="eventColumn" prefWidth="75.0" text="Event" />
@@ -33,7 +33,7 @@
             <Image url="@images/roomsbg.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="970.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="129.0" text="&lt;- Back">
+      <Button layoutX="970.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="129.0" text="Back">
          <font>
             <Font size="23.0" />
          </font>

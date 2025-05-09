@@ -10,7 +10,7 @@
 
 <VBox prefHeight="137.0" prefWidth="977.0" stylesheets="@styles/vboxLayout.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VBoxController">
    <children>
-      <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" styleClass="HBox">
+      <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" style="-fx-cursor: hand;" styleClass="HBox">
          <children>
             <Label fx:id="eventName" prefHeight="30.0" prefWidth="322.0" text="Event Name">
                <font>

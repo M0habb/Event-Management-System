@@ -24,7 +24,7 @@ public class ShowRoomsController {
     private TableView<Room> roomsTable;
 
     @FXML
-    private TableColumn<Room, Integer> roomNumColumn;
+    private TableColumn<Room, String> roomNameColumn;
 
     @FXML
     private TableColumn<Room, String> sizeColumn;
@@ -40,11 +40,11 @@ public class ShowRoomsController {
     @FXML
     public void initialize() {
         // Setup how data is pulled from Room
-        roomNumColumn.setCellValueFactory(new PropertyValueFactory<>("roomNum"));
+        roomNameColumn.setCellValueFactory(new PropertyValueFactory<>("roomName"));
 
-        //sizeColumn.setCellValueFactory(cellData ->
-          //      new javafx.beans.property.SimpleStringProperty(cellData.getValue().getSize().toString())
-        //);
+        sizeColumn.setCellValueFactory(cellData ->
+                new SimpleStringProperty(String.valueOf(cellData.getValue().getSize()))
+        );
 
         availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
 
