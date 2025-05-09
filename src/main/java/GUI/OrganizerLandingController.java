@@ -31,10 +31,8 @@ public class OrganizerLandingController {
 
     @FXML
     private ScrollPane scrollpane;
-    @FXML
-    private Label mainLabel;
     @FXML private AnchorPane mainAnchorpane;
-    @FXML private Label eventNameLabel;
+
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
@@ -68,14 +66,14 @@ public class OrganizerLandingController {
                 count++;
                 if (LocalDate.now().equals(Database.events.get(i).getEventDate())) {
                     if (count == 1) {
-                        mainLabel=FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
+                        Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
                         mainLabel.setText(Database.events.get(i).getEventName());
 
 
                     } else {
 
-                        eventNameLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
+                        Label eventNameLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
                         eventNameLabel.setText(Database.events.get(i).getEventName());
                     }
                 }
