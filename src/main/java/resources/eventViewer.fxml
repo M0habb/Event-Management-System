@@ -92,9 +92,9 @@
             <Image url="@images/ichep logo.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="63.0" layoutX="1077.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="60.0" fitWidth="48.0" layoutX="1087.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/img_2.png" />
+            <Image url="@images/WhatsApp%20Image%202025-05-09%20at%2011.39.24%20PM%20(1).jpeg" />
          </image>
       </ImageView>
       <ImageView fx:id="background" fitHeight="270.0" fitWidth="1154.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
