@@ -20,6 +20,7 @@ public class Attendee extends User{
         super(userName, password, gender, birthDate, phoneNumber);
         this.eventsAttended = new ArrayList<>();
         this.address = address;
+        Database.totalAttendees.add(this);
     }
 
     public Address getAddress() {

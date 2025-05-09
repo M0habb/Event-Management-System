@@ -105,11 +105,13 @@ public class Category {
         this.categoryType = new SimpleObjectProperty<>(type);
         this.editable = new SimpleBooleanProperty(false);
         this.description = description;
+        Database.categories.add(this);
     }
     public Category(String name, CategoryType type) {
         this.categoryName = new SimpleStringProperty(name);
         this.categoryType = new SimpleObjectProperty<>(type);
         this.editable = new SimpleBooleanProperty(false);
+        Database.categories.add(this);
     }
 
     // Getters and setters
