@@ -54,7 +54,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="937.0" layoutY="573.0" mnemonicParsing="false" onAction="#handlePayByWallet" prefHeight="36.0" prefWidth="150.0" styleClass="PayByWallet" text="Pay By Wallet" />
+      <Button layoutX="780.0" layoutY="573.0" mnemonicParsing="false" onAction="#handlePayByWallet" prefHeight="36.0" prefWidth="150.0" styleClass="PayByWallet" text="Pay By Wallet" />
       <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="69.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/shopping-cart.png" />
@@ -65,7 +65,7 @@
             <Font name="System Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="789.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" text="Back" />
+      <Button layoutX="991.0" layoutY="573.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" text="Back" />
       <Button fx:id="ManageWallet" layoutX="607.0" layoutY="573.0" mnemonicParsing="false" onAction="#handleManageWallet" prefHeight="36.0" prefWidth="127.0" styleClass="SignOutButton" text="Manage Your Wallet" />
    </children>
 </AnchorPane>
