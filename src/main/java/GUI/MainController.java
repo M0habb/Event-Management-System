@@ -7,6 +7,7 @@ import javafx.stage.*;
 import javafx.scene.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class MainController extends Application{
@@ -43,7 +44,7 @@ public class MainController extends Application{
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
-        Attendee attendee3 = new Attendee("Sarah", "asda", Gender.FEMALE, bd3, 85635436, address3);
+        Attendee attendee3 = new Attendee("Hana", "asda", Gender.FEMALE, bd3, 85635436, address3);
 
         Admin admin1 = new Admin("Sama", "123", Gender.FEMALE, bd, 155573, 3);
         Admin admin2 = new Admin("Omar", "1325", Gender.MALE, bd2, 5236, 6);
@@ -56,13 +57,14 @@ public class MainController extends Application{
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category("Football", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
 
-        Event event1 = new Event("ASU Music Concert", bd, false, room1, 60, organizer3, category1);
+        Event event1 = new Event("ASU Music Concert", new Date(126, Calendar.MARCH, 12), false, room1, 60, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
-
+        Event event4 = new Event("Test event", new Date(125, Calendar.DECEMBER, 23), true, room2, 150, organizer3, category1);
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
+        event4.setFees(1500);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
@@ -78,6 +80,7 @@ public class MainController extends Application{
         Database.events.add(event1);
         Database.events.add(event2);
         Database.events.add(event3);
+        Database.events.add(event4);
         Database.rooms.add(room1);
         Database.rooms.add(room2);
         Database.rooms.add(room3);
