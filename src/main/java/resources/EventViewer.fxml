@@ -48,7 +48,7 @@
                 <Font size="30.0" />
             </font>
         </Text>
-        <Text fx:id="noAttendeesText" layoutX="37.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. of attendees:" wrappingWidth="216.171875">
+        <Text fx:id="noAttendeesText" layoutX="37.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. of attendees: " wrappingWidth="216.171875">
             <font>
                 <Font size="24.0" />
             </font>
@@ -63,7 +63,7 @@
                 <Font size="24.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: 3500">
+        <Text fx:id="priceText" layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: ">
             <font>
                 <Font name="System Bold Italic" size="20.0" />
             </font>

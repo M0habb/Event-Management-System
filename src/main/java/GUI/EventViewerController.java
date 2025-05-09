@@ -1,9 +1,8 @@
 package GUI;
 
-import classes.Attendee;
+import classes.*;
 
-import classes.Organizer;
-import classes.User;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +16,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class EventViewerController {
 
@@ -45,19 +46,69 @@ public class EventViewerController {
     @FXML
     private Text locationText;
 
-    private String eventName;
+    private String text;
 
     @FXML
     private void initialize(){
+
+        if (text != null){
+            nameText.setText(text);
+        }
+        System.out.println(nameText.getText());
+
         usernameLabel.setText(currentUser.getUserName());
-        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
-        background.setImage(image);
-        background.setFitWidth(1154);
-        background.setFitHeight(270);
-        background.setPreserveRatio(false); // or true, depending on the need
-        background.setSmooth(true);
-        background.toBack();
-        background.setOpacity(0.7);
+
+        Platform.runLater(this::setText);
+    }
+
+    private void setText(){
+        for (Event event : Database.events){
+            if (event.getEventName().equals(nameText.getText())){
+
+                Date date = event.getEventDate();
+                SimpleDateFormat formatter = new SimpleDateFormat("MMM dd | h:mm a, yyyy");
+                String formattedDate = formatter.format(date);
+                dateText.setText(formattedDate);
+
+                roomText.setText(event.getRoom().getRoomName());
+
+                priceText.setText(priceText.getText() + event.getFees());
+
+                organizerText.setText(event.getOrganizer().getUserName());
+
+                noAttendeesText.setText(noAttendeesText.getText() + event.getNumberofAttendees());
+
+                totalProfitText.setText(totalProfitText.getText() + Double.toString(event.getNumberofAttendees() * event.getFees()));
+
+                locationText.setText(event.getRoom().getAddress().toString());
+
+                switch (event.getCategory().getType()){
+                    case MUSIC:
+                        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
+                        background.setImage(image);
+                        break;
+                    case SPORTS:
+                        Image image2 = new Image(getClass().getResourceAsStream("/resources/images/sports.png"));
+                        background.setImage(image2);
+                        break;
+                    case THEATER:
+                        Image image3 = new Image(getClass().getResourceAsStream("/resources/images/theater.jpeg"));
+                        background.setImage(image3);
+                        break;
+                    case CONFERENCE:
+                        Image image4 = new Image(getClass().getResourceAsStream("/resources/images/conference.jpeg"));
+                        background.setImage(image4);
+                        break;
+                }
+
+                background.setFitWidth(1154);
+                background.setFitHeight(270);
+                background.setPreserveRatio(false); // or true, depending on the need
+                background.setSmooth(true);
+                background.toBack();
+                background.setOpacity(0.7);
+            }
+        }
     }
 
     @FXML
@@ -85,6 +136,9 @@ public class EventViewerController {
     }
 
     public void setEventName(String eventName) {
-        this.eventName = eventName;
+        text = eventName;
+        if (text != null){
+            nameText.setText(text);
+        }
     }
 }
