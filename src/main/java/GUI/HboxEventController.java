@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,7 +18,7 @@ public class HboxEventController {
     private Label eventNameLabel;
 
     @FXML
-    private void handleclick(ActionEvent event) throws IOException{
+    private void handleClick(MouseEvent event) throws IOException{
         System.out.println("working");
         Parent root = FXMLLoader.load(getClass().getResource("/resources/eventViewer.fxml"));
 
