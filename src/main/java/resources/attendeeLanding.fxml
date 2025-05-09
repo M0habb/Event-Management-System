@@ -40,6 +40,6 @@
          </image>
       </ImageView>
       <Label fx:id="usernameLabel" layoutX="934.0" layoutY="34.0" text="Username" />
-      <Button fx:id="addToWallet" layoutX="621.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleaddToWallet" prefHeight="36.0" prefWidth="127.0" styleClass="SignOutButton" text="Add To Your Wallet" />
+      <Button fx:id="ManageWallet" layoutX="621.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleManageWallet" prefHeight="36.0" prefWidth="127.0" styleClass="SignOutButton" text="Manage Your Wallet" />
    </children>
 </AnchorPane>
