@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
 
-<HBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.HboxEventController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</HBox>
+<Label fx:id="eventNameLabel" contentDisplay="TOP" prefHeight="237.0" prefWidth="160.0" text="EVENT NAME" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="Georgia Bold" size="14.0" />
+   </font>
+   <graphic>
+      <ImageView fitHeight="160.0" fitWidth="181.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/events.png" />
+         </image>
+      </ImageView>
+   </graphic>
+</Label>

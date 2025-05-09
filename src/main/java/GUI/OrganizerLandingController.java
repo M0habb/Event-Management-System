@@ -16,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import javafx.scene.layout.HBox;
@@ -24,13 +25,16 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class OrganizerLandingController {
 
     @FXML
     private ScrollPane scrollpane;
-
-
+    @FXML
+    private Label mainLabel;
+    @FXML private AnchorPane mainAnchorpane;
+    @FXML private Label eventNameLabel;
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
@@ -66,19 +70,25 @@ public class OrganizerLandingController {
         window.setScene(scene);
         window.show();
     }
-    private void handleUpcomingEvents() {
+    private void handleUpcomingEvents() throws IOException {
         HBox rootH = (HBox) scrollpane.getContent();
+        int count = 0;
         for (int i = 0; i < Database.events.size(); i++) {
             if (User.currentUser == Database.events.get(i).getOrganizer()) {
+                count++;
+                if (LocalDate.now().equals(Database.events.get(i).getEventDate())) {
+                    if (count == 1) {
+                        mainLabel=FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
-                try {
-                    rootH = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                        mainLabel.setText(Database.events.get(i).getEventName());
+
+
+                    } else {
+
+                        eventNameLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
+                        eventNameLabel.setText(Database.events.get(i).getEventName());
+                    }
                 }
-
-                Label eventNameLabel = (Label) rootH.getChildren().get(1);
-                eventNameLabel.setText(Database.tickets.get(i).getEventName());
             }
         }
     }
