@@ -26,6 +26,7 @@ public class EventViewerController {
     @FXML
     private void initialize(){
         usernameLabel.setText(currentUser.getUserName());
+
     }
 
     @FXML

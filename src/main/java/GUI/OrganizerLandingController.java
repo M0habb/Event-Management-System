@@ -34,10 +34,14 @@ public class OrganizerLandingController {
     @FXML
     private ScrollPane scrollpane;
 
+    @FXML
+    private Label usernameLabel;
+
     Organizer currentUser = (Organizer) User.currentUser;
 
     @FXML
     private void initialize() throws IOException {
+        usernameLabel.setText(currentUser.getUserName());
         handleUpcomingEvents();
     }
 
