@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="myComboBox" prefHeight="644.0" prefWidth="1172.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignupController">
+<AnchorPane fx:id="myComboBox" prefHeight="644.0" prefWidth="1172.0" stylesheets="@styles/signup.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignupController">
    <children>
       <Label layoutX="101.0" layoutY="83.0" prefHeight="50.0" prefWidth="303.0" text="Create an account">
          <font>
