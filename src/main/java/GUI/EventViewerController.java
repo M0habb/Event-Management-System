@@ -1,9 +1,7 @@
 package GUI;
 
-import classes.Attendee;
+import classes.*;
 
-import classes.Organizer;
-import classes.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +15,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class EventViewerController {
 
@@ -45,8 +45,6 @@ public class EventViewerController {
     @FXML
     private Text locationText;
 
-    private String eventName;
-
     @FXML
     private void initialize(){
         usernameLabel.setText(currentUser.getUserName());
@@ -58,6 +56,23 @@ public class EventViewerController {
         background.setSmooth(true);
         background.toBack();
         background.setOpacity(0.7);
+
+        for (Event event : Database.events){
+            if (event.getEventName().equals(nameText.getText())){
+                Date date = event.getEventDate();
+                SimpleDateFormat formatter = new SimpleDateFormat("MMM dd | h:mm a, yyyy");
+                String formattedDate = formatter.format(date);
+                dateText.setText(formattedDate);
+
+                roomText.setText(event.getRoom().getRoomName());
+
+                priceText.setText(priceText.getText() + event.getFees());
+
+                organizerText.setText(event.getOrganizer().getUserName());
+
+                noAttendeesText.setText("" + event.getNumberofAttendees());
+            }
+        }
     }
 
     @FXML
@@ -85,6 +100,6 @@ public class EventViewerController {
     }
 
     public void setEventName(String eventName) {
-        this.eventName = eventName;
+        nameText.setText(eventName);
     }
 }
