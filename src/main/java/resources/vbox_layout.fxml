@@ -12,12 +12,12 @@
    <children>
       <HBox onMouseClicked="#expandBox" prefHeight="43.0" prefWidth="977.0" style="-fx-cursor: hand;" styleClass="HBox">
          <children>
-            <Label fx:id="eventName" prefHeight="30.0" prefWidth="322.0" text="Event Name">
+            <Label fx:id="eventName" prefHeight="35.0" prefWidth="815.0" text="Event Name">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="eventDate1" prefHeight="35.0" prefWidth="571.0" text="Event Date">
+            <Label fx:id="eventDate1" prefHeight="35.0" prefWidth="424.0" text="Event Date">
                <font>
                   <Font size="24.0" />
                </font>

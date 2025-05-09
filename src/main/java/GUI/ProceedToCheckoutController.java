@@ -1,9 +1,6 @@
 package GUI;
 
-import classes.Address;
-import classes.Attendee;
-import classes.Database;
-import classes.User;
+import classes.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -124,6 +121,7 @@ public class ProceedToCheckoutController {
                 sum = 0;
                 EmptyCart.setVisible(true);
                 totalLabel.setText(Double.toString(sum));
+                Database.tickets.removeIf(ticket -> ticket.getOwner().getUserName().equals(currentUser.getUserName()));
             }
             else{
                 notification.setText("*Insufficient Funds");

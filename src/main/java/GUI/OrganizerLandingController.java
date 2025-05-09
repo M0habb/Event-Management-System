@@ -45,6 +45,15 @@ public class OrganizerLandingController {
     private Label usernameLabel;
 
     @FXML
+    private Label nameLabel;
+    @FXML
+    private Label dateLabel;
+    @FXML
+    private Label venueLabel;
+    @FXML
+    private Label priceLabel;
+
+    @FXML
     private ListView listView;
 
     Organizer currentUser = (Organizer) User.currentUser;
@@ -53,6 +62,8 @@ public class OrganizerLandingController {
     private void initialize() throws IOException {
         usernameLabel.setText(currentUser.getUserName());
         handleUpcomingEvents();
+        HBox rootH = (HBox) scrollpane.getContent();
+        rootH.setSpacing(50);
     }
 
     @FXML
@@ -104,11 +115,18 @@ public class OrganizerLandingController {
                         mainLabel.setGraphic(imageView1);
                         break;
                     case CategoryType.THEATER:
-                        Image image2 = new Image(getClass().getResourceAsStream("/resources/images/sports.png"));
+                        Image image2 = new Image(getClass().getResourceAsStream("/resources/images/theater.jpeg"));
                         ImageView imageView2 = new ImageView(image2);
                         imageView2.setFitWidth(181);
                         imageView2.setFitHeight(160);
                         mainLabel.setGraphic(imageView2);
+                        break;
+                    case CategoryType.CONFERENCE:
+                        Image image3 = new Image(getClass().getResourceAsStream("/resources/images/conference.jpeg"));
+                        ImageView imageView3 = new ImageView(image3);
+                        imageView3.setFitWidth(181);
+                        imageView3.setFitHeight(160);
+                        mainLabel.setGraphic(imageView3);
                         break;
                 }
 
@@ -119,6 +137,10 @@ public class OrganizerLandingController {
                     if (count == 1) {
                         Label main = mainLabel;
                         mainAnchorPane.getChildren().add(main);
+                        nameLabel.setText(mainLabel.getText());
+                        dateLabel.setText(Database.events.get(i).getEventDate().toString());
+                        venueLabel.setText(Database.events.get(i).getRoom().getRoomName());
+                        priceLabel.setText("Ticket Price: " + Database.events.get(i).getFees());
                     }
 
                 }else {

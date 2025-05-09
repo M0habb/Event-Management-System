@@ -52,31 +52,27 @@
             <Image url="@images/plus.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="310.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Label layoutX="20.0" layoutY="19.0" prefHeight="21.0" prefWidth="138.0" text="EVENT NAME">
-               <font>
-                  <Font name="Georgia Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="58.0" prefHeight="21.0" prefWidth="138.0" text="EVENT DATE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="89.0" prefHeight="21.0" prefWidth="138.0" text="VENUE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="120.0" prefHeight="21.0" prefWidth="138.0" text="PRICE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <ListView fx:id="listView" layoutX="885.0" layoutY="354.0" prefHeight="237.0" prefWidth="193.0" styleClass="ListView" />
+      <Label fx:id="nameLabel" layoutX="382.0" layoutY="150.0" prefHeight="21.0" prefWidth="488.0" text="EVENT NAME">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="382.0" layoutY="188.0" prefHeight="21.0" prefWidth="481.0" text="EVENT DATE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="venueLabel" layoutX="382.0" layoutY="227.0" prefHeight="21.0" prefWidth="471.0" text="VENUE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" layoutX="382.0" layoutY="260.0" prefHeight="21.0" prefWidth="501.0" text="PRICE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="885.0" layoutY="354.0" prefHeight="237.0" prefWidth="227.0" styleClass="ListView" />
       <ScrollPane fx:id="scrollpane" layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
          <content>
             <HBox prefHeight="189.0" prefWidth="588.0" />

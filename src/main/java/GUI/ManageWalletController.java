@@ -9,13 +9,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Optional;
 
-public class AddToWalletController {
+public class ManageWalletController {
     public Button Back;
     @FXML
     private TextField amountField;
@@ -24,13 +23,14 @@ public class AddToWalletController {
     @FXML
     private Label notification;
     @FXML
-    private double amount;;
-    @FXML
     private ScrollPane scrollpane;
+    @FXML
+    private Label currentBalanceLabel;
     @FXML
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
         notification.setVisible(false);
+        currentBalanceLabel.setText("Your Current Balance is : "+ String.valueOf(User.currentUser.getWallet().getBalance()));
     }
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
@@ -58,7 +58,7 @@ public class AddToWalletController {
     }
     @FXML
     private void handlePay(){
-             amount=Double.valueOf(amountField.getText());
+        double amount = Double.valueOf(amountField.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Are you sure?");
@@ -67,10 +67,13 @@ public class AddToWalletController {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 // User clicked OK
-                User.currentUser.getWallet().addBalance(amount);
+                if(amount >0) {
+                    User.currentUser.getWallet().addBalance(amount);
+                    notification.setVisible(true);
+                    notification.setText("Transaction Successful");
+                    currentBalanceLabel.setText("Your Current Balance is : " + User.currentUser.getWallet().getBalance());
+                }else notification.setText("*Invalid amount entered");
 
-                notification.setVisible(true);
-                notification.setText("Transaction Successful. Your current balance is : " + User.currentUser.getWallet().getBalance());
 
 
 

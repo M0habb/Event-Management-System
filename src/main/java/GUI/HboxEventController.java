@@ -1,6 +1,7 @@
 package GUI;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -20,7 +21,12 @@ public class HboxEventController {
     @FXML
     private void handleClick(MouseEvent event) throws IOException{
         System.out.println("working");
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/eventViewer.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/eventViewer.fxml"));
+        Parent root = loader.load();
+
+        EventViewerController eventViewerController = loader.getController();
+
+        eventViewerController.setEventName(eventNameLabel.getText());
 
         Scene scene = new Scene(root, 1142, 642);
 
