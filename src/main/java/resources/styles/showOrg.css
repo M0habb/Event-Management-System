@@ -1,0 +1,52 @@
+.circular-button{
+    -fx-background-radius: 50%;
+    -fx-background-color: white;
+    -fx-text-fill:black;
+    -fx-text-size: 100;
+}
+.button{
+    -fx-cursor: hand;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: f3ead9;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #b4aea1;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f3ead9; /* Your desired color */
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent; /* Make individual headers transparent if needed */
+    -fx-border-color: transparent; /* Optional: removes borders */
+}
+
+.table-view .label {
+    -fx-text-fill: black; /* Change header text color */
+    -fx-font-weight: bold;
+}
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.category-button{
+    -fx-background-radius: 30;
+    -fx-min-width: 60;
+    -fx-min-height: 30;
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
+.table-cell > .text-field {
+    -fx-text-fill: black;   /* Text color */
+    -fx-background-color: white;  /* Optional: Background while editing */
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+}
