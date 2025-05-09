@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +36,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Controller.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainController.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "<unknown>",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Controller.executor&quot;: &quot;Run&quot;,
@@ -70,9 +54,8 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
->>>>>>> 1f505aedcb78bacb663f8cdbe043488421fff42d
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
