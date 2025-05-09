@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="" />
+    <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ManageWalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ManageWalletController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/manageWallet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/manageWallet.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

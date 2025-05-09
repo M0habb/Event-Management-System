@@ -72,11 +72,8 @@ public class ManageWalletController {
                     notification.setVisible(true);
                     notification.setText("Transaction Successful");
                     currentBalanceLabel.setText("Your Current Balance is : " + User.currentUser.getWallet().getBalance());
+                    amountField.clear();
                 }else notification.setText("*Invalid amount entered");
-
-
-
-
             }
     }
 
