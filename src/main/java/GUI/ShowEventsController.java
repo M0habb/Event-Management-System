@@ -414,7 +414,7 @@ public class ShowEventsController {
     }
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/attendeeLanding.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/adminLanding.fxml"));
 
         Scene scene = new Scene(root, 1142, 642);
 

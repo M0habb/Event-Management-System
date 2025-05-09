@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -23,18 +25,14 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextArea layoutX="123.0" layoutY="418.0" prefHeight="38.0" prefWidth="270.0" />
-      <Button layoutX="41.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Sports" />
-      <Button layoutX="479.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Theatre" />
-      <Button layoutX="264.0" layoutY="234.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Music" />
-      <ImageView fitHeight="151.0" fitWidth="712.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="usernnameLabel" fitHeight="151.0" fitWidth="712.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../Pictures/vector-watercolor-art-background-old-260nw-2399844377.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="23.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER" wrappingWidth="235.18002319335938">
+      <Text layoutX="386.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories: " textAlignment="CENTER" wrappingWidth="270.0">
          <font>
-            <Font name="Arial Bold Italic" size="45.0" />
+            <Font name="Arial" size="45.0" />
          </font>
       </Text>
       <Text layoutX="28.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="99.51553344726562">
@@ -42,12 +40,12 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Text layoutX="28.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="99.51553344726562">
+      <Text layoutX="28.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="99.51553344726562">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <Button layoutX="579.0" layoutY="522.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
+      <Button layoutX="579.0" layoutY="522.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
             <Font size="18.0" />
          </font>
@@ -57,5 +55,67 @@
             <Image url="@images/plus.png" />
          </image>
       </ImageView>
+      <Button layoutX="78.0" layoutY="553.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="34.0" prefWidth="81.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="101.0" layoutY="170.0" prefHeight="52.0" prefWidth="249.0" text="Create new category:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Line endX="319.0" layoutX="342.0" layoutY="151.0" startX="-298.0" />
+      <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="16.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="usernameLabel" layoutX="68.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" wrappingWidth="65.5999755859375">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="171.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleSignout" prefHeight="34.0" prefWidth="81.0" text="Sign Out">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Line endX="-62.0" endY="-46.0" layoutX="212.0" layoutY="119.0" startX="-62.0" startY="-74.0" />
+      <Button fx:id="musicCategory" layoutX="84.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="132.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/music.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sportsCategory" layoutX="199.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="247.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/football.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="theaterCategory" layoutX="315.0" layoutY="299.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" styleClass="category-button" text="Theater        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="371.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/theater.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="conferenceCategory" layoutX="434.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" styleClass="category-button" text="Conference       " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="509.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/conference.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="otherCategory" layoutX="573.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Other        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="621.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/more.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nameTextField" layoutX="117.0" layoutY="423.0" prefHeight="29.0" prefWidth="190.0" />
+      <Label fx:id="required" layoutX="43.0" layoutY="478.0" prefHeight="21.0" prefWidth="199.0" text="Name and type are required!" textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
