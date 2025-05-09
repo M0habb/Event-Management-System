@@ -101,7 +101,6 @@ public class ShowRoomsController {
 
             Room room = new Room(name, size, true); // assuming 'true' = available
 
-            Database.rooms.add(room);
 
 
             roomList = FXCollections.observableArrayList(Database.rooms);

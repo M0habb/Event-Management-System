@@ -64,6 +64,16 @@ public class OrganizerLandingController {
         handleUpcomingEvents();
         HBox rootH = (HBox) scrollpane.getContent();
         rootH.setSpacing(50);
+
+        scrollpane.setOnScroll(event -> {
+            double deltaY = event.getDeltaY();  // Vertical scroll amount
+            double width = scrollpane.getContent().getBoundsInLocal().getWidth();
+            double viewportWidth = scrollpane.getViewportBounds().getWidth();
+            double hValue = scrollpane.getHvalue();
+
+            // Calculate the new horizontal position
+            scrollpane.setHvalue(hValue - deltaY / width * viewportWidth);
+        });
     }
 
     @FXML
