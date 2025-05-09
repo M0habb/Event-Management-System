@@ -41,7 +41,7 @@ public class ShowAttendeesController {
             String formattedDate = formatter.format(date);
             return new SimpleStringProperty(formattedDate);
         });
-        phoneColumn.setCellValueFactory(data -> new SimpleStringProperty(Long.toString(data.getValue().getPhoneNumber())));
+        phoneColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getPhoneNumber()));
 
         showAttendees.setItems(FXCollections.observableArrayList(Database.totalAttendees));
     }

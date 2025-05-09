@@ -173,7 +173,7 @@ public class SignupController {
         String street = streetTextField.getText();
         Address address = new Address(country, city, street, postalCode);
 
-        long phoneNumber = Long.valueOf(phoneTextField.getText());
+        String phoneNumber = phoneTextField.getText();
 
         System.out.println(usernameTextfield.getText() + ": " + passwordTextField.getText());
 
