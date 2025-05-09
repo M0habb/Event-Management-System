@@ -30,7 +30,7 @@ public class ManageWalletController {
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
         notification.setVisible(false);
-        currentBalanceLabel.setText("Your Current Balance is : "+ String.valueOf(User.currentUser.getWallet().getBalance()));
+        currentBalanceLabel.setText("Your Current Balance is : "+ User.currentUser.getWallet().getBalance());
     }
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
