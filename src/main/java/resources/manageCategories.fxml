@@ -49,7 +49,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button layoutX="579.0" layoutY="522.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
+      <Button layoutX="579.0" layoutY="522.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
             <Font size="18.0" />
          </font>
