@@ -13,9 +13,7 @@ import java.util.Date;
 public class MainController extends Application{
 
     public static void main(String[] args) {
-
         launch();
-
     }
 
     @Override
@@ -24,6 +22,7 @@ public class MainController extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
         primaryStage.setTitle("Event Management System");
         primaryStage.setScene(new Scene(root, 1142, 642));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
