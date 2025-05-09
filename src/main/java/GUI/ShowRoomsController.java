@@ -48,7 +48,6 @@ public class ShowRoomsController {
 
     @FXML private TextField sizeTextField;
 
-    @FXML private TextField addressTextField;
 
 
     @FXML
@@ -90,12 +89,8 @@ public class ShowRoomsController {
 
     @FXML
     private void handleAdd() {
-        // Check for empty input
-        if (nameTextField.getText().isEmpty() ||
-                sizeTextField.getText().isEmpty() ||
-                addressTextField.getText().isEmpty()) {
 
-            required.setText("All fields are required");
+        if (nameTextField.getText().isEmpty() || sizeTextField.getText().isEmpty()) {
             required.setVisible(true);
             return;
         }
@@ -103,28 +98,26 @@ public class ShowRoomsController {
         try {
             String name = nameTextField.getText();
             int size = Integer.parseInt(sizeTextField.getText());
-            String address = addressTextField.getText();
 
-            Room room = new Room(name, size, true); // true = available
+            Room room = new Room(name, size, true); // assuming 'true' = available
 
             Database.rooms.add(room);
 
-            // Refresh table
+
             roomList = FXCollections.observableArrayList(Database.rooms);
             roomsTable.setItems(roomList);
             roomsTable.refresh();
 
-            // Reset UI
             required.setVisible(false);
             nameTextField.setText("");
             sizeTextField.setText("");
-            addressTextField.setText("");
 
         } catch (NumberFormatException e) {
-            required.setText("Size must be a valid number");
+            required.setText("Size must be a number");
             required.setVisible(true);
         }
     }
+
 
 
 }

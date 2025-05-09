@@ -6,6 +6,7 @@ import classes.Event;
 import classes.Ticket;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -17,6 +18,8 @@ public class VBoxController{
     @FXML private Button buyButton;
     @FXML private Label cartLabel;
 
+    private boolean disableButton;
+
     boolean ticketPurchased = false;
 
     @FXML private VBox expandableBox;
@@ -25,6 +28,19 @@ public class VBoxController{
     private void initialize(){
         expandableBox.setManaged(false);
         cartLabel.setVisible(false);
+        if (disableButton) {
+            buyButton.setDisable(true);
+            buyButton.setVisible(true);
+            buyButton.setOpacity(0);
+        }
+    }
+
+    // Call this method after loading the FXML
+    public void setDisableButton(boolean disableButton) {
+        this.disableButton = disableButton;
+        buyButton.setDisable(disableButton);
+        buyButton.setVisible(disableButton);
+        buyButton.setOpacity(0);
     }
 
     @FXML
