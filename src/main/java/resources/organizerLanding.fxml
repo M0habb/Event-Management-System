@@ -31,7 +31,7 @@
             <Font name="Bodoni MT" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="usernameLabel" layoutX="973.0" layoutY="51.0" text="username">
+      <Label layoutX="973.0" layoutY="51.0" text="username">
          <font>
             <Font size="18.0" />
          </font>
@@ -41,6 +41,11 @@
             <Font name="Bodoni MT" size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="1074.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
       <Button layoutX="926.0" layoutY="132.0" maxHeight="166.0" maxWidth="174.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleImageClick" prefHeight="95.0" prefWidth="95.0" styleClass="circular-button">
          <font>
             <Font size="18.0" />
@@ -51,78 +56,16 @@
             <Image url="@images/plus.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="216.0" fitWidth="461.0" layoutX="94.0" layoutY="119.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/events.png" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="310.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Label layoutX="20.0" layoutY="19.0" prefHeight="21.0" prefWidth="138.0" text="EVENT NAME">
-               <font>
-                  <Font name="Georgia Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="58.0" prefHeight="21.0" prefWidth="138.0" text="EVENT DATE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="89.0" prefHeight="21.0" prefWidth="138.0" text="VENUE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="120.0" prefHeight="21.0" prefWidth="138.0" text="PRICE">
-               <font>
-                  <Font name="Georgia Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <ListView layoutX="913.0" layoutY="354.0" prefHeight="185.0" prefWidth="165.0" styleClass="ListView" />
-      <ScrollPane layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
+      <ScrollPane layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="601.0" styleClass="anchor-pane">
-               <children>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="14.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/events.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="162.0" prefHeight="16.0" prefWidth="117.0" text="EVENT NAME">
-                     <font>
-                        <Font name="Georgia Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="405.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/events.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="160.0" fitWidth="181.0" layoutX="202.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/events.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="223.0" layoutY="159.0" prefHeight="21.0" prefWidth="117.0" text="EVENT NAME">
-                     <font>
-                        <Font name="Georgia Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="419.0" layoutY="156.0" prefHeight="21.0" prefWidth="117.0" text="EVENT NAME">
-                     <font>
-                        <Font name="Georgia Bold" size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="601.0" styleClass="anchor-pane" />
         </content>
       </ScrollPane>
-      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1063.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/img_2.png" />
-         </image>
-      </ImageView>
+      <AnchorPane fx:id="mainAnchorpane" layoutX="110.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="mainLabel" alignment="TOP_LEFT" layoutX="-5.0" layoutY="-4.0" prefHeight="200.0" prefWidth="207.0" text="Label" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
