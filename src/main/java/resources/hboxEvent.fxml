@@ -5,12 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Font?>
 
-<Label fx:controller="GUI.HboxEventController" fx:id="eventNameLabel" contentDisplay="TOP" prefHeight="237.0" prefWidth="160.0" text="EVENT NAME" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Label fx:id="eventNameLabel" contentDisplay="TOP" onMouseClicked="#handleclick" prefHeight="237.0" prefWidth="160.0" style="-fx-cursor: hand;" text="EVENT NAME" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.HboxEventController">
    <font>
       <Font name="Georgia Bold" size="14.0" />
    </font>
    <graphic>
-      <ImageView fitHeight="160.0" fitWidth="181.0" onMouseClicked="#handleclick" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="160.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
          <image>
             <Image url="@images/events2.png" />
          </image>
