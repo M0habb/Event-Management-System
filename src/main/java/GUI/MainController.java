@@ -92,15 +92,6 @@ public class MainController extends Application{
         Admin admin7 = new Admin("Rania", "bhb", Gender.FEMALE, bd, 5515575, 7);
         Admin admin8 = new Admin("Sokary", "jhb", Gender.MALE, bd2, 57757, 7);
         Admin admin9 = new Admin("Rani", "dfee", Gender.MALE, bd3, 17878651, 8);
-        Admin admin10 = new Admin("Samia", "123", Gender.FEMALE, bd, 155573, 3);
-        Admin admin11 = new Admin("Omair", "1325", Gender.MALE, bd2, 5236, 6);
-        Admin admin12 = new Admin("Johny", "asda", Gender.MALE, bd3, 85635436, 7);
-        Admin admin13 = new Admin("Mia", "123", Gender.FEMALE, bd, 68418, 5);
-        Admin admin14 = new Admin("Marwan", "1325", Gender.MALE, bd2, 58188, 4);
-        Admin admin15 = new Admin("Cloe", "kk", Gender.FEMALE, bd3, 6617, 4);
-        Admin admin16 = new Admin("Rokaya", "bhb", Gender.FEMALE, bd, 5515575, 7);
-        Admin admin17 = new Admin("Mohamady", "jhb", Gender.MALE, bd2, 57757, 7);
-        Admin admin18 = new Admin("Karim", "dfee", Gender.MALE, bd3, 17878651, 8);
 
 
         Organizer organizer1 = new Organizer("Michael", "123", Gender.MALE, bd, 155573);
@@ -112,6 +103,15 @@ public class MainController extends Application{
         Organizer organizer7 = new Organizer("Micho", "123", Gender.MALE, bd, 15552973);
         Organizer organizer8 = new Organizer("Amr", "1325", Gender.MALE, bd2, 54754685);
         Organizer organizer9 = new Organizer("Nancy", "123", Gender.FEMALE, bd3, 48845115);
+        Organizer organizer10 = new Organizer("Karim", "123", Gender.MALE, bd, 155573);
+        Organizer organizer11 = new Organizer("Mohamady", "1325", Gender.MALE, bd2, 5236);
+        Organizer organizer12 = new Organizer("Rokaya", "123", Gender.FEMALE, bd3, 85635436);
+        Organizer organizer13 = new Organizer("Marwan", "123", Gender.MALE, bd, 4818461);
+        Organizer organizer14 = new Organizer("Johny", "1325", Gender.MALE, bd2, 81881);
+        Organizer organizer15 = new Organizer("Cloe", "123", Gender.FEMALE, bd3, 1574);
+        Organizer organizer16 = new Organizer("Omair", "123", Gender.MALE, bd, 15552973);
+        Organizer organizer17 = new Organizer("Amer", "1325", Gender.MALE, bd2, 54754685);
+        Organizer organizer18 = new Organizer("Samia", "123", Gender.FEMALE, bd3, 48845115);
 
 
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
