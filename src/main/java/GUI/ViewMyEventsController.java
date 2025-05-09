@@ -17,12 +17,12 @@ public class ViewMyEventsController {
     @FXML
     private Label usernameLabel;
 
-    @FXML
-    private Label greetingLabel;
+    //@FXML
+    //private Label greetingLabel;
     @FXML
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
-        greetingLabel.setText("Hello "+Attendee.currentUser.getUserName());
+        //greetingLabel.setText("Hello "+Attendee.currentUser.getUserName());
     }
     @FXML
      private void username(){
@@ -40,4 +40,15 @@ public class ViewMyEventsController {
         window.show();
     }
 
+    @FXML
+    private void handleBack(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/attendeeLanding.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+    }
 }
