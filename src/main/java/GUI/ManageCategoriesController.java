@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.converter.DefaultStringConverter;
 
@@ -23,10 +24,16 @@ public class ManageCategoriesController {
     @FXML private TableColumn<Category, Void> updateColumn;
     @FXML private TableColumn<Category, Void> deleteColumn;
 
+    @FXML private Text usernameLabel;
+
+    Admin currentUser = (Admin) User.currentUser;
+
     private ObservableList<Category> categoryList;
 
     @FXML
     public void initialize() {
+
+        usernameLabel.setText(currentUser.getUserName());
 
         manageCategories.setEditable(true);
         idColumn.setEditable(true);
@@ -90,6 +97,18 @@ public class ManageCategoriesController {
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/adminLanding.fxml"));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+    }
+
+    @FXML
+    private void handleSignout(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
 
         Scene scene = new Scene(root, 1142, 642);
 

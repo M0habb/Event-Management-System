@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="210.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ViewMyEventsBoxController">
+   <children>
+      <ImageView fitHeight="167.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" />
+      <Label prefHeight="45.0" prefWidth="230.0" text="Label" />
+   </children>
+</VBox>
