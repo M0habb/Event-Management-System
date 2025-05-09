@@ -53,7 +53,7 @@ public class MainController extends Application{
         Room room9 = new Room("ASU venue", 1000, true, address2, true);
 
 
-        Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
+        Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "123", Gender.MALE, bd2, 5236, address2);
         Attendee attendee3 = new Attendee("Hana", "asda", Gender.FEMALE, bd3, 85635436, address3);
         Attendee attendee4 = new Attendee("Farah", "yf", Gender.FEMALE, bd, 594984, address4);
@@ -79,7 +79,7 @@ public class MainController extends Application{
         Organizer organizer3 = new Organizer("Jana", "123", Gender.FEMALE, bd3, 85635436);
         Organizer organizer4 = new Organizer("Seif", "123", Gender.MALE, bd, 4818461);
         Organizer organizer5 = new Organizer("Amjad", "1325", Gender.MALE, bd2, 81881);
-        Organizer organizer6 = new Organizer("Faten", "123", Gender.FEMALE, bd3, 1574);
+        Organizer organizer6 = new Organizer("Sarah", "123", Gender.FEMALE, bd3, 1574);
         Organizer organizer7 = new Organizer("Micho", "123", Gender.MALE, bd, 15552973);
         Organizer organizer8 = new Organizer("Amr", "1325", Gender.MALE, bd2, 54754685);
         Organizer organizer9 = new Organizer("Nancy", "123", Gender.FEMALE, bd3, 48845115);
