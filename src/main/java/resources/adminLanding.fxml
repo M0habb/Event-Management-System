@@ -30,9 +30,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="67.0" layoutY="23.0" text="Admin Page">
+      <Label alignment="CENTER" layoutX="87.0" layoutY="23.0" text="Admin Page">
          <font>
-            <Font name="Arial Bold Italic" size="52.0" />
+            <Font name="Calibri Bold Italic" size="52.0" />
          </font>
       </Label>
       <Button layoutX="707.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleShowEvents" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Events" />
