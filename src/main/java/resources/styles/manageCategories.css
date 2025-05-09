@@ -42,3 +42,7 @@
     -fx-border-color: black;
     -fx-border-radius: 30;
 }
+.table-cell > .text-field {
+    -fx-text-fill: black;   /* Text color */
+    -fx-background-color: white;  /* Optional: Background while editing */
+}
