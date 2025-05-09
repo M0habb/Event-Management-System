@@ -1,9 +1,6 @@
 package GUI;
 
-import classes.Category;
-import classes.CategoryType;
-import classes.Room;
-import classes.Database;
+import classes.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -40,83 +34,91 @@ public class ShowRoomsController {
     private TableColumn<Room, String> eventColumn;
 
     @FXML
+    private TableColumn<Room, String> addressColumn;
+
+    @FXML
     private TextField nameTextField;
+    @FXML
+    private TextField sizeTextField;
+    @FXML
+    private TextField streetTextField;
+    @FXML
+    private TextField cityTextField;
+    @FXML
+    private TextField postalCodeTextField;
+    @FXML
+    private TextField countryTextField;
     @FXML
     private Label required;
 
     private ObservableList<Room> roomList = FXCollections.observableArrayList(Database.rooms);
 
-    @FXML private TextField sizeTextField;
-
-
+    @FXML
+    private CheckBox outdoorsCheckBox;
 
     @FXML
     public void initialize() {
-        // Setup how data is pulled from Room
         roomNameColumn.setCellValueFactory(new PropertyValueFactory<>("roomName"));
-
-        sizeColumn.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.valueOf(cellData.getValue().getSize()))
-        );
-
+        sizeColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getSize())));
         availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
-
         eventColumn.setCellValueFactory(cellData -> {
             for (int i = 0; i < Database.events.size(); i++) {
-                if (cellData.getValue().getRoomName() == Database.events.get(i).getRoom().getRoomName()) {
+                if (cellData.getValue().getRoomName().equals(Database.events.get(i).getRoom().getRoomName())) {
                     return new SimpleStringProperty(Database.events.get(i).getEventName());
                 }
             }
             return new SimpleStringProperty("N/A");
         });
-
-        // Fill the table with data
-        ObservableList<Room> roomList = FXCollections.observableArrayList(Database.rooms);
+        addressColumn.setCellValueFactory(cellData -> {
+            Address address = cellData.getValue().getAddress();
+            String formattedAddress = address.street + ", " + address.city + ", " + address.country + ". " + address.postalCode;
+            return new SimpleStringProperty(formattedAddress);
+        });
         roomsTable.setItems(roomList);
     }
 
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/adminLanding.fxml"));
-
         Scene scene = new Scene(root, 1142, 642);
-
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
         window.setScene(scene);
         window.show();
     }
 
     @FXML
     private void handleAdd() {
-
-        if (nameTextField.getText().isEmpty() || sizeTextField.getText().isEmpty()) {
+        if (nameTextField.getText().isEmpty() || sizeTextField.getText().isEmpty() ||
+                streetTextField.getText().isEmpty() || cityTextField.getText().isEmpty() ||
+                postalCodeTextField.getText().isEmpty() || countryTextField.getText().isEmpty()) {
             required.setVisible(true);
             return;
         }
-
         try {
             String name = nameTextField.getText();
             int size = Integer.parseInt(sizeTextField.getText());
-
-            Room room = new Room(name, size, true); // assuming 'true' = available
-
-
-
+            String street = streetTextField.getText();
+            String city = cityTextField.getText();
+            long postalCode = Long.parseLong(postalCodeTextField.getText());
+            String country = countryTextField.getText();
+            boolean outdoors = outdoorsCheckBox.isSelected();
+            Address address = new Address(country, city, street, postalCode);
+            Room room = new Room(name, size, true, address, outdoors);
+            Database.rooms.add(room);
             roomList = FXCollections.observableArrayList(Database.rooms);
             roomsTable.setItems(roomList);
             roomsTable.refresh();
-
             required.setVisible(false);
             nameTextField.setText("");
             sizeTextField.setText("");
-
+            streetTextField.setText("");
+            cityTextField.setText("");
+            postalCodeTextField.setText("");
+            countryTextField.setText("");
+            outdoorsCheckBox.setSelected(false);
         } catch (NumberFormatException e) {
-            required.setText("Size must be a number");
+            required.setText("Size and postal code must be numbers");
             required.setVisible(true);
         }
     }
-
-
-
 }

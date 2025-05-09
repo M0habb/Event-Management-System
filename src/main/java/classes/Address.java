@@ -1,6 +1,6 @@
 package classes;
 // user's personal address
-public class   Address {
+public class Address {
     public String city;
     public String street;
     public long postalCode;

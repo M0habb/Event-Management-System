@@ -5,30 +5,22 @@ import java.util.ArrayList;
 public class Room {
 
     private String roomName;
-    private int size; //no. of ppl
+    private int size;
     private boolean available;
     private Address address;
     private boolean outdoors;
-    public Room(){
 
+    public Room() {
     }
-    public Room(String roomName, int size, boolean available, Address address, boolean outdoors){
+
+    public Room(String roomName, int size, boolean available, Address address, boolean outdoors) {
         this.roomName = roomName;
         this.size = size;
         this.available = available;
         this.address = address;
+        this.outdoors = outdoors;
         Database.rooms.add(this);
     }
-
-    public Room(String name, int size, boolean b) {
-        this.roomName=name;
-        this.size=size;
-        this.available=b;
-        Database.rooms.add(this);
-    }
-
-
-//setters and getters
 
     public boolean isOutdoors() {
         return outdoors;
@@ -41,47 +33,50 @@ public class Room {
     public int getSize() {
         return size;
     }
+
     public void setSize(int size) {
         this.size = size;
     }
+
     public boolean getAvailable() {
         return available;
     }
+
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
     public String getRoomName() {
         return roomName;
     }
+
     public void setRoomNum(int roomNum) {
         this.roomName = roomName;
     }
+
     public void setRoom(ArrayList<Room> room) {
         Database.rooms = room;
     }
+
     public Address getAddress() {
         return address;
     }
+
     public void setAddress(Address address) {
         this.address = address;
     }
 
-    public void isAvailable(){
+    public void isAvailable() {
         System.out.println("Rooms available: ");
-        boolean exists=false;
-        for(Room room:Database.rooms) {
-            if(room.getAvailable()){
-                exists=true;
+        boolean exists = false;
+        for (Room room : Database.rooms) {
+            if (room.getAvailable()) {
+                exists = true;
                 System.out.println("-" + room.roomName);
             }
         }
-        if(!exists){
+        if (!exists) {
             System.out.println("none");
         }
     }
-
 }
-
-
-
-
