@@ -33,6 +33,24 @@ public class MainController extends Application{
         Date bd4 = new Date(125, 07, 15);
         Date bd5 = new Date(125, 06, 22);
         Date bd6 = new Date(125, 10, 15);
+        Date bd7 = new Date(100, 07, 23);
+        Date bd8 = new Date(105, 12, 21);
+        Date bd9 = new Date(104, 07, 05);
+        Date bd10 = new Date(106, 07, 03);
+        Date bd11= new Date(100, 06, 01);
+        Date bd12= new Date(102, 10, 29);
+        Date bd13 = new Date(104, 07, 19);
+        Date bd14 = new Date(107, 12, 18);
+        Date bd15 = new Date(108, 07, 17);
+        Date bd16 = new Date(103, 07, 20);
+        Date bd17 = new Date(109, 06, 10);
+        Date bd18 = new Date(100, 10, 16);
+        Date bd19 = new Date(102, 07, 13);
+        Date bd20 = new Date(104, 12, 21);
+        Date bd21 = new Date(105, 07, 12);
+        Date bd22 = new Date(106, 07, 03);
+        Date bd23 = new Date(107, 06, 01);
+        Date bd24 = new Date(108, 10, 14);
 
 
         Address address1 = new Address("Egypt", "Cairo", "123", 12341);
@@ -64,24 +82,24 @@ public class MainController extends Application{
         Room room20 = new Room("Church of the nativity", 1000, true, address2, false);
 
 
-        Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd, 155573, address1);
-        Attendee attendee2 = new Attendee("Mohamed", "123", Gender.MALE, bd2, 5236, address2);
-        Attendee attendee3 = new Attendee("Hana", "asda", Gender.FEMALE, bd3, 85635436, address3);
-        Attendee attendee4 = new Attendee("Farah", "yf", Gender.FEMALE, bd, 594984, address4);
-        Attendee attendee5 = new Attendee("Toaa", "ydd", Gender.FEMALE, bd2, 6141651, address5);
-        Attendee attendee6 = new Attendee("Hend", "rg", Gender.FEMALE, bd3, 519825, address6);
-        Attendee attendee7 = new Attendee("Samy", "xg", Gender.MALE, bd, 164116, address1);
-        Attendee attendee8 = new Attendee("Fady", "dr", Gender.MALE, bd2, 5117418, address2);
-        Attendee attendee9 = new Attendee("Ramy", "zrs", Gender.MALE, bd3, 258515, address3);
-        Attendee attendee10 = new Attendee("Hobza", "123", Gender.MALE, bd, 155573, address1);
-        Attendee attendee11 = new Attendee("Sameh", "123", Gender.MALE, bd2, 5236, address2);
-        Attendee attendee12 = new Attendee("Haidy", "asda", Gender.FEMALE, bd3, 85635436, address3);
-        Attendee attendee13 = new Attendee("Fofa", "yf", Gender.FEMALE, bd, 594984, address4);
-        Attendee attendee14 = new Attendee("Tuana", "ydd", Gender.FEMALE, bd2, 6141651, address5);
-        Attendee attendee15 = new Attendee("Hanin", "rg", Gender.FEMALE, bd3, 519825, address6);
-        Attendee attendee16 = new Attendee("Soly", "xg", Gender.MALE, bd, 164116, address1);
-        Attendee attendee17 = new Attendee("Soliman", "dr", Gender.MALE, bd2, 5117418, address2);
-        Attendee attendee18 = new Attendee("Rane", "zrs", Gender.MALE, bd3, 258515, address3);
+        Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd7, 155573, address1);
+        Attendee attendee2 = new Attendee("Mohamed", "123", Gender.MALE, bd8, 5236, address2);
+        Attendee attendee3 = new Attendee("Hana", "asda", Gender.FEMALE, bd9, 85635436, address3);
+        Attendee attendee4 = new Attendee("Farah", "yf", Gender.FEMALE, bd10, 594984, address4);
+        Attendee attendee5 = new Attendee("Toaa", "ydd", Gender.FEMALE, bd11, 6141651, address5);
+        Attendee attendee6 = new Attendee("Hend", "rg", Gender.FEMALE, bd12, 519825, address6);
+        Attendee attendee7 = new Attendee("Samy", "xg", Gender.MALE, bd13, 164116, address1);
+        Attendee attendee8 = new Attendee("Fady", "dr", Gender.MALE, bd14, 5117418, address2);
+        Attendee attendee9 = new Attendee("Ramy", "zrs", Gender.MALE, bd15, 258515, address3);
+        Attendee attendee10 = new Attendee("Hobza", "123", Gender.MALE, bd16, 155573, address1);
+        Attendee attendee11 = new Attendee("Sameh", "123", Gender.MALE, bd17, 5236, address2);
+        Attendee attendee12 = new Attendee("Haidy", "asda", Gender.FEMALE, bd18, 85635436, address3);
+        Attendee attendee13 = new Attendee("Fofa", "yf", Gender.FEMALE, bd19, 594984, address4);
+        Attendee attendee14 = new Attendee("Tuana", "ydd", Gender.FEMALE, bd20, 6141651, address5);
+        Attendee attendee15 = new Attendee("Hanin", "rg", Gender.FEMALE, bd21, 519825, address6);
+        Attendee attendee16 = new Attendee("Soly", "xg", Gender.MALE, bd22, 164116, address1);
+        Attendee attendee17 = new Attendee("Soliman", "dr", Gender.MALE, bd23, 5117418, address2);
+        Attendee attendee18 = new Attendee("Rane", "zrs", Gender.MALE, bd24, 258515, address3);
 
         Admin admin1 = new Admin("Sama", "123", Gender.FEMALE, bd, 155573, 3);
         Admin admin2 = new Admin("Omar", "1325", Gender.MALE, bd2, 5236, 6);
