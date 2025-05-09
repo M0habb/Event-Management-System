@@ -19,8 +19,14 @@ import java.io.IOException;
 public class EventViewerController {
 
     Organizer currentUser = (Organizer) User.currentUser;
+
     @FXML
     private Text usernameLabel;
+
+    @FXML
+    private void initialize(){
+        usernameLabel.setText(currentUser.getUserName());
+    }
 
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
@@ -33,6 +39,7 @@ public class EventViewerController {
         window.setScene(scene);
         window.show();
     }
+
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/organizerLanding.fxml"));
@@ -44,16 +51,5 @@ public class EventViewerController {
         window.setScene(scene);
         window.show();
     }
-
-    @FXML
-    private void initialize(){
-        usernameLabel.setText(currentUser.getUserName());
-    }
-
-
-
-
-
-
 
 }
