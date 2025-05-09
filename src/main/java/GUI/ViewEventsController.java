@@ -69,7 +69,7 @@ public class ViewEventsController {
             Label eventName = (Label) hbox.getChildren().get(0);
             Label eventDate = (Label) hbox.getChildren().get(1);
 
-            eventName.setText(Database.events.get(i).getEventName());
+            eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
             Date date = Database.events.get(i).getEventDate();
             SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
             String dateString = formatter.format(date);
@@ -85,7 +85,7 @@ public class ViewEventsController {
 
             Address address = Database.events.get(i).getRoom().getAddress();
 
-            eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+            eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
             eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
             String outdoors = "outdoors.";
             if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
@@ -135,7 +135,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -151,7 +151,7 @@ public class ViewEventsController {
 
                     Address address = Database.events.get(i).getRoom().getAddress();
 
-                    eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+                    eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
                     String outdoors = "outdoors.";
                     if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
@@ -190,7 +190,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -206,7 +206,7 @@ public class ViewEventsController {
 
                     Address address = Database.events.get(i).getRoom().getAddress();
 
-                    eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+                    eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
                     String outdoors = "outdoors.";
                     if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
@@ -245,7 +245,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -261,7 +261,7 @@ public class ViewEventsController {
 
                     Address address = Database.events.get(i).getRoom().getAddress();
 
-                    eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+                    eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
                     String outdoors = "outdoors.";
                     if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
@@ -300,7 +300,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -316,7 +316,7 @@ public class ViewEventsController {
 
                     Address address = Database.events.get(i).getRoom().getAddress();
 
-                    eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+                    eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
                     String outdoors = "outdoors.";
                     if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
@@ -355,7 +355,7 @@ public class ViewEventsController {
                     Label eventName = (Label) hbox.getChildren().get(0);
                     Label eventDate = (Label) hbox.getChildren().get(1);
 
-                    eventName.setText(Database.events.get(i).getEventName());
+                    eventName.setText(Database.events.get(i).getEventName() + ", " + Database.events.get(i).getCategory().getName() + " Event");
                     Date date = Database.events.get(i).getEventDate();
                     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
                     String dateString = formatter.format(date);
@@ -371,7 +371,7 @@ public class ViewEventsController {
 
                     Address address = Database.events.get(i).getRoom().getAddress();
 
-                    eventLoc.setText(eventLoc.getText() + " " + address.country + ", " + address.city + ", " + address.street + ".");
+                    eventLoc.setText(eventLoc.getText() + Database.events.get(i).getRoom().getRoomName() + ", " + address.country + ", " + address.city + ", " + address.street + ".");
                     eventOrganizer.setText(eventOrganizer.getText() + " " +  Database.events.get(i).getOrganizer().getUserName() + ".");
                     String outdoors = "outdoors.";
                     if (!Database.events.get(i).getOutdoors()) outdoors = "indoors.";
