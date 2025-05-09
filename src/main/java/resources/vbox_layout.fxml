@@ -37,7 +37,7 @@
       </HBox>
       <VBox fx:id="expandableBox" prefHeight="80.0" prefWidth="714.0" styleClass="innerVBox" visible="false">
          <children>
-            <Label text="-Event is set in">
+            <Label text="-Event is set in ">
                <font>
                   <Font size="21.0" />
                </font>
