@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowRoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowRoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showRooms.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
