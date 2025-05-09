@@ -48,9 +48,20 @@ public class MainController extends Application{
         Room room4 = new Room("Coworking space", 52000, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
         Room room5 = new Room("ALAhly stadium", 50, true, address1, false);
         Room room6 = new Room("New Capital venue", 1000, true, address2, true);
-        Room room7 = new Room("ASU stage", 50, true, address1, false);
+        Room room7 = new Room("ASU stage", 50, true, address1, true);
         Room room8 = new Room("ASU halls", 50, true, address1, false);
         Room room9 = new Room("ASU venue", 1000, true, address2, true);
+        Room room10 = new Room("AUC stage", 50, true, address1, true);
+        Room room11 = new Room("AUC venue", 1000, true, address2, true);
+        Room room12 = new Room("AUC halls", 50000, true, address3, false);
+        Room room13 = new Room("Alex library", 52000, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
+        Room room14 = new Room("Elzamalek stadium", 50, true, address1, true);
+        Room room15 = new Room("CFC stage", 1000, true, address2, true);
+        Room room16 = new Room("Central park", 50, true, address1, true);
+        Room room17 = new Room("South park", 50, true, address1, true);
+        Room room18 = new Room("Cinema palace", 1000, true, address2, false);
+        Room room19 = new Room("Mohamed Ali mosque", 50, true, address1, false);
+        Room room20 = new Room("Church of the nativity", 1000, true, address2, false);
 
 
         Attendee attendee1 = new Attendee("Mohab", "123", Gender.MALE, bd, 155573, address1);
@@ -62,6 +73,15 @@ public class MainController extends Application{
         Attendee attendee7 = new Attendee("Samy", "xg", Gender.MALE, bd, 164116, address1);
         Attendee attendee8 = new Attendee("Fady", "dr", Gender.MALE, bd2, 5117418, address2);
         Attendee attendee9 = new Attendee("Ramy", "zrs", Gender.MALE, bd3, 258515, address3);
+        Attendee attendee10 = new Attendee("Hobza", "123", Gender.MALE, bd, 155573, address1);
+        Attendee attendee11 = new Attendee("Sameh", "123", Gender.MALE, bd2, 5236, address2);
+        Attendee attendee12 = new Attendee("Haidy", "asda", Gender.FEMALE, bd3, 85635436, address3);
+        Attendee attendee13 = new Attendee("Fofa", "yf", Gender.FEMALE, bd, 594984, address4);
+        Attendee attendee14 = new Attendee("Tuana", "ydd", Gender.FEMALE, bd2, 6141651, address5);
+        Attendee attendee15 = new Attendee("Hanin", "rg", Gender.FEMALE, bd3, 519825, address6);
+        Attendee attendee16 = new Attendee("Soly", "xg", Gender.MALE, bd, 164116, address1);
+        Attendee attendee17 = new Attendee("Soliman", "dr", Gender.MALE, bd2, 5117418, address2);
+        Attendee attendee18 = new Attendee("Rane", "zrs", Gender.MALE, bd3, 258515, address3);
 
         Admin admin1 = new Admin("Sama", "123", Gender.FEMALE, bd, 155573, 3);
         Admin admin2 = new Admin("Omar", "1325", Gender.MALE, bd2, 5236, 6);
@@ -83,6 +103,15 @@ public class MainController extends Application{
         Organizer organizer7 = new Organizer("Micho", "123", Gender.MALE, bd, 15552973);
         Organizer organizer8 = new Organizer("Amr", "1325", Gender.MALE, bd2, 54754685);
         Organizer organizer9 = new Organizer("Nancy", "123", Gender.FEMALE, bd3, 48845115);
+        Organizer organizer10 = new Organizer("Karim", "123", Gender.MALE, bd, 155573);
+        Organizer organizer11 = new Organizer("Mohamady", "1325", Gender.MALE, bd2, 5236);
+        Organizer organizer12 = new Organizer("Rokaya", "123", Gender.FEMALE, bd3, 85635436);
+        Organizer organizer13 = new Organizer("Marwan", "123", Gender.MALE, bd, 4818461);
+        Organizer organizer14 = new Organizer("Johny", "1325", Gender.MALE, bd2, 81881);
+        Organizer organizer15 = new Organizer("Cloe", "123", Gender.FEMALE, bd3, 1574);
+        Organizer organizer16 = new Organizer("Omair", "123", Gender.MALE, bd, 15552973);
+        Organizer organizer17 = new Organizer("Amer", "1325", Gender.MALE, bd2, 54754685);
+        Organizer organizer18 = new Organizer("Samia", "123", Gender.FEMALE, bd3, 48845115);
 
 
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
