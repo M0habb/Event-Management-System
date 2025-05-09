@@ -59,17 +59,7 @@ public class OrganizerLandingController {
         window.show();
     }
 
-    @FXML
-    private void handleclick(MouseEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/EventViewer.fxml"));
 
-        Scene scene = new Scene(root, 1142, 642);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        window.setScene(scene);
-        window.show();
-    }
     private void handleUpcomingEvents() throws IOException {
         HBox rootH = (HBox) scrollpane.getContent();
         int count = 0;
