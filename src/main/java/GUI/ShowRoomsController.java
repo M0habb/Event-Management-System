@@ -25,6 +25,9 @@ public class ShowRoomsController {
     private TableColumn<Room, String> roomNameColumn;
 
     @FXML
+    private TableColumn<Room, String> outdoorsColumn;
+
+    @FXML
     private TableColumn<Room, String> sizeColumn;
 
     @FXML
@@ -61,6 +64,7 @@ public class ShowRoomsController {
         roomNameColumn.setCellValueFactory(new PropertyValueFactory<>("roomName"));
         sizeColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getSize())));
         availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
+        outdoorsColumn.setCellValueFactory(new PropertyValueFactory<>("outdoors"));
         eventColumn.setCellValueFactory(cellData -> {
             for (int i = 0; i < Database.events.size(); i++) {
                 if (cellData.getValue().getRoomName().equals(Database.events.get(i).getRoom().getRoomName())) {
