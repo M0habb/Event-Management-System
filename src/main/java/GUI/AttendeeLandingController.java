@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class AttendeeLandingController {
 
@@ -66,6 +67,18 @@ public class AttendeeLandingController {
 
         window.setScene(scene);
         window.show();
+    }
+    @FXML
+    private void handleaddToWallet(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/resources/addToWallet.fxml")));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+
     }
 
 }

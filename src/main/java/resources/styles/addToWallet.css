@@ -1,0 +1,35 @@
+.root {
+    -fx-background-color: #f3ead9;
+        -fx-background-size: cover;
+
+}
+.SignOutButton{
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 12px;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+}
+.PayByWallet{
+-fx-background-color: #b4aea1; /* Red */
+ -fx-text-fill:black; /* Text color */
+ -fx-font-size: 12px;
+ -fx-background-radius:5px;
+     -fx-border-radius: 5px;
+}
+.Back{
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 12px;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+ }
+.notification{
+-fx-background-color: #d9e2f3; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 18px;
+-fx-font-style: italic;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+    -fx-alignment:center;
+}
