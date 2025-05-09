@@ -21,11 +21,17 @@ public class ShowAttendeesController {
     @FXML private TableView<Attendee> showAttendees;
     @FXML private TableColumn<Attendee, String> usernameColumn;
     @FXML private TableColumn<Attendee, String> balanceColumn;
+    @FXML private TableColumn<Attendee, String> genderColumn;
+    @FXML private TableColumn<Attendee, String> addressColumn;
+
 
     @FXML
     public void initialize() {
         usernameColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUserName()));
         balanceColumn.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getWallet().getBalance())));
+        genderColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getGender().toString()));
+        addressColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getAddress().toString()));
+        
 
         showAttendees.setItems(FXCollections.observableArrayList(Database.totalAttendees));
     }

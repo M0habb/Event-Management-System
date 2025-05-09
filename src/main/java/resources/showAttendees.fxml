@@ -13,6 +13,8 @@
     <TableView fx:id="showAttendees" layoutY="281.0" prefHeight="362.0" prefWidth="1142.0" stylesheets="@styles/showattendees.css">
         <columns>
             <TableColumn fx:id="usernameColumn" text="Username" />
+         <TableColumn fx:id="genderColumn" text="Gender" />
+         <TableColumn fx:id="addressColumn" text="Address" />
          <TableColumn fx:id="balanceColumn" text="Balance" />
         </columns>
       <columnResizePolicy>
