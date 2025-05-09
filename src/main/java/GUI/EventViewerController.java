@@ -93,7 +93,7 @@ public class EventViewerController {
 
                 switch (event.getCategory().getType()){
                     case MUSIC:
-                        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
+                        Image image = new Image(getClass().getResourceAsStream("/resources/images/img_3.png"));
                         background.setImage(image);
                         break;
                     case SPORTS:
