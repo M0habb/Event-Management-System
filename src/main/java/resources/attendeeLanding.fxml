@@ -36,7 +36,7 @@
       <Line endX="100.0" endY="22.00000762939453" layoutX="783.0" layoutY="30.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
       <ImageView fitHeight="187.0" fitWidth="187.0" layoutX="234.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/events.png" />
+            <Image url="@images/events2.png" />
          </image>
       </ImageView>
       <Label fx:id="usernameLabel" layoutX="934.0" layoutY="34.0" text="Username" />

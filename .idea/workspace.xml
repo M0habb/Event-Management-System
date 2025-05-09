@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowAttendeesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowAttendeesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowOrganizersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowOrganizersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/adminLanding.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showOrganizers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showOrganizers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/manageCategories.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/manageCategories.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +45,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -61,8 +54,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
+      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

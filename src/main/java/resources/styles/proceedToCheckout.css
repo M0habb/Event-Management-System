@@ -42,3 +42,6 @@
     -fx-border-radius: 5px;
     -fx-alignment:center;
 }
+.button{
+    -fx-cursor: hand;
+}

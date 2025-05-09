@@ -22,7 +22,7 @@
             <Button fx:id="musicCategory" layoutX="159.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleMusicCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
             <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="207.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/music.png" />
+                  <Image url="@images/music1.png" />
                </image>
             </ImageView>
             <Button fx:id="sportsCategory" layoutX="274.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleSportsCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
