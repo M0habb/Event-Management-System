@@ -36,7 +36,7 @@ public class ManageCategoriesController {
     @FXML private Button conferenceCategory;
     @FXML private Button otherCategory;
 
-    private ObservableList<Category> categoryList = FXCollections.observableArrayList(Database.categories);;
+    private ObservableList<Category> categoryList = FXCollections.observableArrayList(Database.categories);
 
     private List<Button> categoryButtons;
     private Map<Button, String> categoryButtonColors;
@@ -45,7 +45,14 @@ public class ManageCategoriesController {
     Admin currentUser = (Admin) User.currentUser;
 
     @FXML
+    private TextField nameTextField;
+    @FXML
+    private Label required;
+
+    @FXML
     public void initialize() {
+
+        required.setVisible(false);
 
         usernameLabel.setText(currentUser.getUserName());
 
@@ -166,6 +173,37 @@ public class ManageCategoriesController {
 
     @FXML
     private void handleCreate(){
+
+        String type = "";
+        for (int i = 0; i < categoryButtons.size(); i++){
+            if(categoryButtons.get(i).getStyle().contains(categoryButtonColors.get(categoryButtons.get(i)))){
+                type = categoryButtons.get(i).getText();
+            }
+        }
+
+        if (nameTextField.getText().isEmpty() || type.isEmpty()){
+            required.setVisible(true);
+            return;
+        }
+
+        type = type.replaceAll("\\s+$", "");
+
+        Category category = new Category(nameTextField.getText(), CategoryType.valueOf(type.toUpperCase()));
+
+        Database.categories.add(category);
+
+        categoryList = FXCollections.observableArrayList(Database.categories);
+        manageCategories.setItems(categoryList);
+        manageCategories.refresh();
+
+        required.setVisible(false);
+
+        nameTextField.setText("");
+        for (int i = 0; i < categoryButtons.size(); i++){
+            if(categoryButtons.get(i).getStyle().contains(categoryButtonColors.get(categoryButtons.get(i)))){
+                categoryButtons.get(i).setStyle("-fx-background-color: transparent;");
+            }
+        }
 
     }
 

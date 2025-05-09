@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,7 +25,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextArea layoutX="123.0" layoutY="418.0" prefHeight="38.0" prefWidth="270.0" />
       <ImageView fx:id="usernnameLabel" fitHeight="151.0" fitWidth="712.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../Pictures/vector-watercolor-art-background-old-260nw-2399844377.jpg" />
@@ -112,5 +111,11 @@
             <Image url="@images/more.png" />
          </image>
       </ImageView>
+      <TextField fx:id="nameTextField" layoutX="117.0" layoutY="423.0" prefHeight="29.0" prefWidth="190.0" />
+      <Label fx:id="required" layoutX="43.0" layoutY="478.0" prefHeight="21.0" prefWidth="199.0" text="Name and type are required!" textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
