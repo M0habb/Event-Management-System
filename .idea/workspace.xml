@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="49fe2064-e5f3-4fa0-9510-247221314217" name="Changes" comment="" />
+=======
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/HboxEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/HboxEventController.java" afterDir="false" />
@@ -12,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/organizerLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/organizerLanding.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" afterDir="false" />
     </list>
+>>>>>>> 984ffffa06d00fced998f959a7e4e01b8580f24c
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +41,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainController.executor": "Run",
+    "git-widget-placeholder": "<unknown>"
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Controller.executor&quot;: &quot;Run&quot;,
@@ -55,6 +65,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+>>>>>>> 984ffffa06d00fced998f959a7e4e01b8580f24c
   }
 }</component>
   <component name="RecentsManager">
@@ -70,40 +81,6 @@
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\resources\classes" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\classes" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.MainController">
-    <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.MainController" />
-      <module name="Event Management System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="temporary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.temporary" />
-      <module name="Event Management System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MainController" />
-        <item itemvalue="Application.temporary" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
