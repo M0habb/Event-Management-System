@@ -60,7 +60,7 @@ public class MainController extends Application{
         Event event1 = new Event("ASU Music Concert", new Date(126, Calendar.MARCH, 12), false, room1, 60, organizer3, category1);
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
-
+        Event event4 = new Event("Test event", new Date(125, Calendar.DECEMBER, 23), true, room2, 150, organizer3, category1);
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
