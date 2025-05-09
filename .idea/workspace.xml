@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ShowEvenetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ShowEventsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/showEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,32 +37,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Controller.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainController.executor": "Run",
-    "Application.temporary.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "<unknown>",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Controller.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.temporary.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -76,39 +54,23 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
->>>>>>> 7796d7807a0698cfb96625ca76062c1153a9b6c5
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
-      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\resources\classes" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\classes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainController">
+  <component name="RunManager">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.MainController" />
-      <module name="Event Management System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="temporary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.temporary" />
       <module name="Event Management System" />
       <extension name="coverage">
         <pattern>
@@ -123,7 +85,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainController" />
-        <item itemvalue="Application.temporary" />
       </list>
     </recent_temporary>
   </component>
