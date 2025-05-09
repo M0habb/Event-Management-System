@@ -58,16 +58,6 @@ public class EventViewerController {
 
         usernameLabel.setText(currentUser.getUserName());
 
-        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
-        
-        background.setImage(image);
-        background.setFitWidth(1154);
-        background.setFitHeight(270);
-        background.setPreserveRatio(false); // or true, depending on the need
-        background.setSmooth(true);
-        background.toBack();
-        background.setOpacity(0.7);
-
         Platform.runLater(this::setText);
     }
 
@@ -91,6 +81,32 @@ public class EventViewerController {
                 totalProfitText.setText(totalProfitText.getText() + Double.toString(event.getNumberofAttendees() * event.getFees()));
 
                 locationText.setText(event.getRoom().getAddress().toString());
+
+                switch (event.getCategory().getType()){
+                    case MUSIC:
+                        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
+                        background.setImage(image);
+                        break;
+                    case SPORTS:
+                        Image image2 = new Image(getClass().getResourceAsStream("/resources/images/sports.png"));
+                        background.setImage(image2);
+                        break;
+                    case THEATER:
+                        Image image3 = new Image(getClass().getResourceAsStream("/resources/images/theater.jpeg"));
+                        background.setImage(image3);
+                        break;
+                    case CONFERENCE:
+                        Image image4 = new Image(getClass().getResourceAsStream("/resources/images/conference.jpeg"));
+                        background.setImage(image4);
+                        break;
+                }
+
+                background.setFitWidth(1154);
+                background.setFitHeight(270);
+                background.setPreserveRatio(false); // or true, depending on the need
+                background.setSmooth(true);
+                background.toBack();
+                background.setOpacity(0.7);
             }
         }
     }
