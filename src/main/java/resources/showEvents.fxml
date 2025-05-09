@@ -22,7 +22,7 @@
             <Button fx:id="musicCategory" layoutX="159.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleMusicCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
             <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="207.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/music.png" />
+                  <Image url="@images/music1.png" />
                </image>
             </ImageView>
             <Button fx:id="sportsCategory" layoutX="274.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleSportsCategory" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
@@ -56,7 +56,7 @@
             </Button>
             <ImageView fitHeight="51.0" fitWidth="73.0" layoutX="1065.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
                <image>
-                  <Image url="@images/sarah.jpg" />
+                  <Image url="@images/user.png" />
                </image>
             </ImageView>
             <Line endX="100.0" endY="22.00000762939453" layoutX="793.0" layoutY="40.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
@@ -66,6 +66,7 @@
                   <VBox prefHeight="331.0" prefWidth="980.0" />
                </content>
             </ScrollPane>
+            <Button layoutX="104.0" layoutY="593.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="54.0" text="Back" />
          </children>
       </AnchorPane>
    </children>

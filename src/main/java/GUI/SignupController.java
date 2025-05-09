@@ -20,7 +20,7 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.function.UnaryOperator;
 
-import static classes.Database.totalAttendees;
+import static classes.Database.*;
 
 public class SignupController {
 
@@ -115,8 +115,22 @@ public class SignupController {
             return;
         }
 
-        for (int i = 0; i < totalAttendees.size(); i++){
-            if (usernameTextfield.getText().equals(totalAttendees.get(i).getUserName())){
+        for (Attendee totalAttendee : totalAttendees) {
+            if (usernameTextfield.getText().equals(totalAttendee.getUserName())) {
+                takenUsername.setVisible(true);
+                usernameTextfield.setText("");
+                return;
+            }
+        }
+        for (classes.Admin admin : admins) {
+            if (usernameTextfield.getText().equals(admin.getUserName())) {
+                takenUsername.setVisible(true);
+                usernameTextfield.setText("");
+                return;
+            }
+        }
+        for (classes.Organizer organizer : organizers) {
+            if (usernameTextfield.getText().equals(organizer.getUserName())) {
                 takenUsername.setVisible(true);
                 usernameTextfield.setText("");
                 return;
@@ -133,9 +147,7 @@ public class SignupController {
         Attendee attendee = new Attendee();
 
         Gender gender = Gender.MALE;
-        if (genderComboBox.getValue().equals("Male")){
-            gender = Gender.MALE;
-        }else if(genderComboBox.getValue().equals("Female")){
+        if (genderComboBox.getValue().equals("Female")){
             gender = Gender.FEMALE;
         }
 
@@ -148,6 +160,8 @@ public class SignupController {
         Address address = new Address(country, city, street, postalCode);
 
         long phoneNumber = Long.valueOf(phoneTextField.getText());
+
+        System.out.println(usernameTextfield.getText() + ": " + passwordTextField.getText());
 
         attendee.signup(usernameTextfield.getText(), gender, birthdate, address, phoneNumber, passwordTextField.getText());
 

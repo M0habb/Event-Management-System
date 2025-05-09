@@ -13,9 +13,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import javafx.scene.layout.HBox;
@@ -24,12 +26,31 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
 public class OrganizerLandingController {
 
     @FXML
     private ScrollPane scrollpane;
 
+    @FXML
+    private AnchorPane mainAnchorPane;
+
+    @FXML
+    private Label usernameLabel;
+
+    @FXML
+    private ListView listView;
+
+    Organizer currentUser = (Organizer) User.currentUser;
+
+    @FXML
+    private void initialize() throws IOException {
+        usernameLabel.setText(currentUser.getUserName());
+        handleUpcomingEvents();
+    }
 
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
@@ -55,30 +76,33 @@ public class OrganizerLandingController {
         window.show();
     }
 
-    @FXML
-    private void handleclick(MouseEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/EventViewer.fxml"));
 
-        Scene scene = new Scene(root, 1142, 642);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        window.setScene(scene);
-        window.show();
-    }
-    private void handleUpcomingEvents() {
+    private void handleUpcomingEvents() throws IOException {
         HBox rootH = (HBox) scrollpane.getContent();
+        int count = 0;
         for (int i = 0; i < Database.events.size(); i++) {
-            if (User.currentUser == Database.events.get(i).getOrganizer()) {
+            if (currentUser.getUserName().equals(Database.events.get(i).getOrganizer().getUserName())) {
+                if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).before(Database.events.get(i).getEventDate())) {
 
-                try {
-                    rootH = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    count++;
+                    Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
+
+                    mainLabel.setText(Database.events.get(i).getEventName());
+
+                    rootH.getChildren().add(mainLabel);
+
+                    if (count == 1) {
+                        Label main = mainLabel;
+                        mainAnchorPane.getChildren().add(main);
+                    }
+
                 }
+            }else {
+                Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
-                Label eventNameLabel = (Label) rootH.getChildren().get(1);
-                eventNameLabel.setText(Database.tickets.get(i).getEventName());
+                mainLabel.setText(Database.events.get(i).getEventName());
+
+                listView.getItems().add(mainLabel);
             }
         }
     }

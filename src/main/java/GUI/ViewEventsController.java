@@ -399,22 +399,6 @@ public class ViewEventsController {
     }
 
     @FXML
-    public static void handleBuy(Label eventName){
-
-
-
-        Event event = new Event();
-        for (int i = 0; i < Database.events.size(); i++){
-            if (Database.events.get(i).getEventName().equals(eventName.getText())){
-                event = Database.events.get(i);
-            }
-        }
-
-        Ticket ticket = new Ticket(event.getEventName(), currentUser, event.getFees(), event.getEventDate());
-
-        Database.tickets.add(ticket);
-    }
-    @FXML
     private void handleBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/attendeeLanding.fxml"));
 
