@@ -9,8 +9,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowAttendeesController">
-    <TableView fx:id="showAttendees" layoutY="281.0" prefHeight="362.0" prefWidth="1142.0">
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/showattendees.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowAttendeesController">
+    <TableView fx:id="showAttendees" layoutY="281.0" prefHeight="362.0" prefWidth="1142.0" stylesheets="@styles/showattendees.css">
         <columns>
             <TableColumn fx:id="usernameColumn" text="Username" />
         </columns>
@@ -29,7 +29,7 @@
          <Font name="Calibri Bold Italic" size="65.0" />
       </font>
    </Text>
-   <Button layoutX="43.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+   <Button layoutX="934.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="43.0" prefWidth="81.0" text="Back" />
 
 
 </AnchorPane>
