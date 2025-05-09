@@ -10,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -45,6 +46,10 @@ public class EventViewerController {
     private Text totalProfitText;
     @FXML
     private Text locationText;
+    @FXML
+    private ScrollPane scrollpane;
+    @FXML
+    private Label attendeesLabel;
 
     private String text;
 
@@ -59,6 +64,10 @@ public class EventViewerController {
         usernameLabel.setText(currentUser.getUserName());
 
         Platform.runLater(this::setText);
+
+        scrollpane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollpane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scrollpane.setPannable(true);
     }
 
     private void setText(){
@@ -99,6 +108,14 @@ public class EventViewerController {
                         Image image4 = new Image(getClass().getResourceAsStream("/resources/images/conference.jpeg"));
                         background.setImage(image4);
                         break;
+                }
+                int i = 0;
+                for (Attendee attendee : event.getAttendees()){
+                    attendeesLabel.setText(attendeesLabel.getText() + ", " + attendee.getUserName());
+                }
+
+                if (attendeesLabel.getText().length() > 4){
+                    attendeesLabel.setText(attendeesLabel.getText().substring(2, attendeesLabel.getText().length()));
                 }
 
                 background.setFitWidth(1154);
