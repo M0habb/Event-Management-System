@@ -64,6 +64,7 @@ public class MainController extends Application{
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
+        event4.setFees(1500);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
@@ -79,6 +80,7 @@ public class MainController extends Application{
         Database.events.add(event1);
         Database.events.add(event2);
         Database.events.add(event3);
+        Database.events.add(event4);
         Database.rooms.add(room1);
         Database.rooms.add(room2);
         Database.rooms.add(room3);
