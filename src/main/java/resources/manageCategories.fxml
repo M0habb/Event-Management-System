@@ -26,9 +26,6 @@
          </columnResizePolicy>
       </TableView>
       <TextArea layoutX="123.0" layoutY="418.0" prefHeight="38.0" prefWidth="270.0" />
-      <Button layoutX="41.0" layoutY="291.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Sports" />
-      <Button layoutX="479.0" layoutY="291.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Theatre" />
-      <Button layoutX="264.0" layoutY="291.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="200.0" text="Music" />
       <ImageView fx:id="usernnameLabel" fitHeight="151.0" fitWidth="712.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../Pictures/vector-watercolor-art-background-old-260nw-2399844377.jpg" />
@@ -85,5 +82,35 @@
          </font>
       </Button>
       <Line endX="-62.0" endY="-46.0" layoutX="212.0" layoutY="119.0" startX="-62.0" startY="-74.0" />
+      <Button fx:id="musicCategory" layoutX="84.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Music        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="132.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/music.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sportsCategory" layoutX="199.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Sports        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="247.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/football.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="theaterCategory" layoutX="315.0" layoutY="299.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" styleClass="category-button" text="Theater        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="371.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/theater.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="conferenceCategory" layoutX="434.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" styleClass="category-button" text="Conference       " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="509.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/conference.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="otherCategory" layoutX="573.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" styleClass="category-button" text="Other        " />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="621.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/more.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

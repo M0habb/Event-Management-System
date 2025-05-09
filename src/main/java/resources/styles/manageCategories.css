@@ -33,3 +33,12 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
+
+.category-button{
+    -fx-background-radius: 30;
+    -fx-min-width: 60;
+    -fx-min-height: 30;
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
