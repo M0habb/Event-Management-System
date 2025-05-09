@@ -8,7 +8,7 @@ public abstract class User {
     private String password;
     private Gender gender;
     private Date birthDate;
-    private long phoneNumber;
+    private String phoneNumber;
     private Role role;
     private Wallet wallet;
     public static User currentUser;
@@ -16,7 +16,7 @@ public abstract class User {
     public User(){
         this.wallet = new Wallet();
     }
-    public User(String userName, String password, Gender gender, Date birthDate, long phoneNumber){
+    public User(String userName, String password, Gender gender, Date birthDate, String phoneNumber){
         this.userName = userName;
         this.password = password;
         this.gender = gender;
@@ -50,10 +50,10 @@ public abstract class User {
     public Date getBirthDate(){
         return birthDate;
     }
-    public void setPhoneNumber(long phoneNumber){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
-    public long getPhoneNumber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
     public void setRole(Role role){
