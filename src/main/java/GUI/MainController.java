@@ -43,7 +43,7 @@ public class MainController extends Application{
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
-        Attendee attendee3 = new Attendee("Sarah", "asda", Gender.FEMALE, bd3, 85635436, address3);
+        Attendee attendee3 = new Attendee("Hana", "asda", Gender.FEMALE, bd3, 85635436, address3);
 
         Admin admin1 = new Admin("Sama", "123", Gender.FEMALE, bd, 155573, 3);
         Admin admin2 = new Admin("Omar", "1325", Gender.MALE, bd2, 5236, 6);

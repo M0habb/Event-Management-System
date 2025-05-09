@@ -24,11 +24,6 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1083.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@images/user.png" />
-            </image>
-        </ImageView>
         <Text layoutX="36.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
             <font>
                 <Font size="36.0" />
@@ -126,6 +121,11 @@
       <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1074.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/ichep logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="63.0" layoutX="1077.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/img_2.png" />
          </image>
       </ImageView>
     </children>

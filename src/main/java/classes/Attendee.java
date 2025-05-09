@@ -53,9 +53,9 @@ public class Attendee extends User{
         this.setPhoneNumber(phonenumber);
         this.address = address;
         this.setBirthDate(birthDate);
+        this.setGender(gender);
 
         Database.totalAttendees.add(this);
-
     }
 
     public boolean StrongPasswordValidation(String password)

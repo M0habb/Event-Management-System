@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Times New Roman";
+    src: url("../fonts/times.ttf"); /* adjust path relative to this CSS file */
+}
+
+.custom-label {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.root {
+    -fx-background-image: url("../images/bg.jpg");
+    -fx-background-size: cover;
+}
+
+.hyperlink:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.black-link {
+    -fx-text-fill: black;
+}
+
+.black-link:visited {
+    -fx-text-fill: black;
+}
+
+.black-link:hover {
+    -fx-text-fill: #0096C9;
+}
+
+.black-link:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button{
+    -fx-cursor: hand;
+}
