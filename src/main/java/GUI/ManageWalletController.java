@@ -23,8 +23,6 @@ public class ManageWalletController {
     @FXML
     private Label notification;
     @FXML
-    private double amount;;
-    @FXML
     private ScrollPane scrollpane;
     @FXML
     private Label currentBalanceLabel;
@@ -32,7 +30,7 @@ public class ManageWalletController {
     private void initialize(){
         usernameLabel.setText(Attendee.currentUser.getUserName());
         notification.setVisible(false);
-        currentBalanceLabel.setText("Your Current Balance is : "+ User.currentUser.getWallet().getBalance());
+        currentBalanceLabel.setText("Your Current Balance is : "+ String.valueOf(User.currentUser.getWallet().getBalance()));
     }
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
@@ -60,7 +58,7 @@ public class ManageWalletController {
     }
     @FXML
     private void handlePay(){
-             amount=Double.valueOf(amountField.getText());
+        double amount = Double.valueOf(amountField.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Are you sure?");
@@ -69,7 +67,7 @@ public class ManageWalletController {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 // User clicked OK
-                if(amount>0) {
+                if(amount >0) {
                     User.currentUser.getWallet().addBalance(amount);
                     notification.setVisible(true);
                     notification.setText("Transaction Successful");
