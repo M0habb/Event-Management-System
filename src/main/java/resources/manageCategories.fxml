@@ -59,7 +59,10 @@
             <Image url="@images/plus.png" />
          </image>
       </ImageView>
-      <Button layoutX="60.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <Button layoutX="78.0" layoutY="553.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="34.0" prefWidth="81.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <Label layoutX="101.0" layoutY="170.0" prefHeight="52.0" prefWidth="249.0" text="Create new category:">
          <font>
             <Font name="System Bold" size="24.0" />

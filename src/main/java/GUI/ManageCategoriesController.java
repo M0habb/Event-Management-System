@@ -34,6 +34,11 @@ public class ManageCategoriesController {
     public void initialize() {
 
         usernameLabel.setText(currentUser.getUserName());
+        displayTable();
+
+    }
+
+    private void displayTable(){
 
         manageCategories.setEditable(true);
         idColumn.setEditable(true);
