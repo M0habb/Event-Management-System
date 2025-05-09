@@ -31,6 +31,7 @@ public class Event {
         this.room.setAvailable(false);
         this.attendees = new ArrayList<>();
         Database.events.add(this);
+        organizer.getEventsCreated().add(this);
     }
 
     //Setters & Getters

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Organizer extends User implements Crud<Event>{
 
-    private ArrayList<Event> eventsCreated;
+    private ArrayList<Event> eventsCreated = new ArrayList<>();
     Organizer(){
         super();
         Database.organizers.add(this);
