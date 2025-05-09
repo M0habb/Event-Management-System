@@ -72,12 +72,13 @@ public class SignupController {
             public void updateItem(LocalDate item, boolean empty) {
                 super.updateItem(item, empty);
                 // Disable dates before today
-                if (item != null && item.isAfter(LocalDate.now())) {
+                if (item != null && item.isAfter(LocalDate.of(2011, 1, 1))) {
                     setDisable(true);
                     setStyle("-fx-background-color: #ffcccc;"); // Optional: change color to indicate disabled date
                 }
             }
         });
+        birthDate.setValue(LocalDate.of(2010, 1, 1));
 
         genderComboBox.getItems().addAll(
           "Male",
@@ -173,7 +174,7 @@ public class SignupController {
         String street = streetTextField.getText();
         Address address = new Address(country, city, street, postalCode);
 
-        long phoneNumber = Long.valueOf(phoneTextField.getText());
+        String phoneNumber = phoneTextField.getText();
 
         System.out.println(usernameTextfield.getText() + ": " + passwordTextField.getText());
 

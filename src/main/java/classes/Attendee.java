@@ -16,7 +16,7 @@ public class Attendee extends User{
         super();
         this.eventsAttended = new ArrayList<>();
     }
-    public Attendee(String userName, String password, Gender gender, Date birthDate, long phoneNumber, Address address) {
+    public Attendee(String userName, String password, Gender gender, Date birthDate, String phoneNumber, Address address) {
         super(userName, password, gender, birthDate, phoneNumber);
         this.eventsAttended = new ArrayList<>();
         this.address = address;
@@ -47,7 +47,7 @@ public class Attendee extends User{
         this.eventsAttended = eventsAttended;
     }
 
-    public void signup(String username, Gender gender,  Date birthDate, Address address, long phonenumber, String password) {
+    public void signup(String username, Gender gender, Date birthDate, Address address, String phonenumber, String password) {
 
         this.setUserName(username);
         this.setPassword(password);

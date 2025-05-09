@@ -111,7 +111,7 @@ public class OrganizerLandingController {
                 mainLabel.setText(Database.events.get(i).getEventName());
                 switch (Database.events.get(i).getCategory().getType()) {
                     case CategoryType.MUSIC:
-                        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
+                        Image image = new Image(getClass().getResourceAsStream("/resources/images/img_3.png"));
                         ImageView imageView = new ImageView(image);
                         imageView.setFitWidth(181);
                         imageView.setFitHeight(160);
