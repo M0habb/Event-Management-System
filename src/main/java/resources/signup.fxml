@@ -59,7 +59,7 @@
       <Hyperlink layoutX="935.0" layoutY="296.0" text="*" textFill="RED" />
       <Hyperlink layoutX="1011.0" layoutY="385.0" text="*" textFill="RED" />
       <ComboBox fx:id="genderComboBox" layoutX="112.0" layoutY="324.0" prefHeight="38.0" prefWidth="214.0" promptText="Select gender" />
-      <Button layoutX="911.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleSignUp" text="Sign Up">
+      <Button layoutX="911.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="38.0" prefWidth="102.0" styleClass="signup" text="Sign Up">
          <font>
             <Font size="20.0" />
          </font>
@@ -90,7 +90,7 @@
       <Hyperlink layoutX="530.0" layoutY="471.0" text="*" textFill="RED" />
       <ComboBox fx:id="countryComboBox" layoutX="479.0" layoutY="228.0" prefHeight="38.0" prefWidth="214.0" promptText="Select country" />
       <ComboBox fx:id="cityComboBox" layoutX="478.0" layoutY="320.0" prefHeight="38.0" prefWidth="214.0" promptText="Select city" />
-      <Button layoutX="185.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+      <Button layoutX="185.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="38.0" prefWidth="83.0" styleClass="Back" text="Back">
          <font>
             <Font size="20.0" />
          </font>

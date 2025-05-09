@@ -25,11 +25,11 @@
          <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
       </image>
    </ImageView>
+   <Button layoutX="14.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" stylesheets="@styles/showOrganizers.css" text="Back" />
    <Text layoutX="102.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORGANIZERS">
       <font>
          <Font name="Calibri" size="59.0" />
       </font>
    </Text>
-   <Button layoutX="14.0" layoutY="728.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="34.0" prefWidth="56.0" text="Back" />
 
 </AnchorPane>

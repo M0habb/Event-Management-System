@@ -11,4 +11,11 @@
 .button{
     -fx-cursor: hand;
 }
+.add{
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 12px;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+ }
 
