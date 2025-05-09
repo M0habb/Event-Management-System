@@ -78,9 +78,9 @@
             <HBox prefHeight="189.0" prefWidth="588.0" />
          </content>
       </ScrollPane>
-      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1063.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="59.0" fitWidth="52.0" layoutX="1065.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/img_2.png" />
+            <Image url="@images/WhatsApp%20Image%202025-05-10%20at%2012.27.04%20AM.jpeg" />
          </image>
       </ImageView>
       <AnchorPane fx:id="mainAnchorPane" layoutX="110.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />

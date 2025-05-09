@@ -17,9 +17,9 @@
          </font>
       </Button>
       <Line endX="100.0" endY="22.00000762939453" layoutX="812.0" layoutY="30.0" startX="100.0" startY="4.857137680053711" stroke="#807474" strokeWidth="3.0" />
-      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="1060.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="1030.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/sarah.jpg" />
+            <Image url="@images/WhatsApp%20Image%202025-05-10%20at%2012.23.17%20AM.jpeg" />
          </image>
       </ImageView>
       <Label layoutX="27.0" layoutY="25.0" prefHeight="53.0" prefWidth="282.0" text="View My Events">
