@@ -44,7 +44,10 @@ public class ViewMyEventsController {
                     if (Database.events.get(i).getAttendees().get(j) == Attendee.currentUser){
                         VBox newVBox;
                         try {
-                            newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+                            newVBox = loader.load();
+                            VBoxController vBoxController = loader.getController();
+                            vBoxController.setDisableButton(true);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

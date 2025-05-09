@@ -1,0 +1,61 @@
+.root {
+    -fx-background-color: #f3ead9;
+    -fx-background-size: cover;
+
+}
+
+.category-button{
+    -fx-background-radius: 30;
+    -fx-min-width: 60;
+    -fx-min-height: 30;
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
+
+.button{
+    -fx-cursor: hand;
+}
+
+.innerVBox{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.HBox{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.clickable-HBox{
+    -fx-cursor: hand;
+}
+
+.scrollpane{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.Back{
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 12px;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+    }
+.SignOutButton{
+-fx-background-color: #b4aea1; /* Red */
+-fx-text-fill:black; /* Text color */
+-fx-font-size: 12px;
+-fx-background-radius:5px;
+    -fx-border-radius: 5px;
+
+}

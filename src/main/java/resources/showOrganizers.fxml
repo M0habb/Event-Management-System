@@ -20,16 +20,16 @@
          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
     </TableView>
-   <ImageView fitHeight="776.0" fitWidth="515.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="776.0" fitWidth="515.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
       </image>
    </ImageView>
+   <Button layoutX="14.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" stylesheets="@styles/showOrganizers.css" text="Back" />
    <Text layoutX="102.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORGANIZERS">
       <font>
          <Font name="Calibri" size="59.0" />
       </font>
    </Text>
-   <Button layoutX="30.0" layoutY="696.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="79.0" text="Back" />
 
 </AnchorPane>

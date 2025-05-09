@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,6 +36,9 @@ public class ProceedToCheckoutController {
     private Label notification;
     @FXML
     private double sum;;
+
+    private ArrayList<Event> events = new ArrayList<>();
+
     @FXML
     private void initialize(){
         EmptyCart.setVisible(false);
@@ -78,9 +82,12 @@ public class ProceedToCheckoutController {
                 eventPriceLabel.setText("$"+String.valueOf(Database.tickets.get(i).getFees()));
 
                 rootV.getChildren().add(rootH);
-                sum = sum+Database.tickets.get(i).getFees();
-
-
+                sum = sum + Database.tickets.get(i).getFees();
+                for (Event event : Database.events){
+                    if (Database.tickets.get(i).getEventName().equals(event.getEventName())){
+                        events.add(event);
+                    }
+                }
             }
 
         }
@@ -123,6 +130,11 @@ public class ProceedToCheckoutController {
                 EmptyCart.setVisible(true);
                 totalLabel.setText(Double.toString(sum));
                 Database.tickets.removeIf(ticket -> ticket.getOwner().getUserName().equals(currentUser.getUserName()));
+
+                for (Event event : events){
+                    event.getAttendees().add(currentUser);
+                }
+
             }
             else{
                 notification.setText("*Insufficient Funds");

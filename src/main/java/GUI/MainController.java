@@ -29,8 +29,8 @@ public class MainController extends Application{
     public static void initializeDummyData() {
         Date bd = new Date(125, 07, 23);
         Date bd2 = new Date(125, 12, 21);
-        Date bd3 = new Date(125, 02, 11);
-        Date bd4 = new Date(125, 05, 15);
+        Date bd3 = new Date(125, 07, 11);
+        Date bd4 = new Date(125, 07, 15);
         Date bd5 = new Date(125, 06, 22);
         Date bd6 = new Date(125, 10, 15);
 
@@ -48,6 +48,10 @@ public class MainController extends Application{
         Room room4 = new Room("Coworking space", 52000, true, new Address("KSA", "Jeddah", "1st St.", 123123), false);
         Room room5 = new Room("ALAhly stadium", 50, true, address1, false);
         Room room6 = new Room("New Capital venue", 1000, true, address2, true);
+        Room room7 = new Room("ASU stage", 50, true, address1, false);
+        Room room8 = new Room("ASU halls", 50, true, address1, false);
+        Room room9 = new Room("ASU venue", 1000, true, address2, true);
+
 
         Attendee attendee1 = new Attendee("Sarah", "123", Gender.MALE, bd, 155573, address1);
         Attendee attendee2 = new Attendee("Mohamed", "1325", Gender.MALE, bd2, 5236, address2);
@@ -93,21 +97,21 @@ public class MainController extends Application{
         Category category10 = new Category("Charity", CategoryType.OTHER, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category11 = new Category("Classical", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
 
-        Event event1 = new Event("Omar khairat concert", new Date(125, Calendar.MARCH, 12), false, room2, 60, organizer3, category11);
+        Event event1 = new Event("Omar khairat concert", new Date(123, Calendar.JUNE, 12), false, room2, 60, organizer3, category11);
         Event event2 = new Event("Cairokee concert", bd2, true, room6, 250, organizer2, category3);
         Event event3 = new Event("Amr Diab concert", bd3, true, room6, 400, organizer1, category4);
         Event event4 = new Event("Hamaky concert", new Date(125, Calendar.DECEMBER, 23), true, room6, 150, organizer3, category4);
 
-        Event event5 = new Event("Football match", new Date(125, Calendar.MARCH, 12), false, room5, 60, organizer3, category1);
+        Event event5 = new Event("Football match", new Date(125, Calendar.JUNE, 12), false, room5, 60, organizer3, category2);
         Event event6 = new Event("Swimming race", bd2, true, room3, 250, organizer2, category5);
         Event event7 = new Event("Tennis game", bd3, true, room3, 400, organizer1, category6);
 
-        Event event9 = new Event("Dreamscape Theater", new Date(125, Calendar.MARCH, 12), false, room1, 60, organizer3, category7);
+        Event event9 = new Event("Dreamscape Theater", new Date(125, Calendar.JUNE, 12), false, room1, 60, organizer3, category7);
         Event event10 = new Event("Enchanted Playhouse", bd3, true, room1, 250, organizer2, category7);
         Event event11 = new Event("Masrah masr", bd5, true, room1, 400, organizer1, category8);
 
-        Event event12 = new Event("MindMerge", new Date(125, Calendar.DECEMBER, 23), true, room4, 150, organizer3, category9);
-        Event event13 = new Event("NetworkNest", new Date(125, Calendar.MARCH, 12), false, room4, 60, organizer3, category9);
+        Event event12 = new Event("MindMerge", new Date(124, Calendar.DECEMBER, 23), true, room4, 150, organizer3, category9);
+        Event event13 = new Event("NetworkNest", new Date(125, Calendar.JUNE, 12), false, room4, 60, organizer3, category9);
         Event event14 = new Event("Innovanter", bd5, true, room4, 250, organizer2, category9);
 
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
