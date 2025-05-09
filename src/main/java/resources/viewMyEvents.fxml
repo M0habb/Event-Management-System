@@ -33,7 +33,7 @@
             <VBox prefHeight="368.0" prefWidth="972.0" />
          </content>
       </ScrollPane>
-      <Button layoutX="982.0" layoutY="574.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="54.0" text="Back" />
+      <Button layoutX="963.0" layoutY="559.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="43.0" prefWidth="73.0" text="Back" />
       <Label fx:id="usernameLabel" layoutX="949.0" layoutY="37.0" text="Username" />
       <Button fx:id="ManageWallet" layoutX="662.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleManageWallet" prefHeight="36.0" prefWidth="127.0" styleClass="SignOutButton" text="Manage Your Wallet" />
    </children>
