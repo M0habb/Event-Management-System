@@ -76,7 +76,6 @@ public class OrganizerLandingController {
                     if (count == 1) {
 
                     }
-                    System.out.println("Working");
                     Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
                     mainLabel.setText(Database.events.get(i).getEventName());
