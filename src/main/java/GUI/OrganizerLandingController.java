@@ -53,6 +53,8 @@ public class OrganizerLandingController {
     private void initialize() throws IOException {
         usernameLabel.setText(currentUser.getUserName());
         handleUpcomingEvents();
+        HBox rootH = (HBox) scrollpane.getContent();
+        rootH.setSpacing(50);
     }
 
     @FXML

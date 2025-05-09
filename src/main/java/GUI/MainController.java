@@ -61,10 +61,12 @@ public class MainController extends Application{
         Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
         Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
         Event event4 = new Event("Test event", new Date(125, Calendar.DECEMBER, 23), true, room2, 150, organizer3, category1);
+        Event event5 = new Event("Jana prev event", new Date(123, Calendar.APRIL, 23), true, room1, 1230, organizer3, category2);
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
+        event5.setFees(2000);
 
         Database.admins.add(admin1);
         Database.admins.add(admin2);
@@ -81,6 +83,7 @@ public class MainController extends Application{
         Database.events.add(event2);
         Database.events.add(event3);
         Database.events.add(event4);
+        Database.events.add(event5);
         Database.rooms.add(room1);
         Database.rooms.add(room2);
         Database.rooms.add(room3);

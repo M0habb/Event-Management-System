@@ -76,7 +76,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <ListView fx:id="listView" layoutX="885.0" layoutY="354.0" prefHeight="237.0" prefWidth="193.0" styleClass="ListView" />
+      <ListView fx:id="listView" layoutX="885.0" layoutY="354.0" prefHeight="237.0" prefWidth="227.0" styleClass="ListView" />
       <ScrollPane fx:id="scrollpane" layoutX="95.0" layoutY="394.0" prefHeight="200.0" prefWidth="591.0" styleClass="anchor-pane" vbarPolicy="NEVER">
          <content>
             <HBox prefHeight="189.0" prefWidth="588.0" />
