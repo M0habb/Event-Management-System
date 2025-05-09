@@ -39,9 +39,9 @@
       </Button>
       <Line endX="100.0" endY="22.00000762939453" layoutX="838.0" layoutY="24.0" startX="100.0" startY="1.9999961853027344" stroke="#807474" strokeWidth="3.0" />
       <Label fx:id="usernameLabel" layoutX="951.0" layoutY="24.0" prefHeight="25.0" prefWidth="61.0" text="Username" />
-      <ImageView fitHeight="36.0" fitWidth="54.0" layoutX="1037.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
+      <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="1025.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="handleSarah">
          <image>
-            <Image url="@images/sarah.jpg" />
+            <Image url="@images/WhatsApp%20Image%202025-05-10%20at%2012.23.17%20AM.jpeg" />
          </image>
       </ImageView>
       <Label fx:id="totalLabel" layoutX="913.0" layoutY="506.0" prefHeight="30.0" prefWidth="186.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">

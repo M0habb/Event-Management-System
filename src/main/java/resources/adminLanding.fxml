@@ -15,11 +15,6 @@
             <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="380.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/user.png" />
-         </image>
-      </ImageView>
       <Text fx:id="usernameLabel" layoutX="314.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" wrappingWidth="65.5999755859375">
          <font>
             <Font size="15.0" />
@@ -40,5 +35,10 @@
       <Button layoutX="707.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleShowAttendees" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Attendees" />
       <Button layoutX="707.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Manage Categories" />
       <Button layoutX="707.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" text="Show Rooms" />
+      <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="388.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/WhatsApp%20Image%202025-05-09%20at%2011.36.52%20PM.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="642.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowOrganizersController">
+<AnchorPane prefHeight="642.0" prefWidth="1142.0" stylesheets="@styles/manageCategories.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ShowOrganizersController">
 
-    <TableView fx:id="organizersTable" layoutX="514.0" prefHeight="762.0" prefWidth="628.0">
+    <TableView fx:id="organizersTable" layoutX="514.0" prefHeight="762.0" prefWidth="628.0" stylesheets="@styles/showOrganizers.css">
         <columns>
             <TableColumn fx:id="usernameColumn" text="Username" />
             <TableColumn fx:id="eventsCreatedColumn" text="Events Created" />
@@ -25,7 +25,7 @@
          <Image url="@images/c00ab03d0a34ee766b3fdfe4dba7cad7.jpg" />
       </image>
    </ImageView>
-   <Button layoutX="14.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="36.0" prefWidth="91.0" styleClass="Back" stylesheets="@styles/showOrganizers.css" text="Back" />
+   <Button layoutX="43.0" layoutY="618.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="49.0" prefWidth="110.0" styleClass="Back" stylesheets="@styles/showOrganizers.css" text="Back" />
    <Text layoutX="102.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORGANIZERS">
       <font>
          <Font name="Calibri" size="59.0" />

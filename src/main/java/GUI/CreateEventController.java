@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
@@ -46,13 +47,23 @@ public class CreateEventController {
 
     @FXML
     private void initialize(){
-        typecombobox.getItems().addAll(
-                "Music",
-                "Conference",
-                "Sports",
-                "Theater",
-                "Other"
-        );
+
+        for (Category category : Database.categories) {
+            typecombobox.getItems().add(category.getName());
+        }
+
+        eventDate.setDayCellFactory(picker -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                // Disable dates before today
+                if (item != null && item.isBefore(LocalDate.now())) {
+                    setDisable(true);
+                    setStyle("-fx-background-color: #ffcccc;"); // Optional: change color to indicate disabled date
+                }
+            }
+        });
+        
         missingLabel.setVisible(false);
         eventCreatedLabel.setVisible(false);
 
@@ -104,10 +115,19 @@ public class CreateEventController {
         }
         int maxAttendees = room.getSize();
 
-        Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, new Category("Techno", CategoryType.MUSIC, "Test"));
+        for (Category category : Database.categories){
+            if (category.getName().equals(typecombobox.getValue())){
+                Event event = new Event(name, birthdate, outdoors, room, maxAttendees, currentUser, category);
+                event.setFees(Integer.valueOf(priceTextField.getText()));
+            }
+        }
 
-        Database.events.add(event);
-
+        typecombobox.getSelectionModel().clearSelection();
+        outdoorsCheckbox.setSelected(false);
+        eventDate.setValue(null);
+        rentComboBox.getSelectionModel().clearSelection();
+        nameTextfield.clear();
+        priceTextField.clear();
         eventCreatedLabel.setVisible(true);
     }
 
