@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Optional;
 import static GUI.ViewEventsController.currentUser;
 public class ProceedToCheckoutController {
@@ -142,5 +143,18 @@ public class ProceedToCheckoutController {
         notification.setVisible(false);
 
     }
+    @FXML
+    private void handleManageWallet(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/resources/manageWallet.fxml")));
+
+        Scene scene = new Scene(root, 1142, 642);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene);
+        window.show();
+
+    }
+
 
 }
