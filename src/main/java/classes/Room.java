@@ -18,6 +18,15 @@ public class Room {
         this.available = available;
         this.address = address;
     }
+
+    public Room(String name, int size, boolean b) {
+        this.roomName=name;
+        this.size=size;
+        this.available=b;
+
+    }
+
+
 //setters and getters
 
     public boolean isOutdoors() {
