@@ -37,11 +37,11 @@ public class ProceedToCheckoutController {
     private double sum;;
     @FXML
     private void initialize(){
+        EmptyCart.setVisible(false);
         usernameLabel.setText(Attendee.currentUser.getUserName());
         displayTicketsBought();
         totalLabel.setText("Total: $ "+String.valueOf(sum));
         notification.setVisible(false);
-        EmptyCart.setVisible(false);
     }
 
     @FXML
@@ -52,9 +52,10 @@ public class ProceedToCheckoutController {
 
     private void displayTicketsBought(){
         VBox rootV = (VBox) scrollpane.getContent();
+        int ticketCount = 0;
         for (int i = 0; i < Database.tickets.size(); i++){
-            if(User.currentUser == Database.tickets.get(i).getOwner()) {
-
+            if(User.currentUser == Database.tickets.get(    i).getOwner()) {
+                ticketCount++;
                 HBox rootH;
                 try {
                     rootH = FXMLLoader.load(getClass().getResource("/resources/hbox_layout.fxml"));
@@ -81,10 +82,9 @@ public class ProceedToCheckoutController {
 
             }
 
-            }
+        }
 
-
-
+        if (ticketCount == 0) EmptyCart.setVisible(true);
     }
 
     @FXML
@@ -102,6 +102,9 @@ public class ProceedToCheckoutController {
     //make label not visible in back
     @FXML
     private void handlePayByWallet(){
+
+        if (sum == 0) return;
+
         VBox rootV = (VBox) scrollpane.getContent();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
@@ -117,7 +120,7 @@ public class ProceedToCheckoutController {
                 rootV.getChildren().clear();
                 sum = 0;
                 EmptyCart.setVisible(true);
-
+                totalLabel.setText(Double.toString(sum));
             }
             else{
                 notification.setText("*Insufficient Funds");
