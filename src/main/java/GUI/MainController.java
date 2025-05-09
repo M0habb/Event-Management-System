@@ -84,7 +84,6 @@ public class MainController extends Application{
 
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category("Football", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
-
         Category category3 = new Category("Techno", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category4 = new Category("Slow", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category5 = new Category("Swimming", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
@@ -121,8 +120,6 @@ public class MainController extends Application{
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
-
-
         event5.setFees(2500);
         event6.setFees(1700);
         event7.setFees(1500);
@@ -133,8 +130,6 @@ public class MainController extends Application{
         event13.setFees(1100);
         event14.setFees(1500);
         event15.setFees(150);
-
-
         event5.setFees(2000);
         event6.setFees(500);
 
