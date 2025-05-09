@@ -96,6 +96,11 @@ public class MainController extends Application{
         Category category9 = new Category("Work", CategoryType.CONFERENCE, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category10 = new Category("Charity", CategoryType.OTHER, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category11 = new Category("Classical", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category12 = new Category("Music", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category13 = new Category("Sports", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category14 = new Category("Theatre", CategoryType.THEATER, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category15 = new Category("Conference", CategoryType.CONFERENCE, "Events of this category are jjhnajkg skdlfg kdsj");
+        Category category16 = new Category("Other", CategoryType.OTHER, "Events of this category are jjhnajkg skdlfg kdsj");
 
         Event event1 = new Event("Omar khairat concert", new Date(123, Calendar.JUNE, 12), false, room2, 60, organizer3, category11);
         Event event2 = new Event("Cairokee concert", bd2, true, room6, 250, organizer2, category3);
