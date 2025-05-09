@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -29,11 +30,7 @@
       </Label>
       <ScrollPane fx:id="scrollpane" layoutX="75.0" layoutY="156.0" prefHeight="371.0" prefWidth="979.0">
          <content>
-            <AnchorPane prefHeight="368.0" prefWidth="977.0">
-               <children>
-                  <ImageView fitHeight="156.0" fitWidth="207.0" layoutX="95.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </AnchorPane>
+            <VBox prefHeight="368.0" prefWidth="972.0" />
          </content>
       </ScrollPane>
       <Button layoutX="982.0" layoutY="574.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="54.0" text="Back" />
