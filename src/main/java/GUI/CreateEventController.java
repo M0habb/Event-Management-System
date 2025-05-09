@@ -46,9 +46,6 @@ public class CreateEventController {
 
     @FXML
     private void initialize(){
-
-        missingLabel.setVisible(false);
-        eventCreatedLabel.setVisible(false);
         typecombobox.getItems().addAll(
                 "Music",
                 "Conference",
@@ -56,6 +53,8 @@ public class CreateEventController {
                 "Theater",
                 "Other"
         );
+        missingLabel.setVisible(false);
+        eventCreatedLabel.setVisible(false);
 
         for (int i = 0; i < Database.rooms.size(); i++){
             if (Database.rooms.get(i).getAvailable()){
