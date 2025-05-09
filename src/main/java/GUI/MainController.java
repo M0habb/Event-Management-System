@@ -114,28 +114,15 @@ public class MainController extends Application{
 
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
 
-<<<<<<< HEAD
-=======
-
-        Category category3 = new Category("Act", CategoryType.THEATER);
-
-        Event event1 = new Event("ASU Music Concert", new Date(126, Calendar.MARCH, 12), false, room1, 60, organizer3, category1);
-        Event event2 = new Event("ASU Sports Concert", bd2, true, room2, 250, organizer2, category2);
-        Event event3 = new Event("IDK Music Concert", bd3, true, room3, 400, organizer1, category1);
-        Event event4 = new Event("Test event", new Date(125, Calendar.DECEMBER, 23), true, room2, 150, organizer3, category1);
-        Event event5 = new Event("Jana prev event", new Date(123, Calendar.APRIL, 23), true, room1, 1230, organizer3, category2);
-        Event event6 = new Event("Romeo & Juliet", new Date(126, Calendar.JANUARY, 15), false, room8, 100, organizer3, category3);
 
 
->>>>>>> 2ca7ec3fd58fdfc25c72503652574a860275f989
+
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
-<<<<<<< HEAD
-=======
 
->>>>>>> 2ca7ec3fd58fdfc25c72503652574a860275f989
+
         event5.setFees(2500);
         event6.setFees(1700);
         event7.setFees(1500);
