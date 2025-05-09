@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="49fe2064-e5f3-4fa0-9510-247221314217" name="Changes" comment="" />
-=======
     <list default="true" id="6145a1bd-6c78-451b-8d73-df21afc54f9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/styles/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/HboxEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/HboxEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/OrganizerLandingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/hboxEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/hboxEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/organizerLanding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/organizerLanding.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/styles/organizerLanding.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Attendee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/signup.fxml" afterDir="false" />
     </list>
->>>>>>> 984ffffa06d00fced998f959a7e4e01b8580f24c
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,12 +36,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainController.executor": "Run",
-    "git-widget-placeholder": "<unknown>"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Controller.executor&quot;: &quot;Run&quot;,
@@ -60,18 +49,17 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sarah Haimy/Documents/GitHub/Event-Management-System/src/main/java/resources/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohab/Desktop/OOP Project/Event-Management-System/src/main/java/resources/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
->>>>>>> 984ffffa06d00fced998f959a7e4e01b8580f24c
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\images" />
+      <recent name="C:\Users\Sarah Haimy\Documents\GitHub\Event-Management-System\src\main\java\resources\images" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\resources\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -81,6 +69,40 @@
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\resources\classes" />
       <recent name="C:\Users\Mohab\Desktop\OOP Project\Event-Management-System\src\main\java\classes" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.MainController">
+    <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.MainController" />
+      <module name="Event Management System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="temporary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.temporary" />
+      <module name="Event Management System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainController" />
+        <item itemvalue="Application.temporary" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,8 +114,5 @@
       <updated>1746188400638</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
