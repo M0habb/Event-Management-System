@@ -52,9 +52,10 @@ public class ProceedToCheckoutController {
 
     private void displayTicketsBought(){
         VBox rootV = (VBox) scrollpane.getContent();
+        rootV.getChildren().clear();
         int ticketCount = 0;
         for (int i = 0; i < Database.tickets.size(); i++){
-            if(User.currentUser == Database.tickets.get(    i).getOwner()) {
+            if(User.currentUser == Database.tickets.get(i).getOwner()) {
                 ticketCount++;
                 HBox rootH;
                 try {

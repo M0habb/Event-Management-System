@@ -24,10 +24,8 @@ public class ViewMyEventsController {
         usernameLabel.setText(Attendee.currentUser.getUserName());
         //greetingLabel.setText("Hello "+Attendee.currentUser.getUserName());
     }
-    @FXML
-     private void username(){
 
-    }
+
     @FXML
     private void handleSignout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
