@@ -25,6 +25,8 @@ public class ShowAttendeesController {
     @FXML
     public void initialize() {
         usernameColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUserName()));
+        balanceColumn.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getWallet().getBalance())));
+
         showAttendees.setItems(FXCollections.observableArrayList(Database.totalAttendees));
     }
 
