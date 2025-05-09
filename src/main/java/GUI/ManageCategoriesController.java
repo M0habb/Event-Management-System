@@ -190,8 +190,6 @@ public class ManageCategoriesController {
 
         Category category = new Category(nameTextField.getText(), CategoryType.valueOf(type.toUpperCase()));
 
-        Database.categories.add(category);
-
         categoryList = FXCollections.observableArrayList(Database.categories);
         manageCategories.setItems(categoryList);
         manageCategories.refresh();

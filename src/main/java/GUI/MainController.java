@@ -13,9 +13,7 @@ import java.util.Date;
 public class MainController extends Application{
 
     public static void main(String[] args) {
-
         launch();
-
     }
 
     @Override
@@ -24,6 +22,7 @@ public class MainController extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
         primaryStage.setTitle("Event Management System");
         primaryStage.setScene(new Scene(root, 1142, 642));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -84,7 +83,6 @@ public class MainController extends Application{
 
         Category category1 = new Category("House", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category2 = new Category("Football", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
-
         Category category3 = new Category("Techno", CategoryType.MUSIC, "Events of this category are jsfasj fsadjf asf s");
         Category category4 = new Category("Slow", CategoryType.MUSIC, "Events of this category are jjhnajkg skdlfg kdsj");
         Category category5 = new Category("Swimming", CategoryType.SPORTS, "Events of this category are jjhnajkg skdlfg kdsj");
@@ -114,15 +112,10 @@ public class MainController extends Application{
 
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
 
-
-
-
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
         event4.setFees(1500);
-
-
         event5.setFees(2500);
         event6.setFees(1700);
         event7.setFees(1500);
@@ -133,73 +126,9 @@ public class MainController extends Application{
         event13.setFees(1100);
         event14.setFees(1500);
         event15.setFees(150);
-
-
         event5.setFees(2000);
         event6.setFees(500);
-
-
-        Database.admins.add(admin1);
-        Database.admins.add(admin2);
-        Database.admins.add(admin3);
-        Database.organizers.add(organizer1);
-        Database.organizers.add(organizer2);
-        Database.organizers.add(organizer3);
-        Database.totalAttendees.add(attendee1);
-        Database.totalAttendees.add(attendee2);
-        Database.totalAttendees.add(attendee3);
-        Database.categories.add(category1);
-        Database.categories.add(category2);
-        Database.events.add(event1);
-        Database.events.add(event2);
-        Database.events.add(event3);
-        Database.events.add(event4);
-        Database.events.add(event5);
-        Database.events.add(event6);
-        Database.rooms.add(room1);
-        Database.rooms.add(room2);
-        Database.rooms.add(room3);
-        Database.rooms.add(room4);
-        Database.admins.add(admin4);
-        Database.admins.add(admin5);
-        Database.admins.add(admin6);
-        Database.admins.add(admin7);
-        Database.admins.add(admin8);
-        Database.admins.add(admin9);
-        Database.organizers.add(organizer4);
-        Database.organizers.add(organizer5);
-        Database.organizers.add(organizer6);
-        Database.organizers.add(organizer7);
-        Database.organizers.add(organizer8);
-        Database.organizers.add(organizer9);
-        Database.totalAttendees.add(attendee4);
-        Database.totalAttendees.add(attendee5);
-        Database.totalAttendees.add(attendee6);
-        Database.totalAttendees.add(attendee7);
-        Database.totalAttendees.add(attendee8);
-        Database.totalAttendees.add(attendee9);
-        Database.categories.add(category3);
-        Database.categories.add(category4);
-        Database.categories.add(category5);
-        Database.categories.add(category6);
-        Database.categories.add(category7);
-        Database.categories.add(category8);
-        Database.categories.add(category9);
-        Database.categories.add(category10);
-        Database.categories.add(category11);
-        Database.events.add(event5);
-        Database.events.add(event6);
-        Database.events.add(event7);
-        Database.events.add(event9);
-        Database.events.add(event10);
-        Database.events.add(event11);
-        Database.events.add(event12);
-        Database.events.add(event13);
-        Database.events.add(event14);
-        Database.events.add(event15);
-        Database.rooms.add(room5);
-        Database.rooms.add(room6);
-
+        
 
         attendee1.getWallet().addBalance(400);
 

@@ -36,7 +36,6 @@ public class ShowEventsController {
     private List<Button> categoryButtons;
     private Map<Button, String> categoryButtonColors;
 
-
     @FXML
     public void initialize() {
 
@@ -53,6 +52,11 @@ public class ShowEventsController {
         categoryButtonColors.put(theaterCategory, "#3498db");
         categoryButtonColors.put(conferenceCategory, "#9b59b6");
         categoryButtonColors.put(otherCategory, "#95a5a6");
+
+        VBox rootV = (VBox) scrollpane.getContent();
+        rootV.setSpacing(50);
+
+
     }
 
     private void displayEvents(){
@@ -60,7 +64,10 @@ public class ShowEventsController {
         for (int i =0; i < Database.events.size(); i++){
             VBox newVBox;
             try {
-                newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -80,6 +87,7 @@ public class ShowEventsController {
             Label eventOrganizer = (Label) innerV.getChildren().get(1);
             Label eventOutdoors = (Label) innerV.getChildren().get(2);
             Label eventActivities = (Label) innerV.getChildren().get(3);
+            eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
             HBox bottomHBox = (HBox) innerV.getChildren().get(4);
             Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
@@ -126,7 +134,10 @@ public class ShowEventsController {
                 if(Database.events.get(i).getCategory().getType().equals(CategoryType.MUSIC)){
                     VBox newVBox;
                     try {
-                        newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -146,6 +157,7 @@ public class ShowEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
+                        eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
@@ -181,7 +193,10 @@ public class ShowEventsController {
                 if(Database.events.get(i).getCategory().getType().equals(CategoryType.SPORTS)){
                     VBox newVBox;
                     try {
-                        newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -201,6 +216,7 @@ public class ShowEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
+                        eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
@@ -236,7 +252,10 @@ public class ShowEventsController {
                 if(Database.events.get(i).getCategory().getType().equals(CategoryType.THEATER)){
                     VBox newVBox;
                     try {
-                        newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -256,6 +275,7 @@ public class ShowEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
+                        eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
@@ -291,7 +311,10 @@ public class ShowEventsController {
                 if(Database.events.get(i).getCategory().getType().equals(CategoryType.CONFERENCE)){
                     VBox newVBox;
                     try {
-                        newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -311,6 +334,7 @@ public class ShowEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
+                        eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 
@@ -346,7 +370,10 @@ public class ShowEventsController {
                 if(Database.events.get(i).getCategory().getType().equals(CategoryType.OTHER)){
                     VBox newVBox;
                     try {
-                        newVBox = FXMLLoader.load(getClass().getResource("/resources/vbox_layout.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/vbox_layout.fxml"));
+        newVBox = loader.load();
+        VBoxController vBoxController = loader.getController();
+        vBoxController.setDisableButton(true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -366,6 +393,7 @@ public class ShowEventsController {
                     Label eventOrganizer = (Label) innerV.getChildren().get(1);
                     Label eventOutdoors = (Label) innerV.getChildren().get(2);
                     Label eventActivities = (Label) innerV.getChildren().get(3);
+                        eventActivities.setText("-" + Database.events.get(i).getCategory().getName() + " Event");
                     HBox bottomHBox = (HBox) innerV.getChildren().get(4);
                     Label eventFees = (Label) bottomHBox.getChildren().get(0);
 

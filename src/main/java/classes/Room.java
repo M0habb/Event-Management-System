@@ -17,13 +17,14 @@ public class Room {
         this.size = size;
         this.available = available;
         this.address = address;
+        Database.rooms.add(this);
     }
 
     public Room(String name, int size, boolean b) {
         this.roomName=name;
         this.size=size;
         this.available=b;
-
+        Database.rooms.add(this);
     }
 
 
