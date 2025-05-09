@@ -65,5 +65,6 @@
          </content>
       </ScrollPane>
       <Button layoutX="1039.0" layoutY="586.0" mnemonicParsing="false" onAction="#handleBack" styleClass="Back" text="Back" />
+      <Button fx:id="ManageWallet" layoutX="631.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleManageWallet" prefHeight="36.0" prefWidth="127.0" styleClass="Back" text="Manage Your Wallet" />
    </children>
 </AnchorPane>

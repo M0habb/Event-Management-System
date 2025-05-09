@@ -113,9 +113,6 @@ public class MainController extends Application{
 
         Event event15 = new Event("Charity day", bd6, true, room3, 400, organizer1, category10);
 
-
-
-
         event1.setFees(200);
         event2.setFees(500);
         event3.setFees(1000);
@@ -130,6 +127,7 @@ public class MainController extends Application{
         event13.setFees(1100);
         event14.setFees(1500);
         event15.setFees(150);
+<<<<<<< HEAD
         event5.setFees(2000);
         event6.setFees(500);
 
@@ -195,6 +193,8 @@ public class MainController extends Application{
         Database.rooms.add(room5);
         Database.rooms.add(room6);
 
+=======
+>>>>>>> 7796d7807a0698cfb96625ca76062c1153a9b6c5
 
         attendee1.getWallet().addBalance(400);
 

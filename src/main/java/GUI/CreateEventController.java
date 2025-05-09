@@ -49,6 +49,13 @@ public class CreateEventController {
 
         missingLabel.setVisible(false);
         eventCreatedLabel.setVisible(false);
+        typecombobox.getItems().addAll(
+                "Music",
+                "Conference",
+                "Sports",
+                "Theater",
+                "Other"
+        );
 
         for (int i = 0; i < Database.rooms.size(); i++){
             if (Database.rooms.get(i).getAvailable()){
@@ -58,13 +65,7 @@ public class CreateEventController {
                     rentComboBox.getItems().add(Database.rooms.get(i).getRoomName());
                 }
             }
-            typecombobox.getItems().addAll(
-                    "Music",
-                    "Conference",
-                    "Sports",
-                    "Theater",
-                    "Other"
-            );
+
         }
 
     }
