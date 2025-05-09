@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="btnShowAttendees" prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #dcd0c0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminLandingController">
+<AnchorPane fx:id="btnShowAttendees" prefHeight="642.0" prefWidth="1142.0" style="-fx-background-color: #dcd0c0;" stylesheets="@styles/adminLanding.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminLandingController">
    <children>
       <ImageView fitHeight="644.0" fitWidth="436.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -39,6 +39,6 @@
       <Button layoutX="707.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleShowOrganizers" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Organizers" />
       <Button layoutX="707.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleShowAttendees" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Attendees" />
       <Button layoutX="707.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleManageCategories" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Manage Categories" />
-      <Button layoutX="707.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" style="-fx-background-color: #bca48c;" text="Show Rooms" />
+      <Button layoutX="707.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleShowRooms" prefHeight="79.0" prefWidth="202.0" text="Show Rooms" />
    </children>
 </AnchorPane>
