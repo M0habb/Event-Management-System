@@ -19,88 +19,61 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
+        <Text fx:id="nameText" layoutX="36.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
             <font>
-                <Font size="36.0" />
+                <Font name="System Bold" size="36.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
+        <Text fx:id="dateText" layoutX="36.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
             <font>
-                <Font size="24.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
+        <Text fx:id="roomText" layoutX="36.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
             <font>
-                <Font size="24.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="446.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organized by">
+        <Text layoutX="963.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organized by:" wrappingWidth="107.068359375">
             <font>
-                <Font size="14.0" />
+                <Font name="System Bold Italic" size="14.0" />
             </font>
         </Text>
-        <Text layoutX="470.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MSJ worldwide partners" wrappingWidth="161.99218750000006" />
-        <Text layoutX="459.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Upcoming Event" textAlignment="CENTER">
+        <Text fx:id="organizerText" layoutX="963.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MSJ worldwide partners" wrappingWidth="161.99218750000006">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <Text layoutX="474.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Details" textAlignment="CENTER">
             <font>
                 <Font size="30.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of attendees">
+        <Text fx:id="noAttendeesText" layoutX="37.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. of attendees:" wrappingWidth="216.171875">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total profit">
+        <Text fx:id="totalProfitText" layoutX="820.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total profit: " wrappingWidth="236.1171875">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendee list">
+        <Text layoutX="36.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendee list:">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
-        <Text layoutX="845.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room number">
+        <Text layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: 3500">
             <font>
-                <Font size="24.0" />
+                <Font name="System Bold Italic" size="20.0" />
             </font>
         </Text>
-        <Text layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price 3500">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Text>
-        <Text layoutX="845.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Text>
-        <Text layoutX="847.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bathrooms">
+        <Text fx:id="locationText" layoutX="36.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AZ Zaytoun Al Qebleyah, Zeitoun, Cairo Governorate">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="845.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food services">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Text layoutX="845.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Text layoutX="846.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parking">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Text layoutX="36.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AZ Zaytoun Al Qebleyah, Zeitoun, Cairo Governorate">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-        <Text layoutX="36.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+        <Text layoutX="36.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
             <font>
                 <Font size="24.0" />
             </font>
@@ -122,7 +95,7 @@
             <Image url="@images/img_2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="271.0" fitWidth="1154.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="background" fitHeight="270.0" fitWidth="1154.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="72.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="40.0" prefWidth="73.0" text="Back" />
     </children>
 </AnchorPane>

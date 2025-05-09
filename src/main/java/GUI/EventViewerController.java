@@ -11,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -24,9 +26,38 @@ public class EventViewerController {
     private Text usernameLabel;
 
     @FXML
+    private ImageView background;
+
+    @FXML
+    private Text nameText;
+    @FXML
+    private Text dateText;
+    @FXML
+    private Text roomText;
+    @FXML
+    private Text priceText;
+    @FXML
+    private Text organizerText;
+    @FXML
+    private Text noAttendeesText;
+    @FXML
+    private Text totalProfitText;
+    @FXML
+    private Text locationText;
+
+    private String eventName;
+
+    @FXML
     private void initialize(){
         usernameLabel.setText(currentUser.getUserName());
-
+        Image image = new Image(getClass().getResourceAsStream("/resources/images/music1.png"));
+        background.setImage(image);
+        background.setFitWidth(1154);
+        background.setFitHeight(270);
+        background.setPreserveRatio(false); // or true, depending on the need
+        background.setSmooth(true);
+        background.toBack();
+        background.setOpacity(0.7);
     }
 
     @FXML
@@ -53,4 +84,7 @@ public class EventViewerController {
         window.show();
     }
 
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
 }
