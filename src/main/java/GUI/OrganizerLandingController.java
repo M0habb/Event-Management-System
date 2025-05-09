@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 
@@ -35,7 +36,13 @@ public class OrganizerLandingController {
     private ScrollPane scrollpane;
 
     @FXML
+    private AnchorPane mainAnchorPane;
+
+    @FXML
     private Label usernameLabel;
+
+    @FXML
+    private ListView listView;
 
     Organizer currentUser = (Organizer) User.currentUser;
 
@@ -76,16 +83,26 @@ public class OrganizerLandingController {
         for (int i = 0; i < Database.events.size(); i++) {
             if (currentUser.getUserName().equals(Database.events.get(i).getOrganizer().getUserName())) {
                 if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).before(Database.events.get(i).getEventDate())) {
-                    count++;
-                    if (count == 1) {
 
-                    }
+                    count++;
                     Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
 
                     mainLabel.setText(Database.events.get(i).getEventName());
 
                     rootH.getChildren().add(mainLabel);
+
+                    if (count == 1) {
+                        Label main = mainLabel;
+                        mainAnchorPane.getChildren().add(main);
+                    }
+
                 }
+            }else {
+                Label mainLabel = FXMLLoader.load(getClass().getResource("/resources/hboxEvent.fxml"));
+
+                mainLabel.setText(Database.events.get(i).getEventName());
+
+                listView.getItems().add(mainLabel);
             }
         }
     }
