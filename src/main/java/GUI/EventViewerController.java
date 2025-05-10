@@ -72,6 +72,8 @@ public class EventViewerController {
         scrollpane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollpane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         scrollpane.setPannable(true);
+
+
     }
 
     private void setText(){
@@ -170,7 +172,6 @@ public class EventViewerController {
 
     @FXML
     private void handleDelete(ActionEvent event) throws IOException{
-
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
