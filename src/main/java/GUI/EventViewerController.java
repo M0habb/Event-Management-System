@@ -41,6 +41,8 @@ public class EventViewerController {
     @FXML
     private Text priceText;
     @FXML
+    private TextField priceTextField;
+    @FXML
     private Text organizerText;
     @FXML
     private Text noAttendeesText;
@@ -71,6 +73,7 @@ public class EventViewerController {
     private void initialize(){
 
         rooms.setVisible(false);
+        priceTextField.setVisible(false);
 
         for (Room room : Database.rooms){
             if (room.getAvailable()) {
@@ -91,61 +94,7 @@ public class EventViewerController {
         scrollpane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         scrollpane.setPannable(true);
 
-        roomText.setOnMouseClicked(event -> {
-            roomText.setVisible(false);
-            for (Room room : Database.rooms){
-                if (room.getAvailable()) {
-                    rooms.getItems().add(room.getRoomName());
-                }
-            }
-            rooms.setVisible(true);
-            rooms.requestFocus();
-        });
 
-        rooms.setOnAction(event -> {
-            for (Room room : Database.rooms){
-                if (room.getRoomName().equals(roomText.getText())){
-                    room.setAvailable(true);
-                }
-                if (room.getRoomName().equals(rooms.getValue())){
-                    for (Event e : Database.events){
-                        if (e.getEventName().equals(nameText.getText())){
-                            e.setRoom(room);
-                            roomText.setText(room.getRoomName());
-                        }
-                    }
-                }
-            }
-            roomText.setVisible(true);
-            rooms.setVisible(false);
-        });
-
-        nameText.setOnMouseClicked(event -> {
-            nameTextField.setText(nameText.getText());
-            nameText.setVisible(false);
-            nameTextField.setVisible(true);
-            nameTextField.requestFocus();
-        });
-
-        nameTextField.setOnAction(event -> {
-            String ogName = nameText.getText();
-            nameText.setText(nameTextField.getText());
-            for (Event e : Database.events){
-                if (e.getEventName().equals(ogName)){
-                    e.setEventName(nameText.getText());
-                }
-            }
-            nameTextField.setVisible(false);
-            nameText.setVisible(true);
-        });
-
-        nameTextField.focusedProperty().addListener((obs, oldVal, newVal) -> {
-            if (!newVal) {
-                nameText.setText(nameTextField.getText());
-                nameTextField.setVisible(false);
-                nameText.setVisible(true);
-            }
-        });
     }
 
     private void setText(){
@@ -157,6 +106,92 @@ public class EventViewerController {
                 if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).after(event.getEventDate())){
                     delete.setVisible(false);
                     delete.setDisable(true);
+                    hide.setVisible(false);
+                    L.setVisible(false);
+                }else {
+                    roomText.setOnMouseClicked(x -> {
+                        roomText.setVisible(false);
+                        for (Room room : Database.rooms){
+                            if (room.getAvailable()) {
+                                rooms.getItems().add(room.getRoomName());
+                            }
+                        }
+                        rooms.setVisible(true);
+                        rooms.requestFocus();
+                    });
+
+                    rooms.setOnAction(x -> {
+                        for (Room room : Database.rooms){
+                            if (room.getRoomName().equals(roomText.getText())){
+                                room.setAvailable(true);
+                            }
+                            if (room.getRoomName().equals(rooms.getValue())){
+                                for (Event e : Database.events){
+                                    if (e.getEventName().equals(nameText.getText())){
+                                        e.setRoom(room);
+                                        roomText.setText(room.getRoomName());
+                                        locationText.setText(room.getAddress().toString());
+                                    }
+                                }
+                            }
+                        }
+                        roomText.setVisible(true);
+                        rooms.setVisible(false);
+                    });
+
+                    nameText.setOnMouseClicked(x -> {
+                        nameTextField.setText(nameText.getText());
+                        nameText.setVisible(false);
+                        nameTextField.setVisible(true);
+                        nameTextField.requestFocus();
+                    });
+
+                    nameTextField.setOnAction(x -> {
+                        String ogName = nameText.getText();
+                        nameText.setText(nameTextField.getText());
+                        for (Event e : Database.events){
+                            if (e.getEventName().equals(ogName)){
+                                e.setEventName(nameText.getText());
+                            }
+                        }
+                        nameTextField.setVisible(false);
+                        nameText.setVisible(true);
+                    });
+
+                    nameTextField.focusedProperty().addListener((obs, oldVal, newVal) -> {
+                        if (!newVal) {
+                            nameText.setText(nameTextField.getText());
+                            nameTextField.setVisible(false);
+                            nameText.setVisible(true);
+                        }
+                    });
+
+                    priceText.setOnMouseClicked(x -> {
+                        priceTextField.setText(priceText.getText());
+                        priceText.setVisible(false);
+                        priceTextField.setVisible(true);
+                        priceTextField.requestFocus();
+                    });
+
+                    priceTextField.setOnAction(x -> {
+                        priceText.setText(priceTextField.getText());
+                        for (Event e : Database.events){
+                            if (e.getEventName().equals(nameText.getText())){
+                                String newFees = priceText.getText().substring(13);
+                                e.setFees(Double.parseDouble(newFees));
+                            }
+                        }
+                        priceTextField.setVisible(false);
+                        priceText.setVisible(true);
+                    });
+
+                    priceTextField.focusedProperty().addListener((obs, oldVal, newVal) -> {
+                        if (!newVal) {
+                            priceText.setText(priceTextField.getText());
+                            priceTextField.setVisible(false);
+                            priceText.setVisible(true);
+                        }
+                    });
                 }
 
                 Date date1 = event.getEventDate();
