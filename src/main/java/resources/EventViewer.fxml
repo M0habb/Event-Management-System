@@ -108,5 +108,6 @@
             </Label>
          </content>
       </ScrollPane>
+      <Button fx:id="delete" layoutX="175.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" prefWidth="97.0" text="Delete" textFill="RED" />
     </children>
 </AnchorPane>

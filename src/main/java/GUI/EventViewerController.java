@@ -9,8 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -18,7 +17,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.Optional;
 
 public class EventViewerController {
 
@@ -50,6 +52,8 @@ public class EventViewerController {
     private ScrollPane scrollpane;
     @FXML
     private Label attendeesLabel;
+    @FXML
+    private Button delete;
 
     private String text;
 
@@ -73,6 +77,11 @@ public class EventViewerController {
     private void setText(){
         for (Event event : Database.events){
             if (event.getEventName().equals(nameText.getText())){
+
+                if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).after(event.getEventDate())){
+                    delete.setVisible(false);
+                    delete.setDisable(true);
+                }
 
                 Date date = event.getEventDate();
                 SimpleDateFormat formatter = new SimpleDateFormat("MMM dd | h:mm a, yyyy");
@@ -156,6 +165,29 @@ public class EventViewerController {
         text = eventName;
         if (text != null){
             nameText.setText(text);
+        }
+    }
+
+    @FXML
+    private void handleDelete(ActionEvent event) throws IOException{
+
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Are you sure?");
+        alert.setContentText("You are about to delete this event. This process is irreversible. Do you want to proceed?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK){
+            Database.events.removeIf(eventt -> eventt.getEventName().equals(nameText.getText()));
+            Parent root = FXMLLoader.load(getClass().getResource("/resources/organizerLanding.fxml"));
+
+            Scene scene = new Scene(root, 1142, 642);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setScene(scene);
+            window.show();
         }
     }
 }
