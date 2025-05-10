@@ -54,11 +54,29 @@ public class EventViewerController {
     private Label attendeesLabel;
     @FXML
     private Button delete;
+    @FXML
+    private TextField nameTextField;
+    @FXML
+    private DatePicker date;
+    @FXML
+    private Label L;
+    @FXML
+    private Hyperlink hide;
+    @FXML
+    private ComboBox<String> rooms;
 
     private String text;
 
     @FXML
     private void initialize(){
+
+        rooms.setVisible(false);
+
+        for (Room room : Database.rooms){
+            if (room.getAvailable()) {
+                rooms.getItems().add(room.getRoomName());
+            }
+        }
 
         if (text != null){
             nameText.setText(text);
@@ -73,22 +91,71 @@ public class EventViewerController {
         scrollpane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         scrollpane.setPannable(true);
 
+        roomText.setOnMouseClicked(event -> {
+            roomText.setVisible(false);
+            rooms.setVisible(true);
+            rooms.requestFocus();
+        });
 
+        rooms.setOnAction(event -> {
+            for (Room room : Database.rooms){
+                if (room.getRoomName().equals(rooms.getValue())){
+                    for (Event e : Database.events){
+                        if (e.getEventName().equals(nameText.getText())){
+                            e.setRoom(room);
+                            roomText.setText(room.getRoomName());
+                        }
+                    }
+                }
+            }
+            roomText.setVisible(true);
+            rooms.setVisible(false);
+        });
+
+        nameText.setOnMouseClicked(event -> {
+            nameTextField.setText(nameText.getText());
+            nameText.setVisible(false);
+            nameTextField.setVisible(true);
+            nameTextField.requestFocus();
+        });
+
+        nameTextField.setOnAction(event -> {
+            String ogName = nameText.getText();
+            nameText.setText(nameTextField.getText());
+            for (Event e : Database.events){
+                if (e.getEventName().equals(ogName)){
+                    e.setEventName(nameText.getText());
+                }
+            }
+            nameTextField.setVisible(false);
+            nameText.setVisible(true);
+        });
+
+        nameTextField.focusedProperty().addListener((obs, oldVal, newVal) -> {
+            if (!newVal) {
+                nameText.setText(nameTextField.getText());
+                nameTextField.setVisible(false);
+                nameText.setVisible(true);
+            }
+        });
     }
 
     private void setText(){
         for (Event event : Database.events){
             if (event.getEventName().equals(nameText.getText())){
 
+
+
                 if (Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).after(event.getEventDate())){
                     delete.setVisible(false);
                     delete.setDisable(true);
                 }
 
-                Date date = event.getEventDate();
+                Date date1 = event.getEventDate();
                 SimpleDateFormat formatter = new SimpleDateFormat("MMM dd | h:mm a, yyyy");
-                String formattedDate = formatter.format(date);
+                String formattedDate = formatter.format(date1);
                 dateText.setText(formattedDate);
+                date.setValue(LocalDate.ofInstant(date1.toInstant(), ZoneId.systemDefault()));
 
                 roomText.setText(event.getRoom().getRoomName());
 
@@ -190,5 +257,11 @@ public class EventViewerController {
             window.setScene(scene);
             window.show();
         }
+    }
+
+    @FXML
+    private void hideL() {
+        L.setVisible(false);
+        hide.setVisible(false);
     }
 }

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -19,21 +26,6 @@
         <Text fx:id="usernameLabel" layoutX="986.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
             <font>
                 <Font size="18.0" />
-            </font>
-        </Text>
-        <Text fx:id="nameText" layoutX="36.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
-            <font>
-                <Font name="System Bold" size="36.0" />
-            </font>
-        </Text>
-        <Text fx:id="dateText" layoutX="36.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
-            <font>
-                <Font name="System Bold" size="24.0" />
-            </font>
-        </Text>
-        <Text fx:id="roomText" layoutX="36.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
-            <font>
-                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
         <Text layoutX="963.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organized by:" wrappingWidth="107.068359375">
@@ -65,7 +57,7 @@
                 <Font size="24.0" />
             </font>
         </Text>
-        <Text fx:id="priceText" layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: ">
+        <Text fx:id="priceText" layoutX="37.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: ">
             <font>
                 <Font name="System Bold Italic" size="20.0" />
             </font>
@@ -97,7 +89,7 @@
             <Image url="@images/WhatsApp%20Image%202025-05-09%20at%2011.39.24%20PM%20(1).jpeg" />
          </image>
       </ImageView>
-      <ImageView fx:id="background" fitHeight="270.0" fitWidth="1154.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="background" fitHeight="270.0" fitWidth="1154.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="72.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="40.0" prefWidth="73.0" text="Back" />
       <ScrollPane fx:id="scrollpane" layoutX="89.0" layoutY="378.0" prefHeight="54.0" prefWidth="699.0" styleClass="scrollpane">
          <content>
@@ -109,5 +101,49 @@
          </content>
       </ScrollPane>
       <Button fx:id="delete" layoutX="175.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" prefWidth="97.0" text="Delete" textFill="RED" />
+      <StackPane layoutX="36.0" layoutY="50.0" prefHeight="65.0" prefWidth="542.0">
+         <children>
+            <TextField fx:id="nameTextField" prefHeight="53.0" prefWidth="542.0" visible="false" />
+              <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
+                  <font>
+                      <Font name="System Bold" size="36.0" />
+                  </font>
+              </Text>
+         </children>
+      </StackPane>
+      <HBox layoutX="37.0" layoutY="113.0" prefHeight="48.0" prefWidth="780.0" spacing="50.0">
+         <children>
+              <Text fx:id="dateText" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+              </Text>
+            <DatePicker fx:id="date" prefHeight="25.0" prefWidth="163.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <Label fx:id="L" layoutX="65.0" layoutY="600.0" text="Click on any field to edit." textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hide" layoutX="233.0" layoutY="596.0" onAction="#hideL" text="Hide">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Hyperlink>
+      <StackPane layoutX="38.0" layoutY="161.0" prefHeight="48.0" prefWidth="225.0">
+         <children>
+              <Text fx:id="roomText" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+              </Text>
+            <ComboBox fx:id="rooms" prefWidth="150.0" />
+         </children>
+      </StackPane>
     </children>
 </AnchorPane>
