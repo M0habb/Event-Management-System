@@ -93,12 +93,20 @@ public class EventViewerController {
 
         roomText.setOnMouseClicked(event -> {
             roomText.setVisible(false);
+            for (Room room : Database.rooms){
+                if (room.getAvailable()) {
+                    rooms.getItems().add(room.getRoomName());
+                }
+            }
             rooms.setVisible(true);
             rooms.requestFocus();
         });
 
         rooms.setOnAction(event -> {
             for (Room room : Database.rooms){
+                if (room.getRoomName().equals(roomText.getText())){
+                    room.setAvailable(true);
+                }
                 if (room.getRoomName().equals(rooms.getValue())){
                     for (Event e : Database.events){
                         if (e.getEventName().equals(nameText.getText())){
