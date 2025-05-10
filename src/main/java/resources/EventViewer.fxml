@@ -96,7 +96,7 @@
          </content>
       </ScrollPane>
       <Button fx:id="delete" layoutX="175.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" prefWidth="97.0" text="Delete" textFill="RED" />
-      <StackPane layoutX="36.0" layoutY="50.0" prefHeight="65.0" prefWidth="542.0">
+      <StackPane layoutX="36.0" layoutY="40.0" prefHeight="65.0" prefWidth="542.0">
          <children>
               <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="The Grand Show: Omar Khairat">
                   <font>
@@ -106,7 +106,7 @@
             <TextField fx:id="nameTextField" prefHeight="53.0" prefWidth="542.0" visible="false" />
          </children>
       </StackPane>
-      <HBox layoutX="49.0" layoutY="113.0" prefHeight="48.0" prefWidth="780.0" spacing="50.0">
+      <HBox layoutX="36.0" layoutY="113.0" prefHeight="48.0" prefWidth="780.0" spacing="50.0">
          <children>
               <Text fx:id="dateText" strokeType="OUTSIDE" strokeWidth="0.0" text="May 09 | 8:30 PM">
                   <font>
@@ -130,7 +130,7 @@
             <Font name="System Italic" size="15.0" />
          </font>
       </Hyperlink>
-      <StackPane layoutX="54.0" layoutY="161.0" prefHeight="48.0" prefWidth="225.0">
+      <StackPane layoutX="33.0" layoutY="161.0" prefHeight="48.0" prefWidth="225.0">
          <children>
               <Text fx:id="roomText" strokeType="OUTSIDE" strokeWidth="0.0" text="Qubba Palace">
                   <font>
@@ -140,7 +140,7 @@
             <ComboBox fx:id="rooms" prefWidth="150.0" />
          </children>
       </StackPane>
-      <StackPane layoutX="72.0" layoutY="207.0" prefHeight="48.0" prefWidth="170.0">
+      <StackPane layoutX="33.0" layoutY="207.0" prefHeight="48.0" prefWidth="170.0">
          <children>
               <Text fx:id="priceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price: ">
                   <font>
