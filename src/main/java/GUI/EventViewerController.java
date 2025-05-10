@@ -109,6 +109,15 @@ public class EventViewerController {
                     hide.setVisible(false);
                     L.setVisible(false);
                 }else {
+
+                    date.setOnAction(x -> {
+                        Date date1 = Date.from(date.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+                        event.setEventDate(date1);
+                        SimpleDateFormat formatter = new SimpleDateFormat("MMM dd | h:mm a, yyyy");
+                        String formattedDate = formatter.format(date1);
+                        dateText.setText(formattedDate);
+                    });
+
                     roomText.setOnMouseClicked(x -> {
                         roomText.setVisible(false);
                         for (Room room : Database.rooms){
