@@ -94,12 +94,12 @@ public class MainController extends Application{
         Admin admin9 = new Admin("Rani", "dfee", Gender.MALE, bd3, "17878651", 8);
 
 
-        Organizer organizer1 = new Organizer("Michael", "123", Gender.MALE, bd, "155573");
+        Organizer organizer6 = new Organizer("Michael", "123", Gender.MALE, bd, "155573");
         Organizer organizer2 = new Organizer("Ahmad", "1325", Gender.MALE, bd2, "57757");
         Organizer organizer3 = new Organizer("Jana", "123", Gender.FEMALE, bd3, "155573");
         Organizer organizer4 = new Organizer("Seif", "123", Gender.MALE, bd, "57757");
         Organizer organizer5 = new Organizer("Amjad", "1325", Gender.MALE, bd2, "155573");
-        Organizer organizer6 = new Organizer("Sarah", "123", Gender.FEMALE, bd3, "57757");
+        Organizer organizer1 = new Organizer("Sarah", "123", Gender.FEMALE, bd3, "57757");
         Organizer organizer7 = new Organizer("Micho", "123", Gender.MALE, bd, "15552973");
         Organizer organizer8 = new Organizer("Amr", "1325", Gender.MALE, bd2, "54754685");
         Organizer organizer9 = new Organizer("Nancy", "123", Gender.FEMALE, bd3, "48845115");
